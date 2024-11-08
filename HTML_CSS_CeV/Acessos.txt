@@ -8,6 +8,17 @@ https://youtu.be/TNQsmPf24go - video como funciona internet
 Curso Git e Github: 
 https://youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA&si=UI4hN6SbnD58lRMi
 
+gerador de QR-CODE: gr-code-generator.com
+
+Acessar os exercicios html:
+https://betotal.github.io/WEB/<caminho do index> 
+
+Exemplo:
+HTML_CSS_CeV/Guanabara_M2/index_M2_24_28_Borda.html#
+
+Projeto Android: Modulo 3 aula 7
+https://betotal.github.io/Projeto_Android/
+
 
 HTML    >> Conteudo
 CSS     >> Estilo (design)
