@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        /*  
+            pseudoclasse: ':' >> estado da classse
+            pseudoelemento '::' >> conteudo periférico
+          
+          */
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a {
+            color:purple;
+            text-decoration: none;
+        }
+        a:visited{
+            color: #015353;
+        }
+        a:hover {
+            color: green;
+            text-decoration: underline;
+        }
+        a:active {
+            color: yellow;
+        }
+
+        a::after {
+            content: ' [link]';
+            text-decoration: none;
+            font-weight: normal;
+            color: lightgray;
+
+        }
+    </style>
+</head>
+<body>
+    <H1>Personalizando links</H1>
+    <ul>
+        <li><a href="https://gustavoguanabara.github.io">Repositório GitHub</a></li>
+        <li><a href="https://youtube.com.br/cursoemvideo/">YouTube - Curso em video</a></li>
+        <li><a href="https//www.datamace.com.br">Datamace</a></li>
+    </ul>
+    
+</body>
+</html>

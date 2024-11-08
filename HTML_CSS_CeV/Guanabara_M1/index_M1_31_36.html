@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML 5 </title>
+</head>
+<body>
+    <H1>Imagens dinâmicas</H1>
+    <p>Tente abrir esse site em varios dispositivos diferentes ou simplesmente aumente o tamanho do seu navegador.</p>
+    <picture>
+        <source media="(max-width: 700px)" srcset="../Imagens/foto_p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="../Imagens/foto_m.png" type="image/png">
+        <img src="../Imagens/foto_g.png" alt="Imagem flexível">
+    </picture>
+
+    <H1>Reproduzindo audio</H1>
+    <p>Reproduzindo audio</p>
+    <!--<audio src="../Som/Deserto.mp3" controls autoplay></audio>
+        formatos: mp3, wav e ogg-->
+
+    <audio preload="auto" controls autoplay>
+         <source src="../Som/Deserto.mp3" type="audio/mpeg">
+    
+    </audio>
+
+    <H1>Reproduzindo video</H1>
+    <p>Reproduzindo video local</p>
+    <!--<video src="../Videos/escuta.mp4" controls></video>-->
+    <video controls loop>
+        <source src="../Videos/escuta.mp4" type="video/mp4">
+    </video>
+
+    <p>Reproduzindo video Youtube</p>
+    Subir site no Youtube e incorporar ao site
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/bCFTv8a59PE?si=tVF0GaSdsDDLH9vp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>

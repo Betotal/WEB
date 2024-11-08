@@ -1,0 +1,42 @@
+HTML CSS - Guanabara
+github.com/gustavoguanabara - repositório
+gustavoguanabara.github.io  - 
+github.com/gustavoguanabara/html-css - Material de apoio / divulgação
+www.submarinecablemap.com
+https://youtu.be/TNQsmPf24go - video como funciona internet
+
+Curso Git e Github: 
+https://youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA&si=UI4hN6SbnD58lRMi
+
+
+HTML    >> Conteudo
+CSS     >> Estilo (design)
+JScript >> Interatividade   Próximo
+
+imagens: unsplash / pexels para download
+
+programas para edição de texto: gimp
+Formatos para web: jpg e png
+
+favicon: Icone da aba
+favicon.io
+
+W3C - Tags Obsoletos
+
+Software: Imagens:  Gimp
+          Videos:  HandBreaker  
+
+CSS Hierarquia Externo >> Interno >> InLine
+
+Fonte web safe: css web safe font combinations
+site de fonte: google fonts
+
+mockweb
+emojipedia
+
+
+
+
+
+
+
