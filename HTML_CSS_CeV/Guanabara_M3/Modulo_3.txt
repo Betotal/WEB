@@ -1,0 +1,66 @@
+
+Aula 10 
+    Trabalhar remoto
+
+
+Baixar o projeto em outro computador, commitar e não deixar rastros
+
+Precisa:
+    navegador
+    VSCODE
+    GIT
+    GitHub desktop
+
+Abrir Github desktop
+    Account >> Sing in
+        Fará a carga dos repositórios
+    File >> options > Git
+        Fará a carga dos seus dados no GitHub
+    Escolher o repositórios 
+        Clonar
+            Choose >> escolher o Local
+            clone
+    Será carregado os arquivos
+    abir no VSCODE
+
+Trabalhar normalmente
+    commitar para o repositório remoto
+
+Para sair e eliminar todos os arquivos e contas.
+    fechar VSCODE
+    Repository >> Remove
+        mark recycle bin
+    File >> options >> Account >> Sing out
+                    >> git     >> apagar os dados
+    Esvaziar lixeira
+
+Video extra >> Youtube.com >> git github guanabara
+    Seu github muito mais seguro
+///////////////////////////////////////////////////////////////
+
+Capitulo 19 - Aula 2,3 e 4
+Imagem em objetos do tipo caixa
+    Style
+        background-color    >> cor solida
+        background-Image:   linear-gradiente            >> para gradiente
+                            url ('<caminho com nome>)   >> para imagens
+        background-size:    tamanho da Imagem
+        background-repeat:  no-repeat   >> sem repetição
+                            repeat-x    >> repete no eixo x
+                            repeat-y    >> repete no eixo y
+
+        background-position:    left/ right     direita ou esquerda
+                                top/ bottom     topo ou base
+                                center
+            ou a combinação das mesmas: left top, right        
+
+            sempre em relação a view port (tela)
+        
+        background-size: 100% 100%;     >> imagem total mas distorce a imagem
+                         contain;       >> mantem a imagem na proporção, mas montra o fundo (background)
+                         cover;         >> cobre a tela (amplia proporcionalmente a imagem e não mostra totalmente)
+        background-attachment: fixed    >> ancoragem da imagem    
+            com background-attachment: fixed, bg-size será cover
+
+
+
