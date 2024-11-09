@@ -62,5 +62,17 @@ Imagem em objetos do tipo caixa
         background-attachment: fixed    >> ancoragem da imagem    
             com background-attachment: fixed, bg-size será cover
 
+Para alinhar um elemente dentro (por exemplo, divs) de outro, usamos container
+Alinhamento horizontal: margin
+Alinhamento verical: 
+na div de fora (container) position: relative   
+na div de dentro           position; absolute
+    Com isso na div de denttro podemos usar as tags:
+            left: e top: 
+    porém o posicionamento é sobre o vertice superior esquerdo.
+    então é necessário usar: 
+        transform: translate(<esp>, <top>)        
+
+
 
 
