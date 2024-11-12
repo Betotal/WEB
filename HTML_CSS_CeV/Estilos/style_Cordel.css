@@ -52,23 +52,26 @@
   }
 
   main .imagem#i1 {
-    background-image: url('../Imagens/dictionary.jpg');    
+    background-image: url('../Imagens/traffic.jpg'); 
+    background-position: center center;   
   } 
 
   main .imagem#i2 {
-    background-image: url('../Imagens/learn.jpg');
+    background-image: url('../Imagens/puppet.jpg');
+    background-position: center center;
+
   }
 
   main .imagem#i3 {
-    background-image: url('../Imagens/dictionary.jpg');
+    background-image: url('../Imagens/money.jpg');
   }
 
   main .imagem#i4 {
-    background-image: url('../Imagens/globo.jpg');
+    background-image: url('../Imagens/health.jpg');
   }
 
   main .imagem#i5 {
-    background-image: url('../Imagens/teclado.jpg');
+    background-image: url('../Imagens/people.jpg');
   }
 
   section {
