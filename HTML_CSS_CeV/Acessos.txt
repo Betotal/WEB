@@ -24,7 +24,7 @@ HTML    >> Conteudo
 CSS     >> Estilo (design)
 JScript >> Interatividade   Próximo
 
-imagens: unsplash / pexels para download
+imagens: unsplash / pexels para download, pixabay
 
 programas para edição de texto: gimp
 Formatos para web: jpg e png

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Eagle+Lake&display=swap');
+
+
+.eagle-lake-regular {
+    font-family: "Eagle Lake", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .cookie-regular {
+    font-family: "Cookie", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  *{
+    margin: 0px;
+    padding: 0px;
+  }
+
+  header {
+        background-color: black;
+        color: white;
+        margin: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+  }
+
+  header > a {
+    text-decoration: none;
+  }
+  header >a:hover {
+    text-decoration: underline;
+  }
