@@ -1,100 +1,59 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Eagle+Lake&display=swap');
 
-/*
-.eagle-lake-regular {
-    font-family: "Eagle Lake", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .cookie-regular {
-    font-family: "Cookie", cursive;
-    font-weight: 400;
-    font-style: normal;
-  }
-*/
-  *{
+ *{
     margin: 0px;
     padding: 0px;
+    font-size: 1em;
     
   }
 
   :root {
     --font-padrao: Verdana, Geneva, Tahoma, sans-serif;
     --font-cursive: "Cookie", cursive;
-    --font-eagle: "Eagle Lake", serif;
-    --fundo: background-image: linear-gradient(180deg, lightgray, rgb(193, 245, 247));
+    --font-eagle: "Sriracha", serif;
+  }
+
+  html, body {
+    min-height: 100vh;
+    background-color: lightgray;
+    font-family: var(--font-padrao);
+    
   }
 
   header {
         background-color: black;
         color: white;
-        margin: auto;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        font-family: var(--font-eagle);
         text-align: center;
   }
 
-  header
+  header > h1 {
+    padding-top: 50px;
+    /* text-transform: uppercase; */
+    font-variant: small-caps;
+    font-family: var(--font-eagle);
+    font-size: 5vw;
+  }
 
-  header a {
+  header > p {
+    padding-bottom: 50px;
+  }
+
+  a {
     text-decoration: none;
     color: white;
+    font-weight: bolder;
   }
-  header  a:hover {
+  a:hover{
     text-decoration: underline;
   }
-  header a:visited {
-    color: white;
-  }
 
-  main {
-    max-width: 80%;
-    
-  }
-
-  main p#p1 {
-    background-color: rgba(0, 0, 0, 0.342);
-    padding-left: 20px;
-    margin-right: 50%;
-    border-radius: 10px;
-    
-  }
-
-  main .normal {
-    background-color: white;
-    color: black;
-    padding: 50px;
-    font-family: var(--font-cursive);
-    font-size: 3em;
-
-  }
-
-  main .imagem {
-    background-color: rgba(0, 0, 0, 0.438);
-    box-shadow: 1px 1px 13px 1px rgba(0, 0, 0, 0.555);
-    box-shadow: inset 1px 1px 13px 1px rgba(0, 0, 0, 0.555);
-    border-radius: 10px;
-    background-size: cover;
-    background-attachment: fixed;
-
-    color: white;
-    padding: 50px;
-    font-family: var(--font-cursive);
-    font-size: 3em;
-    text-shadow: 2px 2px 2px gray;
-    margin-left: 40%;
-    
-  }
-
-    main .imagem#i1 {
+  main .imagem#i1 {
     background-image: url('../Imagens/dictionary.jpg');    
-  }
+  } 
 
   main .imagem#i2 {
     background-image: url('../Imagens/learn.jpg');
@@ -111,3 +70,45 @@
   main .imagem#i5 {
     background-image: url('../Imagens/teclado.jpg');
   }
+
+  section {
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    line-height: 2em;   /* espaço entre as linhas */
+    padding-left: 30px;
+    font-family: var(--font-cursive);
+    font-size: 5vw;
+  }
+
+  section.normal {
+    color: black;
+  }
+
+  section.imagem {
+    background-color: rgba(0, 0, 0, 0.438);
+    color: white;
+    box-shadow: 1px 1px 13px 1px rgba(0, 0, 0, 0.555);
+    box-shadow: inset 1px 1px 13px 1px rgba(0, 0, 0, 0.555);
+    /* border-radius: 10px; */
+    background-size: cover;
+    background-attachment: fixed;
+
+    text-shadow: 2px 2px 2px gray;
+  }
+
+  section > p#p1 {
+    display: inline-block;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.342);
+    border-radius: 10px;
+  }
+
+  footer {
+    background-color: black;
+    color: white;
+    margin: auto;
+    padding: 10px;
+    font-family: var(--font-padrao);
+    text-align: center;
+  }
+  
