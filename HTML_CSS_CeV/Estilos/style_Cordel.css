@@ -40,6 +40,10 @@
 
   header > p {
     padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: var(--font-f3);
+    font-size: 2vw;
   }
 
   a {
@@ -68,6 +72,7 @@
 
   main .imagem#i4 {
     background-image: url('../Imagens/health.jpg');
+    background-position: center top;
   }
 
   main .imagem#i5 {
