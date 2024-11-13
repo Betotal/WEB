@@ -12,15 +12,15 @@
   }
 
   :root {
-    --font-padrao: Verdana, Geneva, Tahoma, sans-serif;
-    --font-cursive: "Cookie", cursive;
-    --font-eagle: "Sriracha", serif;
+    --font-f1: Verdana, Geneva, Tahoma, sans-serif;
+    --font-f2: "Cookie", cursive;
+    --font-f3: Helvetica, sans-serif;
   }
 
   html, body {
     min-height: 100vh;
     background-color: lightgray;
-    font-family: var(--font-padrao);
+    font-family: var(--font-f1);
     
   }
 
@@ -34,7 +34,7 @@
     padding-top: 50px;
     /* text-transform: uppercase; */
     font-variant: small-caps;
-    font-family: var(--font-eagle);
+    font-family: var(--font-f3);
     font-size: 5vw;
   }
 
@@ -77,9 +77,9 @@
   section {
     padding-top: 3vw;
     padding-bottom: 3vw;
-    line-height: 2em;   /* espaço entre as linhas */
+    line-height: 1em;   /* espaço entre as linhas */
     padding-left: 30px;
-    font-family: var(--font-cursive);
+    font-family: var(--font-f2);
     font-size: 5vw;
   }
 
