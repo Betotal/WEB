@@ -73,6 +73,22 @@ na div de dentro           position; absolute
     então é necessário usar: 
         transform: translate(<esp>, <top>)        
 
+Tabelas:
+        <!--
+        Anatomia das tabelas
+        Table   -- Tabela prorpiamente
+        Caption -- Legenda/Titulo da tabela
+        THead   -- area de Cabeçalho da tabela
+        tbody   -- area de Corpo da tabela
+        tfoot   -- area rodapé da tabela
+        tr      -- table row (linha da tabela)
+        td      -- table data(dados da tabela/ célula)
+        th      -- table head (cabeça da coluna)
+
+        Dentro de cada area, podemos ter tr (linha)
+                                         th (titulo) / td (dados)
+
+
 
 
 
