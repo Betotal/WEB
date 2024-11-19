@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            width: 400px;
+            padding: 15px;
+        }
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Meclagem de células</h1>
+
+    <table>
+        <tr>
+            <td>A</td>
+            <td>B</td>
+            <td>C</td>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+
+        <tr>
+            <td>I</td>
+            <td>II</td>
+            <td>III</td>
+        </tr>
+
+        <tr>
+            <td>XY</td>
+            <td>99</td>
+            <td>infinito</td>
+        </tr>
+    </table>
+    <br>
+    
+    <table>
+        <tr>
+            <td>A</td>
+            <td colspan="2">B</td>
+        </tr>
+
+        <tr>
+            <td rowspan="3">1</td>
+            <td>2</td>
+            <td rowspan="2">3</td>
+        </tr>
+
+        <tr>
+            <!-- <td>I</td> -->
+            <td>II</td>
+            <!-- <td>III</td> -->
+        </tr>
+
+        <tr>
+            <!-- <td>XY</td> -->
+            <!-- <td>99</td> -->
+            <td colspan="2">infinito</td>
+        </tr>
+    </table>
+
+    <H1>Desafios propostos de tabelas</H1>
+    <table>
+        <caption>Desafio 1 - Parte 1</caption>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td rowspan="2">3</td>
+            <td>4</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td colspan="3">8</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td rowspan="2">10</td>
+            <td colspan="2">11</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+        </tr>
+    </table>
+    <br>
+
+    <table>
+        <caption>Desafio 2 - Parte 1</caption>
+        <tr>
+            <td colspan="4">A</td>
+            <td rowspan="4">B</td>
+        </tr>
+        <tr>
+            <td rowspan="4">C</td>
+            <td>D</td>
+            <td>E</td>
+            <td>F</td>
+        </tr>
+        <tr>
+            <td>G</td>
+            <td>H</td>
+            <td>I</td>
+        </tr>
+        <tr>
+            <td>J</td>
+            <td>K</td>
+            <td>L</td>
+        </tr>
+        <tr>
+            <td colspan="4">M</td>
+        </tr>
+
+
+    </table>
+
+</body>
+</html>

@@ -88,6 +88,11 @@ Tabelas:
         Dentro de cada area, podemos ter tr (linha)
                                          th (titulo) / td (dados)
 
+        efeito zebrado: tr:nth-child(2n) onde:
+            2n é a repetição
+            odd  >> impar
+            even >> par
+
 
 
 
