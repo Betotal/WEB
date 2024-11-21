@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+table {
+    /* width: 700px; */
+    border-collapse: collapse;
+    position: relative;
+}
+caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px;
+    background-color: lightgray;
+}
+td, th {
+    border: 1px;
+    border-style: solid; /* solid */
+    border-color: black;
+    padding: 10px;
+}
+
+thead,tfoot {
+    background-color: #1d1d1d;
+    color: white;
+}
+
+thead > tr > th {
+    position: sticky;  /* colado */
+    /* colado as palavras */
+    top: 0;
+    background-color: #1d1d1d; 
+}
+
+
+td.num {
+    text-align: right;
+}
+
+/* p {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    font-size: 1.2em;
+    width: 700px;
+    text-indent: 10px;
+} */
+col.cSexo, col.cProf{
+    background-color: bisque;
+}
+
+col.verde{
+    background-color: lightgreen;
+}
+col.azul{
+    background-color: lightskyblue;
+}
+
+div#container {
+    overflow-x: auto;
+}
+
+

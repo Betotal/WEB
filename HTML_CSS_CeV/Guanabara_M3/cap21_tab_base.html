@@ -4,56 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabelas dos estados</title>
+    <link rel="stylesheet" href="../Estilos/style_tab.css">
     <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        table {
-            width: 700px;
-            border-collapse: collapse;
-            position: relative;
-        }
-        caption {
-            font-size: 1.5em;
-            font-weight: bold;
-            padding: 10px;
-            background-color: lightgray;
-        }
-        td, th {
-            border: 1px;
-            border-style: dotted; /* solid */
-            border-color: black;
-            padding: 10px;
-        }
-
-        thead,tfoot {
-            background-color: #1d1d1d;
-            color: white;
-        }
-
-        thead > tr > th {
-            position: sticky;  /* colado */
-            /* colado as palavras */
-            top: 0;
-            background-color: #1d1d1d; 
-        }
-
         tbody > tr:nth-child(2n) { /* zebrado  odd  even*/
             background-color: #dbeeff;
         }
 
-        td.num {
-            text-align: right;
-        }
-
-        p {
-            font-family: 'Times New Roman', Times, serif;
-            text-align: justify;
-            font-size: 1.2em;
-            width: 700px;
-            text-indent: 10px;
-        }
     </style>
+
 </head>
 <body>
     <h1>Uso de tabelas grandes</h1>
@@ -88,10 +46,10 @@
                 <th scope="col">Posição</th>
                 <th scope="col">Estado</th>
                 <th scope="col" style="width: 50px;">População</th>
-                <th scope="col" style="width: 250px;">Pais Caparativo</th>
+                <th scope="col" style="width: 250px;">Pais Comparativo</th>
             </tr>
         </thead>
-        <tody>  
+        <tody class="mescla">  
             <tr>
                 <td>1 </td>    
                 <td>São Paulo </td>     	        
