@@ -1,0 +1,13 @@
+IFrame  >> InLine Frame
+    Tamanho >> padrão 300 x 150
+    Se possuir definição em css do tamanho, prevale o css
+
+    Para abrir uma página, a partir de um link ( a href), usa-se o target="<nome do frame>
+
+    No IFrame, usar a propriedade name = "<nome>
+
+    Para abrir um código html no Iframe, como padrão:
+        src="<pagina.html> - Abre uma página padrão
+        srcdoc="<H1>  Texto que será exibido </H1><p>
+                      Lorem qweruqwe qowerjf,as  </p><img src='imagens/...'>"
+
