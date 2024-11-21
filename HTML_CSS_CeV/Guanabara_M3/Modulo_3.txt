@@ -84,9 +84,11 @@ Tabelas:
         tr      -- table row (linha da tabela)
         td      -- table data(dados da tabela/ célula)
         th      -- table head (cabeça da coluna)
+            - precisa de um escopo (scope) 
 
         Dentro de cada area, podemos ter tr (linha)
                                          th (titulo) / td (dados)
+
 
         efeito zebrado: tr:nth-child(2n) onde:
             2n é a repetição

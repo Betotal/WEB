@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            /* width: 800px; */
+            padding: 15px;
+            border: 1px solid black;
+        }
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        thead th {
+            background-color: lightgray;
+        }
+
+        tr.media {
+            background-color: lightgray;
+        }
+        th.media {
+            text-align: left;
+        }
+
+    </style>
+<body>
+    <table>
+        <caption>Filmes favoritos</caption>
+        <thead>
+            <tr>
+                <th scope="col">Gupo</th>
+                <th scope="col">Nomes</th>
+                <th scope="colgroup" colspan="3">Filmes</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th scope="rowgroup" rowspan="3">Mulheres</th>
+                <td>Ana Maria Santos</td>
+                <td>Alien</td>
+                <td>Rambo</td>
+                <td>Vingadores</td>
+            </tr>
+            <tr>
+                <td>Beatriz Souza</td>
+                <td>Hulk</td>
+                <td>Inception (A Origem)</td>
+                <td>Batman - Cavaleiro das trevas</td>
+            </tr>
+            <tr>
+                <td>Claudia Mello</td>
+                <td>Oblivion</td>
+                <td>Matrix</td>
+                <td>Big Hero</td>
+            </tr>
+
+            <tr>
+                <th  scope="rowgroup" rowspan="3">Homens</th>
+                <td>Bruno Mendonça</td>
+                <td>Intocáveis</td>
+                <td>Amnésia</td>
+                <td>Gladiador</td>
+            </tr>
+            <tr>
+                <td>Daniel Lourenço</td>
+                <td>Wall-e</td>
+                <td>Oldboy</td>
+                <td>Dangal</td>
+            </tr>
+            <tr>
+                <td>Fabiano Mota</td>
+                <td>Star Wars - Uma nova esperança</td>
+                <td>Taxi driver</td>
+                <td>Toy story</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <br>    
+
+    <table>
+        <caption>Tabela de média de disciplinas</caption>
+        <thead>
+            <tr>
+                <th scope="col" rowspan="2">Área</th>
+                <th scope="col" rowspan="2">Disciplina</th>
+                <th scope="colgroup" colspan="2">Nota</th>
+                <th scope="col" rowspan="2">Média</th>
+            </tr>
+            <tr>
+                <th scope="col" >Nota 1</th>
+                <th scope="col" >Nota 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="rowgroup" rowspan="4">Exatas</th>
+                <td>Matemática</td>
+                <td>1,0</td>
+                <td>1,5</td>
+                <td>5,5</td>
+            </tr>
+            <tr>
+                <td>Física</td>
+                <td>2,0</td>
+                <td>2,5</td>
+                <td>6,5</td>
+            </tr>
+            <tr>
+                <td>Quimica</td>
+                <td>3,0</td>
+                <td>3,5</td>
+                <td>7,5</td>
+            </tr>
+            <tr>
+                <td>Biologia</td>
+                <td>4,0</td>
+                <td>4,5</td>
+                <td>8,5</td>
+            </tr>
+            <tr class="media">
+                <th scope="row" colspan="4" class="media">Média de Exatas</th>
+                <th>7,0</th>
+            </tr>
+            <tr>
+                <th scope="rowgroup" rowspan="2">Humanas</th>
+                <td>História</td>
+                <td>5,0</td>
+                <td>5,5</td>
+                <td>7,0</td>
+            </tr>
+            <tr>
+                <td>Geografia</td>
+                <td>6,0</td>
+                <td>6,5</td>
+                <td>8,0</td>
+            </tr>
+            <tr class="media">
+                <th scope="row" colspan="4"  class="media">Média de Humanas</th>
+                <th>7,0</th>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>
