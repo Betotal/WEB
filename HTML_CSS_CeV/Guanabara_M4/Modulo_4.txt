@@ -11,3 +11,18 @@ IFrame  >> InLine Frame
         srcdoc="<H1>  Texto que será exibido </H1><p>
                       Lorem qweruqwe qowerjf,as  </p><img src='imagens/...'>"
 
+    Fragilidade:
+            Site de terceiros, sem acessibilidade e usabilidade 
+            Ataques de terceiros - cross site  e XSS
+    Proteção: usar para site de terceiros, no iframe: 
+            sandbox="sandbox" - não captura nenhuma informação
+            referrerpolicy="no-referrer" - conteuno não coleta nenhuma informação
+
+            Algumas permissões:
+                sandbox="allow-forms" - permite formulario
+                sandbox="allow-same-origin" - permite mesma origem
+                sandbox="allow-scripts" - permite scripts
+                
+                sandbox="allow-same-origin allow-scripts allow-forms"
+
+
