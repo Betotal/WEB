@@ -25,4 +25,8 @@ IFrame  >> InLine Frame
                 
                 sandbox="allow-same-origin allow-scripts allow-forms"
 
+::-webkit-scrollbar {    /*   para esconder a barra de rolagem
+    width: 0px;
+    height: 0px;                
+
 
