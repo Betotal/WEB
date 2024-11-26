@@ -32,8 +32,28 @@ IFrame  >> InLine Frame
 
 formulario <Form>
     <form  action= "cadastro.php"  A ação (submit) chama a ação, que neste caso é php
-           autocomplete
-        input name >> mais util para php
-              id   >> mais util para javascript 
+    2 métodos de envio:
+            get     >> padrão  
+                    >> quando dados não forem sensiveis
+                    >> maximo 3000 bytes
+            post    >> Para dados sensíveis
+                    >> Não apareçam na URL
+                    >> Envio de arquivos
+            No futuro estudar HTTPS   
+
+    autocomplete no form    >> Liga o autocomplete
+    input name >> mais util para php
+          id   >> mais util para javascript
+          type=password     >> esconde os caracteres na tela 
+          required          >> Obrigatório
+          minlength=        >> tamanho minimo
+          maxlenght=        >> tamanho minimo   
+          size              >> tamanho da caixa, independente do maxlenght  
+          placeholder       >> dica do campo input
+          autocomplete      >> pode ser para cada campo, para carregar, de acordo com os dados de navegador 
+
+    label é importante para recurso dos mecanismos de busca, a identificar o campo. Principalmente o autocomplete, que usa os dados ja salvos do uruário      
+
+
 
 
