@@ -27,6 +27,13 @@ IFrame  >> InLine Frame
 
 ::-webkit-scrollbar {    /*   para esconder a barra de rolagem
     width: 0px;
-    height: 0px;                
+    height: 0px;            
+}
+
+formulario <Form>
+    <form  action= "cadastro.php"  A ação (submit) chama a ação, que neste caso é php
+           autocomplete
+        input name >> mais util para php
+              id   >> mais util para javascript 
 
 
