@@ -54,6 +54,16 @@ formulario <Form>
 
     label é importante para recurso dos mecanismos de busca, a identificar o campo. Principalmente o autocomplete, que usa os dados ja salvos do uruário      
 
+    fieldset    >> agrupamento de campos, por assuntos
+        legend  >> legenda do agrupamento
+
+    file:  envia um arquivo
+        method obrigatório      >> POST
+
+Midia Query     >> São formatação (Estilos), especificos para cada midia (Impressão, celular, tablet, tv etc)        
+
+
+
 
 
 
