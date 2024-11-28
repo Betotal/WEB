@@ -60,7 +60,16 @@ formulario <Form>
     file:  envia um arquivo
         method obrigatório      >> POST
 
-Midia Query     >> São formatação (Estilos), especificos para cada midia (Impressão, celular, tablet, tv etc)        
+Midia Query     >> São formatação (Estilos), especificos para cada midia (Impressão, celular, tablet, tv etc)   
+                >> Para cada media query, (*) devemos criar um arquivo estilo diferente
+                        >> exemplo: 
+                        <link rel="stylesheet" href="../Estilos/style_mq1_tela.css" media="screen">
+                        <link rel="stylesheet" href="../Estilos/style_mq1_impressora.css" media="print"> 
+                        media   >> media types
+        >> São a combinação 
+                media Types >> tipo da midia
+                media features  >> caracteristicas da midia, como por exemplo retrato ou paisagem, no caso da tela    
+
 
 
 
