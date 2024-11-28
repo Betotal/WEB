@@ -75,8 +75,8 @@ Midia Query     >> São formatação (Estilos), especificos para cada midia (Imp
                 css interno - recomendado para projetos pequenos          
         >> Tipical Device Breakpoints
 
-Obs. Montar menu:
-https://fonts.google.com/icons >> Developer guide        
+        Obs. Montar menu:
+        https://fonts.google.com/icons >> Developer guide        
 
 
 
