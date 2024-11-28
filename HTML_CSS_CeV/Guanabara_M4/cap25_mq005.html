@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries - Cap25 aula 9</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="../Estilos/M4/style_mq5.css">
+    <link rel="stylesheet" href="../Estilos/M4/style_mq5_other.css">
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>Meu site</h1>
+        <span id="burger" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+        <menu id="itens">
+            <ul>
+                <li><a href="#">Opc 01</a></li>
+                <li><a href="#">Opc 02</a></li>
+                <li><a href="#">Opc 03</a></li>
+                <li><a href="#">Opc 04</a></li>
+                <li><a href="#">Opc 05</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <H2>Testando Media queries, com menu</H2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas aliquid, natus tenetur quae asperiores velit dolorum voluptatem magni doloribus rerum saepe ullam sit alias fugiat necessitatibus assumenda, at, est harum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, quo. Nostrum possimus, cupiditate sapiente beatae culpa fuga obcaecati provident dolorem harum neque. Maxime placeat sit alias similique facilis libero odio? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic dolorem laboriosam quas ducimus doloremque ullam distinctio deserunt qui dignissimos molestias harum amet, nihil fugit praesentium, quos minima soluta saepe eius!</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum explicabo voluptate perferendis molestiae rem animi, provident culpa assumenda accusamus officiis tempora, omnis inventore accusantium temporibus natus exercitationem! Repudiandae, labore fugiat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime repellendus ut, tempora fugit accusantium culpa, sunt ab ullam explicabo saepe dolor quae aut eveniet molestias nulla magnam praesentium id voluptate.</p>
+
+            <H3>Sub-titulo</H3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, accusantium incidunt voluptates porro culpa pariatur, est asperiores minus reprehenderit dolore sit sed quia laborum beatae expedita perspiciatis qui ullam! Iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel voluptatem libero exercitationem deserunt quod nobis commodi fugiat. Error deleniti totam ullam in, autem sunt voluptatem molestiae voluptates dolor. Rerum, eligendi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum praesentium, corrupti pariatur sunt vel harum ab earum quisquam voluptas fugiat iusto nostrum ratione molestias distinctio dolore et, quo numquam ducimus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias dolorem sint ducimus a, illo maxime aliquam ex dolorum unde dolor aspernatur ea explicabo sequi amet, similique ipsam rem! Quasi, inventore!</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam impedit deleniti est enim aperiam facere. Aliquam, nulla. Amet minus ea doloribus, ducimus nobis modi. Eaque blanditiis ex inventore quibusdam rem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quasi dolore voluptates nesciunt esse. Nulla repudiandae ipsum in aliquam aperiam omnis, similique optio eius. Perferendis architecto a vitae voluptatibus praesentium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum at deleniti corrupti maiores fuga, animi dolorem repellendus, nesciunt aliquam mollitia pariatur quae quas beatae? Adipisci, quos quae? Labore, laborum a!</p>
+
+            <H3>Conclusão</H3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quis harum voluptatibus autem modi consectetur error ab voluptate dignissimos nobis distinctio velit perferendis ea veritatis eius deleniti, cum, incidunt fugit? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, est consequatur accusantium praesentium, sint rerum ex ut optio quae eaque fuga placeat, corrupti inventore recusandae aut enim exercitationem itaque temporibus!</p>
+
+        </article>
+    </main>
+
+    <script>
+        function mudouTamanho(){
+            if (window.innerWidth < 768){
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }        
+        
+    </script>
+    
+</body>
+</html>

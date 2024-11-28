@@ -13,7 +13,7 @@ html, body {
 }
 
 body {
-    background: url("../Imagens/ProjetoSocial/fundo-madeira.jpg") no-repeat top center;
+    background: url("../../Imagens/ProjetoSocial/fundo-madeira.jpg") no-repeat top center;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -31,7 +31,7 @@ section#telefone {
 
     height: 625px;
     width: 309px;
-    background: url("../Imagens/ProjetoSocial/frame-iphone.png") no-repeat;
+    background: url("../../Imagens/ProjetoSocial/frame-iphone.png") no-repeat;
 }
 
 iframe#tela {
