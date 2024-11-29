@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="../Estilos/M4/style_login.css">
+    <link rel="stylesheet" href="../Estilos/M4/style_login_query.css">
 </head>
 <body>
     <main>
@@ -16,7 +17,16 @@
             <div id="formulario">
                 <h1>Login</h1>
                 <p>Benvenido. Por favor, insira seu usuário e senha para suas configurações</p>
-                <form action="login.xml" method="post"></form>
+                <form action="login.xml" method="post">
+                    <div class="campo">
+                        <label for="ilogin">Login</label>
+                        <input type="email" name="login" id="ilogin" placeholder="seu e-mail">
+                    </div>
+                    <div>
+                        <label for="isenha">Senha</label>
+                        <input type="password" name="senha" id="isenha" placeholder="Sua senha">
+                    </div>
+                </form>
             </div>
 
         </section>
