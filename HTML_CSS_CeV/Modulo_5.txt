@@ -1,0 +1,42 @@
+FLEX BOX
+    O container pai, precisa ter a propriedade              >> display: flex;
+    O container filho, par ser adaptável ao tamanho da tela >> flex: auto;
+
+    4 configurações para Flex Direction (container pai)
+        Padrão  >> Flex-Direction: row;             esquerda para direita
+                >> flex-direction: row-reverse      direita para esquerda
+                >> flex-direction: colunm           cima para vaixo
+                >> flex-derection: colunm-reerse    baixo para cima
+
+        configuração de eixo
+            2 eixos >> main-axis    eixo principal
+                        main-start  >> ponto inicial
+                        main-end    >> ponto final
+
+                    >> cross-axis   eixo transversal
+                        cross-start >>  ponto inicial
+                        cross-end   >>  ponto final
+        
+        para o flex directon, o eixo principal esta relacionado diretente com a direção
+            row             >> axis     esq  x dir
+                            >> cross    cima x baixo
+            row-reverse     >> axis     dir  x esq
+                            >> cross    cima x baixo
+
+            colunm          >> axis     cima  x baixo
+                            >> cross    esq   x dir
+            colunm-reverse  >> axis     baixo x cima
+                            >> cross    esq   x dir
+
+
+            
+
+
+
+GRID LAYOUT
+
+
+
+
+
+BOOTSTRAP

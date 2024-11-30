@@ -4,57 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina de aprendizado do curos HTML5 - CSS3</title>
-    <style>
-        header {
-            background-image: linear-gradient(to bottom, cyan, lightgray);
-            padding: 15px;
-            margin: 0px;
-            border-radius: 10px 10px 0px 0px;
-            box-shadow: 5px 7px 5px gray;
-            text-align: center;
 
-        }
-        header > h1 {
-            margin: auto;
-            width: 400px;
-        }
-        main {
-            background-color: lightgray;
-            margin: auto;
-            /* border: 1px solid black; */
-            border-radius: 0px 0px 10px 10px;
-            box-shadow: 5px 7px 5px gray;
-        }    
-        main > nav {
-            padding: 20px 0px 0px 10px;
-
-        }
-        main h2 {
-            font-size: 1em;
-        }
-
-        main li {
-            font-size: 0.8;
-        }
-        
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: 25vw 71vw;
-        }
-        .menu {
-            padding-left: 30px;
-        }
-
-        .page {
-            /* border: 2px solid black; */
-        }
-
-        main ul {
-            list-style-type: '\1F5F8\0020\0020';
-            column-count: 1;
-        }
-    </style>
+    <link rel="stylesheet" href="Estilos/style_index.css">
 </head>
 <body>
     <Header>
@@ -62,75 +13,109 @@
     </Header>
 
     <main>
-        <div class="grid-container">
-            <div class="menu">
-                <Nav>
-                    <H2>Módulo 1</H2>
-                    <ul>
-                        <li><a href="Guanabara_M1/19_24_Semantica.html" target="frame">Aula Semantica</a></li>
-                        <li><a href="Guanabara_M1/25_Lista.html" target="frame">Aula 25 - Lista</a></li>
-                        <li><a href="Guanabara_M1/26_28_Favicon_Link.html" target="frame">Aula_26 - Favicon</a></li>
-                        <li><a href="Guanabara_M1/31_36_Midias.html" target="frame">Aula 36 - Midias</a></li>
-                        <li><a href="Guanabara_M1/38_Estilo_local.html" target="frame">Aula 38 - Estilo Local</a></li>     
-                        <li><a href="Guanabara_M1/38_Estilos_inline.html" target="frame">Aula 38 - Estilo inline</a></li>
-                        <li><a href="Guanabara_M1/39_Estilo_externo_p1.html" target="frame">Aula 39 - Estilo externo</a></li>
-                    
-                    </ul>
-                </Nav>
-                
-                <Nav>
-                    <H2>Módulo 2</H2>
-                    <ul>
-                        <li><a href="Guanabara_M2/3_Style.html" target="frame">Aula_3_Style</a></li>
-                        <li><a href="Guanabara_M2/7_Gradiente.html" target="frame">Aula_7_Gradiente</a></li>
-                        <li><a href="Guanabara_M2/8_Format.html" target="frame">Aula_8_Format</a></li>
-                        <li><a href="Guanabara_M2/11_13_Font.html" target="frame">Aula_11_13_Font</a></li>
-                        <li><a href="Guanabara_M2/14_Font.html" target="frame">Aula_14_Font</a></li>
-                        <li><a href="Guanabara_M2/18_Ident.html" target="frame">Aula_18_Ident</a></li>
-                        <li><a href="Guanabara_M2/19_20_Style.html" target="frame">Aula_19_20_Style</a></li>
-                        <li><a href="Guanabara_M2/21_PseudoClass.html" target="frame">Aula_21_PseudoClass</a></li>
-                        <li><a href="Guanabara_M2/21_PseudoElement.html" target="frame">Aula_21_PseudoElement</a></li>
-                        <li><a href="Guanabara_M2/22_Link.html" target="frame">Aula_22_link</a></li>
-                        <li><a href="Guanabara_M2/24_28_Borda.html" target="frame">Aula_24_28_Borda</a></li>
-                        <li><a href="Guanabara_M2/29_responsivo.html" target="frame">Aula_29_responsivo</a></li>
-                        <li><a href="https://betotal.github.io/Projeto_Android/" target="frame">Projeto Android</a></li>
-                    </ul>
-                </Nav>
-                
-                <Nav>
-                    <H2>Módulo 3</H2>
-                    <ul>
-                        <li><a href="Guanabara_M3/cap19_img_fundo.html" target="frame">Aula 12 - Imagem Background</a></li>
-                        <li><a href="Guanabara_M3/cap19_img.html" target="frame">Aula 13 -  Imagem Backgrund fixed</a></li>
-                        <li><a href="Guanabara_M3/cap19_vert.html" target="frame">Aula 14 - Posição vertical</a></li>
-                        <li><a href="Guanabara_M3/Cordel_Paralax.html" target="frame">Cordel e Paralax</a></li>
-                        <li><a href="Guanabara_M3/cap21_tab_base.html" target="frame">Tabela Base</a></li>
-                        <li><a href="Guanabara_M3/cap21_tab_mescla_p1.html" target="frame">Tabela Mesclada 1</a></li>
-                        <li><a href="Guanabara_M3/cap21_tab_mescla_p2.html" target="frame">Tabela Mesclada 2</a></li>
-                        <li><a href="Guanabara_M3/cap21_tab_coluna.html" target="frame">Coluna em tabelas / rolagem </a></li>
-                    </ul>
-                </Nav>
-                
-                <Nav>
-                    <H2>Módulo 4</H2>
-                    <ul>
-                        <li><a href="Guanabara_M4/cap22_iframe.html" target="frame">Como usar IFrame</a></li>
-                        <li><a href="Guanabara_M4/cap22_iframe_ok.html" target="frame">Uso de IFrame</a></li>
-                        <li><a href="Guanabara_M4/ProjetoSocial.html" target="frame">Socho Midia</a></li>
+        <div class="menu">
+            <a href="#" onclick="clickMenu1()">
+                <H2>Módulo 1</H2>
+            </a>
+            <Menu id="itens1">
+                <ul>
+                    <li><a href="Guanabara_M1/19_24_Semantica.html" target="frame">Aula Semantica</a></li>
+                    <li><a href="Guanabara_M1/25_Lista.html" target="frame">Aula 25 - Lista</a></li>
+                    <li><a href="Guanabara_M1/26_28_Favicon_Link.html" target="frame">Aula_26 - Favicon</a></li>
+                    <li><a href="Guanabara_M1/31_36_Midias.html" target="frame">Aula 36 - Midias</a></li>
+                    <li><a href="Guanabara_M1/38_Estilo_local.html" target="frame">Aula 38 - Estilo Local</a></li>     
+                    <li><a href="Guanabara_M1/38_Estilos_inline.html" target="frame">Aula 38 - Estilo inline</a></li>
+                    <li><a href="Guanabara_M1/39_Estilo_externo_p1.html" target="frame">Aula 39 - Estilo externo</a></li>
+                </ul>
+            </Menu>
 
-                        <li><a href="construcao.html" target="frame">Proxima aula</a></li>
-                    </ul>
-                </Nav>
-            </div>
-            <div class="page">
-                <iframe  name="frame" width="100%" height="100%" src="" frameborder="0" ></iframe>
-            </div>
+            <a href="#" onclick="clickMenu2()">
+                <H2>Módulo 2</H2>
+            </a>
+            <Menu id="itens2">
+                <ul>
+                    <li><a href="Guanabara_M2/3_Style.html" target="frame">Aula_3_Style</a></li>
+                    <li><a href="Guanabara_M2/7_Gradiente.html" target="frame">Aula_7_Gradiente</a></li>
+                    <li><a href="Guanabara_M2/8_Format.html" target="frame">Aula_8_Format</a></li>
+                    <li><a href="Guanabara_M2/11_13_Font.html" target="frame">Aula_11_13_Font</a></li>
+                    <li><a href="Guanabara_M2/14_Font.html" target="frame">Aula_14_Font</a></li>
+                    <li><a href="Guanabara_M2/18_Ident.html" target="frame">Aula_18_Ident</a></li>
+                    <li><a href="Guanabara_M2/19_20_Style.html" target="frame">Aula_19_20_Style</a></li>
+                    <li><a href="Guanabara_M2/21_PseudoClass.html" target="frame">Aula_21_PseudoClass</a></li>
+                    <li><a href="Guanabara_M2/21_PseudoElement.html" target="frame">Aula_21_PseudoElement</a></li>
+                    <li><a href="Guanabara_M2/22_Link.html" target="frame">Aula_22_link</a></li>
+                    <li><a href="Guanabara_M2/24_28_Borda.html" target="frame">Aula_24_28_Borda</a></li>
+                    <li><a href="Guanabara_M2/29_responsivo.html" target="frame">Aula_29_responsivo</a></li>
+                    <li><a href="https://betotal.github.io/Projeto_Android/" target="frame">Projeto Android</a></li>
+                </ul>
+            </Menu>
+
+            <a href="#" onclick="clickMenu3()">
+                <H2>Módulo 3</H2>
+            </a>
+            <Menu id="itens3">
+                <ul>
+                    <li><a href="Guanabara_M3/cap19_img_fundo.html" target="frame">Aula 12 - Imagem Background</a></li>
+                    <li><a href="Guanabara_M3/cap19_img.html" target="frame">Aula 13 -  Imagem Backgrund fixed</a></li>
+                    <li><a href="Guanabara_M3/cap19_vert.html" target="frame">Aula 14 - Posição vertical</a></li>
+                    <li><a href="Guanabara_M3/Cordel_Paralax.html" target="frame">Cordel e Paralax</a></li>
+                    <li><a href="Guanabara_M3/cap21_tab_base.html" target="frame">Tabela Base</a></li>
+                    <li><a href="Guanabara_M3/cap21_tab_mescla_p1.html" target="frame">Tabela Mesclada 1</a></li>
+                    <li><a href="Guanabara_M3/cap21_tab_mescla_p2.html" target="frame">Tabela Mesclada 2</a></li>
+                    <li><a href="Guanabara_M3/cap21_tab_coluna.html" target="frame">Coluna em tabelas / rolagem </a></li>
+                </ul>
+            </Menu>
+
+            <a href="#" onclick="clickMenu4()">
+                <H2>Módulo 4</H2>
+            </a>
+            <Menu id="itens4"">
+                <ul>
+                    <li><a href="Guanabara_M4/cap22_iframe.html" target="frame">Como usar IFrame</a></li>
+                    <li><a href="Guanabara_M4/cap22_iframe_ok.html" target="frame">Uso de IFrame</a></li>
+                    <li><a href="Guanabara_M4/ProjetoSocial.html" target="frame">Socho Midia</a></li>
+
+                    <li><a href="construcao.html" target="frame">Proxima aula</a></li>
+                </ul>
+            </Menu>
         </div>
 
-        <div>
-            <br>
+        <div id="page">
+            <iframe class="frame" name="frame" src="" frameborder="0" ></iframe>
         </div>
     </main>
+
+    <script>
+        function clickMenu1() {
+            if (itens1.style.display == 'block') {
+                itens1.style.display = 'none'
+            } else {
+                itens1.style.display = 'block'
+            }
+        }        
+        function clickMenu2() {
+            if (itens2.style.display == 'block') {
+                itens2.style.display = 'none'
+            } else {
+                itens2.style.display = 'block'
+            }
+        }        
+        function clickMenu3() {
+            if (itens3.style.display == 'block') {
+                itens3.style.display = 'none'
+            } else {
+                itens3.style.display = 'block'
+            }
+        }        
+        function clickMenu4() {
+            if (itens4.style.display == 'block') {
+                itens4.style.display = 'none'
+            } else {
+                itens4.style.display = 'block'
+            }
+        }        
+
+    </script>
 
  
         <!-- <a href="Guanabara_M4/index.html" target="frame">Modulo 4</a>
