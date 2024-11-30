@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 /*    Paleta de cores 
-    azul: #82bfff
-    laranja: #ffc282
+    azul: #1484fc
+    laranja: #ff982a
 */
 
 /* Typical Device Breakpoints - W3C
@@ -18,12 +18,14 @@ Grandes telas   : acima de 1200px
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px){
+    /*  configuracao para tablet */
     body {
-        background-image: linear-gradient(to bottom, #82bfff, #ffc282);
+        background-image: linear-gradient(to bottom, #1484fc, #ff982a);
     }
 
     section#login {
-        width: 90vw;    
+        width: 90vw;   
+        height: 260px; 
     }
 
     section#login > div#imagem {
@@ -36,15 +38,20 @@ Grandes telas   : acima de 1200px
         float: right;
         width: 70%
     }
+    form > input[type=submit], form > a.botao {
+        max-width: 300px;
+    }
 }
 
 @media screen and (min-width: 992px){
+    /*  configuracao para telas grandes */
     body {
-        background-image: linear-gradient(to top, #82bfff, #ffc282);
+        background-image: linear-gradient(to top, #1484fc, #ff982a);
     }
 
     section#login {
         width: 990px;
+        height: 310px;
     }
     section#login > div#imagem {
         float: left;
@@ -62,5 +69,10 @@ Grandes telas   : acima de 1200px
 
     section#login > div#formulario > p {
         font-size: 1.2em;
+    }
+
+    form > input[type=submit], form > a.botao {
+        max-width: 300px;
+
     }
 }

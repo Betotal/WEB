@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="../Estilos/M4/style_login.css">
     <link rel="stylesheet" href="../Estilos/M4/style_login_query.css">
 </head>
@@ -17,15 +18,19 @@
             <div id="formulario">
                 <h1>Login</h1>
                 <p>Benvenido. Por favor, insira seu usuário e senha para suas configurações</p>
-                <form action="login.xml" method="post">
+                <form action="login.xml" method="post" autocomplete="on">
                     <div class="campo">
+                        <span class="material-symbols-outlined" >person</span>
+                        <input type="email" name="login" id="ilogin" placeholder="seu e-mail" autocomplete="email" required maxlength="30">
                         <label for="ilogin">Login</label>
-                        <input type="email" name="login" id="ilogin" placeholder="seu e-mail">
                     </div>
-                    <div>
+                    <div class="campo">
+                        <span class="material-symbols-outlined" >Passkey</span>
+                        <input type="password" name="senha" id="isenha" placeholder="Sua senha" autocomplete="password" required maxlength="20" minlength="8">
                         <label for="isenha">Senha</label>
-                        <input type="password" name="senha" id="isenha" placeholder="Sua senha">
                     </div>
+                    <input type="submit" value="Entrar">
+                    <a href="esqueci.html" class="botao">Esqueci a senha <span class="material-symbols-outlined">mail</span></a>
                 </form>
             </div>
 

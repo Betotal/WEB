@@ -76,7 +76,10 @@ Midia Query     >> São formatação (Estilos), especificos para cada midia (Imp
         >> Tipical Device Breakpoints
 
         Obs. Montar menu:  <menu hamburger>
-        https://fonts.google.com/icons >> Developer guide        
+        https://fonts.google.com/icons >> Developer guide      
+
+em css podemos usar coaculos, para posicionamento:
+calc () <cap26_login.html >> stuly_login.css>  
 
 
 
