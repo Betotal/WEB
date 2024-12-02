@@ -47,7 +47,7 @@ main > div {
 main > div#page > iframe {
     display: block;
     width: 74vw;
-    height: 250px;
+    height: 500px;
 }
 
 main menu {

@@ -88,9 +88,12 @@
     <script>
         function clickMenu1() {
             if (itens1.style.display == 'block') {
-                itens1.style.display = 'none'
+                itens1.style.display = 'none';
             } else {
-                itens1.style.display = 'block'
+                itens1.style.display = 'block';
+                itens2.style.display = 'none';
+                itens3.style.display = 'none';
+                itens4.style.display = 'none';
             }
         }        
         function clickMenu2() {
@@ -98,6 +101,9 @@
                 itens2.style.display = 'none'
             } else {
                 itens2.style.display = 'block'
+                itens1.style.display = 'none';
+                itens3.style.display = 'none';
+                itens4.style.display = 'none';
             }
         }        
         function clickMenu3() {
@@ -105,6 +111,9 @@
                 itens3.style.display = 'none'
             } else {
                 itens3.style.display = 'block'
+                itens1.style.display = 'none';
+                itens2.style.display = 'none';
+                itens4.style.display = 'none';
             }
         }        
         function clickMenu4() {
@@ -112,6 +121,9 @@
                 itens4.style.display = 'none'
             } else {
                 itens4.style.display = 'block'
+                itens1.style.display = 'none';
+                itens2.style.display = 'none';
+                itens3.style.display = 'none';
             }
         }        
 

@@ -28,8 +28,48 @@ FLEX BOX
             colunm-reverse  >> axis     baixo x cima
                             >> cross    esq   x dir
 
+//////////////////////////    FLUXO DE ITENS  //////////////////////
+    Container filho
+    FLEX: auto  >>  - redistribui de modo que não fique espaços                      
 
-            
+    Container Pai
+    FLEX-WRAP   >> WRAP (Empacotamento): Se diminuir o tamanho do container (pai) 
+                    NOWRAP  > mantem a posição das caixas (Valor padrão)
+                            > as caixas internas encolhem
+                                O tamanho depende da palavra mais longa (Depende do conteudo)
+                    WRAP    > Mantem o tamanho das caixas e faz a distribuição no sentido do eixo cross
+                    WRAP-REVERSE > Mantem o tamanho das caixas e faz a distribuição no sentido do eixo cross, REVERSO
+
+    FLEX-FLOW   >> é a junção de FLEX-DIRECTION e FLEX-WRAP
+                >> se o container filho estiver com flex:auto, fará a quebra e fará a redistribuição dos campos para não ficar espaços nos filhos
+
+/////////////////////////     alinhamento             ////////////////////
+    JUSTIFY-CONTENT (main-start e main-end)  (com base no main-axis) 
+        >> :flex-start  (padrão)
+            1º item a partir do main-start
+            se houver espaço livre fica no final do eixo principal           
+        >> :flex-end 
+            1º item a partir do main-end
+            se houver espaço livre fica no inicio do eixo principal 
+        >> :center
+            alinha pelo centro e o espço fica dividido pelos main-star e main-end
+        >> :space-between
+            1º elemento no main-start e o ultimo no main-end
+            os outros ficam distribuidos iqualitariamente
+        >> :space-evenly
+            Divide o espaço entre todos os elementos
+        >> :space-around
+            quebra o espaço util do container (pai), na quantidade de elementos.
+            coloca cada elemento, no centro de cada divisão
+
+    ALIGN-ITENS (cross-start e cross-end)  (com base no cross-axis) 
+        >> :stretch  (padrão - esticar)
+        >> :flex-start
+            elementos colados no cross-start   
+        >> :flex-end
+            elementos colados no cross-end   
+        >> :center
+            elementos centralizados entre os cross-start e cross-end   
 
 
 
