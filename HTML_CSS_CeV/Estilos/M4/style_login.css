@@ -14,21 +14,24 @@
 
 body, html {
     background-color: #1484fc;
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw;
+    height: 100vh; */
 }
 
 main {
-    position: relative;
+    /* position: relative;     sem flexbox*/
     width: 100vw;
-    height: 100%;
+    height: 100vh; 
+
+    /* com flexbox */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
 
 section#login {
-    position: absolute;
-    top: 50%;
-    left: 50%;
     overflow: hidden;   /* tudo que estiver fora da borda, ficará escondido */
     
     background-color: white;
@@ -37,7 +40,11 @@ section#login {
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     transition: width 1s, height 1s ;
-    transform: translate(-50%, -50%);
+    
+    /* position: absolute;     sem flexbox
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); */
 }
 
 section#login > div#imagem {

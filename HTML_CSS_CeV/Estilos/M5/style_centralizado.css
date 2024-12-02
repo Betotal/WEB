@@ -1,4 +1,4 @@
-@charset "UTF-8"
+@charset "UTF-8";
 
 *{
     margin: 0px;
@@ -15,6 +15,7 @@ main {
     background-color: aquamarine;
     width: 90vw;
     height: 90vh;
+    margin: auto;
     
     display: flex;
     flex-flow: row nowrap;
