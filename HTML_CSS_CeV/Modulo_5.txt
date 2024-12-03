@@ -43,9 +43,9 @@ FLEX BOX
     FLEX-FLOW   >> é a junção de FLEX-DIRECTION e FLEX-WRAP
                 >> se o container filho estiver com flex:auto, fará a quebra e fará a redistribuição dos campos para não ficar espaços nos filhos
 
-/////////////////////////     alinhamento             ////////////////////
-    JUSTIFY-CONTENT (main-start e main-end)  (com base no main-axis) 
-        >> :flex-start  (padrão)
+/////////////////////////     alinhamento  container           ////////////////////
+    JUSTIFY-CONTENT (main-start e main-end)  (com base no main-axis) eixo principal
+        >> :flex-start  (padrão). Divide o espaço e estica os elementos no eixo main
             1º item a partir do main-start
             se houver espaço livre fica no final do eixo principal           
         >> :flex-end 
@@ -62,7 +62,7 @@ FLEX BOX
             quebra o espaço util do container (pai), na quantidade de elementos.
             coloca cada elemento, no centro de cada divisão
 
-    ALIGN-ITENS (cross-start e cross-end)  (com base no cross-axis) 
+    ALIGN-ITENS (cross-start e cross-end)  (com base no cross-axis) eixo transversal
         >> :stretch  (padrão - esticar)
         >> :flex-start
             elementos colados no cross-start   
@@ -70,6 +70,60 @@ FLEX BOX
             elementos colados no cross-end   
         >> :center
             elementos centralizados entre os cross-start e cross-end   
+
+    ALIGN-CONTENT (cross-start e cross-end)  (com base no cross-axis) eixo transversal qdo estão empacotados
+        funciona em conjunto com Flex-WRAP: WRAP ou WRAP-REVERSE
+        >> :stretch (Padrão - esticar). Divide o espaço e estica os elementos no eixo cross
+        >> :flex-start
+        >> :flex-end
+        >> :space-between
+            1º elemento no cross-start e o ultimo no cross-end
+            os outros ficam distribuidos iqualitariamente
+        >> :space-evenly
+            Divide o espaço entre todos os elementos
+        >> :space-around
+            quebra o espaço util do container (pai), na quantidade de elementos.
+            coloca cada elemento, no centro de cada divisão
+
+**********************************************************************************************
+*   Quando usamos flexbox as caixas externas são flexiveis e os elemnetos não são flexiveis  *
+*   Mas possuem alguams propriedades que ajudam na flexibilidade                             *
+**********************************************************************************************
+
+///////////////////    Propriedades dos elementos      //////////////
+    ORDER: <numerico de order> no main-axis
+        Todo item dentro de container possui ordem 0
+    
+    ALIGN-SELF (Aplica-se aos itens, no eixo CROSS-AXIS)  
+        >> :auto  (Padrão) herda o alinhamento do pai
+        >> :flex-start
+        >> :flex-end
+        >> :center
+        >> :stretch 
+    
+    FLEX-BASIS (tamanho)
+        >> :auto        tamanho de acordo com o conteudo
+        >> :<em pixel>  tamanho fixo (maximo)
+
+    FLEX-SHRINK:    pode diminuir?  1 (padrão)
+        0   >> não diminui
+        1   >> diminui
+        2 ou outro   >> diminui na proporção
+
+    FLEX-GROW:      pode crescer?   0 (padrão)
+        0   >> não cresce
+        1   >> cresce
+        2 ou outro   >> cresce na proporção
+
+    FLEX: >> flex-grow - flex-shrink - flex-basis   
+
+    flex: 0 1 auto (Valores padrão)     >> flex: initial
+    flex: 0 0 auto (sem flexibilidade)  >> flex: none 
+    flex: 1 1 auto (total flex)         >> flex: auto
+    
+
+                         
+
 
 
 

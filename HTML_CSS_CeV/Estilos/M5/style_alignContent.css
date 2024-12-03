@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+* {
+
+}
+
+div.container {
+    background-color: lightsalmon;
+    height: 300px;
+    display: flex;  /*  container pai flexivel */
+    flex-flow: row wrap;
+    align-content: stretch;
+}
+
+div.item {
+    background-color: aquamarine;
+    border: 1px solid black;
+    text-align: center;
+    padding: 40px;
+}
