@@ -25,17 +25,17 @@ div#i1 {
   /*  flex-grow: 0; 
     flex-basis: 1;
     flex-shrink: 300px;  */
-    flex: 0 1 300px; 
+    flex: 0 0 100px; 
 }
 div#i2 { 
   /*  flex-grow: 0; 
     flex-basis: 1;
     flex-shrink: 300px;  */
-    flex: 0 1 300px; 
+    flex: 0 0 100px; 
 }
 div#i3 { 
   /*  flex-grow: 0; 
     flex-basis: 1;
     flex-shrink: 300px;  */
-    flex: 0 1 300px; 
+    flex: 0 0 100px; 
 }
