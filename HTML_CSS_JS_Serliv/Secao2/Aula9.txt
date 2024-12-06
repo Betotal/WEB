@@ -1,0 +1,51 @@
+Curriculo.html
+
+João da Sailva
+
+Brasileiro, Solteiro, 30 anos
+
+Objetivo
+Front-end Developer, Desenvolvedor Front-end, Webdesigner
+
+Experiencia profissional
+
+UOL(link) - 12/2014 a´te 02/2015 - 2 meses
+Analista progamador - 2 meses
+Desenvolvedor de aplicações web com HTML, CSS, AngularJS, JavaScript, Ajax, Rest, JSON, PHP
+
+Terra(link) - 1 ano
+Desenvolvedor Front-end - 1 ano
+Atuei como desenvolvedor Front-end Pleno, praticando ativamente em todos os projetos da empresa (Aplicação WEB, Aplicativo ?Mobile e Portais).
+Trabalhei efetivamente usando tecnologis como HTML5, CSS3, AngularJS, Wordpress, PHP, JSON e JavaScript
+
+G1 - 6 meses
+Desenvolvedor Front-End - 6 meses
+Trabalhando em portais, landing pages e eCommerce, codando manualmente HTML, CSS, JAvaScript, trabalhando com a equipe de BAck-end com PHP
+
+Formação
+Graduação em Tecnologia da Informação
+01/201 a 12/20212
+FAculdade qualquer uma
+
+Pós Graduação em Projetos computacioans em tecnologias Front-End (italico)
+08/2014 a  12/2015
+Faculdade qquer uma
+
+Cursos/ Especialização
+Participação no evento Search Masters Brasil - São Paulo (2014)
+Certificado em Google adwors - Gogle Partners Weekend (2015)
+
+HTML5
+
+serforntend - 40 h - 2018
+
+CSS3
+
+serforntend - 40 h - 2018
+
+JAvaScript
+
+serforntend - 40 h - 2018
+
+Idiomas
+inglesa: baciso
