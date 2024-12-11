@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Imagens</title>
+    <style>
+        body {
+            /* background-color: black; */
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 22px;
+            width: 700px;
+            margin: auto;
+
+            background-image: url('../Imagens/bg.jpg');
+            background-repeat: no-repeat;
+            /* background-size: 400px 600px;  width height */
+            background-attachment: fixed;
+            background-position: right bottom;
+            background-size: contain;  /* prioridade para imagem */
+            background-size: cover;  /* prioridade para texto */
+        }
+        img {
+            width: 400px;
+        }
+        img.tama {
+            width: 200px;
+        }
+
+        img.img-html {
+            float: left;
+        }
+        img.img-css {
+            float: right;
+        }
+
+        p{
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Trabalhando com imagnes</h1>
+
+        <h2>Imagens vetoriais vs bitmap</h2>
+
+        <img src="../Imagens/logo_ser-frontend-ico.png" class="img-logo" alt="Logotipo SerForntEnd"> <br>
+
+        <img src="../Imagens/logo_ser-frontend-ico.svg" class="img-logo" alt="Logotipo SerForntEnd"> <br>
+
+        <h2>Imagens Transparentes</h2>
+        <img src="../Imagens/logo_ser-frontend-ico-transparente.gif" alt="Logotipo SerForntEnd"> <br>
+        <img src="../Imagens/logo_ser-frontend-ico-transparente.png" alt="Logotipo SerForntEnd"> <br>
+
+        <h2>gif animado</h2>
+        <img src="../Imagens/walk.gif" alt="Animação mulher andando"> <br>
+
+        <h2>Float</h2>
+        <img class="tama img-html" src="../Imagens/html5.png" alt="Logotipo HTML5 ">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis asperiores vel earum dolorem provident. Accusantium nemo magni quisquam. Deserunt voluptates dolores exercitationem temporibus iusto, neque dolor sit, consectetur officiis totam dolorum consequatur at iste repellendus repudiandae iure explicabo sunt maiores blanditiis animi impedit provident. Quisquam aspernatur ut vitae, blanditiis debitis, neque dignissimos fugiat porro iusto impedit recusandae amet et iure nobis. Aut aliquid sed excepturi, voluptatibus cupiditate suscipit quae rerum, dicta laboriosam ut quasi repellendus. Saepe, rem quo sunt, cupiditate reiciendis cumque ad, dolores voluptas quae nihil aut itaque beatae illum quos atque! Tempora autem veritatis consequatur consectetur eligendi voluptatum. </p><br>
+
+        <img class="tama img-css" src="../Imagens/css3.png" alt="Logotipo css3 ">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste consectetur veritatis ullam, veniam error aliquam expedita, deserunt laboriosam accusamus quasi, cum nesciunt libero ea ex aliquid explicabo dolorum exercitationem ut dolores neque iure odit. Repellendus consectetur voluptatibus perspiciatis quaerat at quibusdam dolore exercitationem obcaecati quo explicabo consequuntur impedit perferendis voluptas a, ipsum, iusto inventore, molestias quam reiciendis tenetur veritatis! Fugiat officia blanditiis eaque repudiandae quia quis ullam laudantium iusto, repellat consectetur asperiores obcaecati ducimus fuga, impedit ex laborum sequi deserunt non. Exercitationem perspiciatis officiis facilis nisi earum inventore culpa eos quibusdam ratione, nobis consequatur nihil recusandae amet commodi fugiat nemo consectetur at distinctio. Velit, animi consequuntur placeat perspiciatis dolores eaque dolorem odio quia omnis similique? Velit debitis magni numquam delectus, quidem accusamus veniam exercitationem nesciunt, perferendis ipsa aut eum consectetur suscipit iusto odio ipsam atque, cum earum ducimus. Ullam itaque architecto repudiandae numquam delectus asperiores. Dolorem veniam voluptatem aliquid id harum et reiciendis explicabo sunt pariatur, quasi maxime dolore. Error tempora eveniet soluta aliquam nihil ut in accusantium, possimus, sint, consequatur deserunt magni a sapiente maiores aliquid quia explicabo earum dolores voluptate ab. Qui quas vitae corporis accusantium natus illo distinctio. Eos obcaecati et voluptatibus unde quibusdam, praesentium aspernatur vel. </p>
+
+
+
+    </main>
+    
+</body>
+</html>
