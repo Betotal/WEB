@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Itens</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container0 {
+            max-width: 95vw;
+            height: 230px;
+            padding: 10px;
+            margin: auto;
+            border: 2px solid blue;
+            display: flex;  
+            /* flex-wrap: nowrap; */
+        }
+        .container1 {
+            max-width: 95vw;
+            height: 80px;
+            padding: 10px;
+            margin: auto;
+            border: 2px solid blue;
+            display: flex;  
+            /* flex-wrap: nowrap; */
+        }
+
+        .container2 {
+            max-width: 95vw;
+            height: 200px;
+            padding: 10px;
+            margin: auto;
+            border: 2px solid green;
+            display: flex;
+            flex: auto;  
+            align-items: flex-start;
+        }
+
+        .container3 {
+            max-width: 95vw;
+            height: 50px;
+            padding: 10px;
+            margin: auto;
+            border: 2px solid green;
+            display: flex;
+            flex: auto;  
+            align-items: flex-start;
+        }
+
+        ._flex-flow_wrap {
+            flex-flow: row wrap;
+        }
+        ._flex-flow_nowrap {
+            flex-flow: row nowrap;
+        }
+
+        ._flex-flow_wrap-reverse {
+            flex-flow: row wrap-reverse;
+        }
+
+        .div-item {
+            border: 2px solid yellow;
+            /* width: 10vw; */
+            width: 50px;
+            margin: 1px;
+        }
+        .div-item_flex {
+            border: 2px solid yellow;
+            /* width: 10vw; */
+            width: 100px;
+            margin: 1px;
+            flex-basis: 150px;
+        }
+        .div-item_flex1 {
+            border: 2px solid yellow;
+            /* width: 10vw; */
+            width: 200px;
+            margin: 1px;
+        }
+
+        .div-item_flex2 {
+            border: 2px solid yellow;
+            /* width: 10vw; */
+            width: 200px;
+            margin: 1px;
+        }
+
+        div#o1 { order: -100; }
+        div#o2 { order: 2;  }
+        div#o3 { order: 1;  }
+        div#o4 { order: -4; }
+        div#o5 { order: 5;  }
+        div#o6 { order: 3;  }
+        div#o7 { order: -27; }
+
+        div#s1 {         }
+        div#s2 { align-self: auto;     }
+        div#s3 { align-self: flex-end; }
+        div#s4 {         }
+        div#s5 { align-self: center;   }
+        div#s6 { align-self: flex-start; }
+        div#s7 { align-self: stretch;  }
+
+        div#cx1 { flex: 1 1 100px;        /*flex-grow: 0; flex-shrink: 1; flex-basis: 100px;     */}
+        div#cx2 { flex: 2 1 100px;        /*flex-grow: 2; flex-shrink: 1; flex-basis: 100px;     */}
+        div#cx3 { flex: 4 1 100px;        /*flex-grow: 4; flex-shrink: 1; flex-basis: 100px;     */}
+
+    </style>
+</head>    
+
+<body>
+    <h4>Item Order e align-self Propriedades do item do container flex</h4>
+    <div class="container0">
+        <h5></h5>
+        <div class="container2 _flex-flow_wrap">
+            <div class="div-item" id="o1"><h4>order</h4></div>
+            <div class="div-item" id="o2">1</div>
+            <div class="div-item" id="o3">2</div>
+            <div class="div-item" id="o4">3</div>
+            <div class="div-item" id="o5">4</div>
+            <div class="div-item" id="o6">5</div>
+            <div class="div-item" id="o7">6</div>
+        </div>
+        <div class="container2 _flex-flow_wrap-reverse">
+            <div class="div-item" id="s1"><h4>Self</h4></div>
+            <div class="div-item" id="s2">1</div>
+            <div class="div-item" id="s3">2</div>
+            <div class="div-item" id="s4">3</div>
+            <div class="div-item" id="s5">4</div>
+            <div class="div-item" id="s6">5</div>
+            <div class="div-item" id="s7">6</div>
+        </div>
+    </div>
+
+    <h4>flex basis - Propriedades do item do container flex</h4>
+    <div class="container1">
+        <h5></h5>
+        <div class="container3 _flex-flow_nowrap">
+            <div class="div-item_flex"><h4>flex-basis</h4></div>
+            <div class="div-item_flex">1</div>
+            <div class="div-item_flex">2</div>
+            <div class="div-item_flex">3</div>
+            <div class="div-item_flex">4</div>
+            <div class="div-item_flex">5</div>
+            <div class="div-item_flex">6</div>
+        </div>
+    </div>
+
+    <h4>flex shrink e flex-grow (encolher e crescer ) Propriedades do item do container flex</h4>
+    <div class="container1">
+        <h5></h5>
+        <div class="container3 _flex-flow_nowrap">
+            <div class="div-item_flex1"><h4>flex-shrink</h4></div>
+            <div class="div-item_flex1"><h4>flex-grow</h4></div>
+            <div class="div-item_flex1">flex</div>
+        </div>
+    </div>
+
+    <h4>flex-grow, flex-shrink e flex-basis</h4>
+    <div class="container1">
+        <h5></h5>
+        <div class="container3 _flex-flow_nowrap">
+            <div class="div-item_flex1" id="cx1"><h4>flex-shrink</h4></div>
+            <div class="div-item_flex1" id="cx2"><h4>flex-grow</h4></div>
+            <div class="div-item_flex1" id="cx3">flex</div>
+        </div>
+    </div>
+
+    <h4>flex-grow, flex-shrink e flex-basis</h4>
+    <div class="container1">
+        <h5></h5>
+        <div class="container3 _flex-flow_nowrap">
+            <div class="div-item_flex1" id="cx1"><h4>flex-shrink</h4></div>
+            <div class="div-item_flex1" id="cx2"><h4>flex-grow</h4></div>
+            <div class="div-item_flex1" id="cx3">flex</div>
+        </div>
+    </div>
+</body>
+</html>

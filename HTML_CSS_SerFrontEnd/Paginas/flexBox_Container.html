@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            max-width: 95vw;
+            height: 100px;
+            padding: 10px;
+            margin: auto;
+            border: 2px solid blue;
+            display: flex;  
+            flex-wrap: nowrap;
+        }
+        .container0 {
+            max-width: 95vw;
+            height: 230px;
+            padding: 10px;
+            margin: auto;
+            border: 2px solid blue;
+            display: flex;  
+            flex-wrap: nowrap;
+        }
+
+        .container1 {
+            max-width: 95vw;
+            height: 50px;
+            padding: 10px;
+            margin: auto;
+            border: 2px solid red;
+            display: flex;  
+        }
+        .container2 {
+            max-width: 95vw;
+            height: 50px;
+            padding: 10px;
+            margin: auto;
+            border: 2px solid green;
+            display: flex;  
+            flex: auto;
+        }
+
+        .container3 {
+            max-width: 95vw;
+            height: 200px;
+            padding: 10px;
+            margin: auto;
+            border: 2px solid green;
+            display: flex;  
+            flex: auto;
+        }
+
+
+        ._row {
+            flex-direction: row;     
+        }
+
+        ._row-reverse {
+            flex-direction: row-reverse;     
+        }
+
+        ._column {
+            flex-direction: column;     
+        }
+
+        ._column-reverse {
+            flex-direction: column-reverse;     
+        }
+
+        ._wrap {
+            flex-wrap: wrap;
+        }
+
+        ._nowrap {
+            flex-wrap: nowrap;
+        }
+
+        ._wrap-reverse {
+             flex-wrap: wrap-reverse;          
+        }
+
+        ._flex-flow_wrap {
+            flex-flow: row wrap;
+        }
+
+        ._flex-flow_wrap_reverse {
+            flex-flow: row wrap-reverse;
+        }
+
+        ._flex-flow_nowrap {
+            flex-flow: row nowrap;
+        }
+
+        ._justify-content_start{
+            justify-content: flex-start;
+        }
+
+        ._justify-content_center{
+            justify-content: center;
+        }
+
+        ._justify-content_end{
+            justify-content: flex-end;
+        }
+
+        ._justify-content_around {
+            justify-content: space-around;
+        }
+
+        ._justify-content_evenly {
+            justify-content: space-evenly;
+        }
+
+        ._justify-content_betweeen {
+            justify-content: space-between;
+        }
+
+        ._align-items_start {
+            align-items: flex-start;
+        }
+
+        ._align-items_end {
+            align-items: flex-end;
+        }
+
+        ._align-items_stretch {
+            align-items: stretch;
+        }
+
+        ._align-items_center {
+            align-items: center;
+        }
+
+        ._align-content_stretch {
+            align-content: stretch;
+        }
+        ._align-content_start {
+            align-content: flex-start;
+        }
+        ._align-content_end {
+            align-content: flex-end;
+        }
+        ._align-content_center {
+            align-content: center;
+        }
+
+        ._align-content_around {
+            align-content: space-around;
+        }
+        ._align-content_evenly {
+            align-content: space-evenly;
+        }
+        ._align-content_between {
+            align-content: space-between;
+        }
+
+        .div-item {
+            border: 2px solid yellow;
+            /* width: 10vw; */
+            width: 100px;
+            margin: 1px;
+        }
+        .div-item_flex {
+            border: 2px solid yellow;
+            /* width: 10vw; */
+            width: 100px;
+            margin: 1px;
+            flex: auto;
+        }
+    </style>
+</head>
+<body>
+    <h4>Container - direction: row</h4>
+    <div class="container">
+        <div class="container1 _row">
+            <div class="div-item"><h4>main-axis: left</h4></div>
+            <div class="div-item"><h4>cross-axis: top</h4></div>
+            <div class="div-item">Bloco 3</div>
+        </div>
+        <div class="container2 _row-reverse">
+            <div class="div-item_flex"><h4>main-axis: right</h4></div>
+            <div class="div-item_flex"><h4>cross-axis: top</h4></div>
+            <div class="div-item_flex">Bloco 3</div>
+        </div>
+    </div>
+
+    <h4>Container - direction: column</h4>
+    <div class="container">
+        <div class="container1 _column">
+            <div class="div-item_flex"><h4>main-axis: top</h4></div>
+            <div class="div-item_flex"><h4>cross-axis: left</h4></div>
+            <div class="div-item_flex">Bloco 3</div>
+        </div>
+        <div class="container2 _column-reverse">
+            <div class="div-item_flex"><h4>main-axis: bottom</h4></div>
+            <div class="div-item_flex"><h4>cross-axis: left</h4></div>
+            <div class="div-item_flex">Bloco 3</div>
+        </div>
+    </div>
+
+    <h4>Container - flex-wrap</h4>
+    <div class="container">
+        <h5></h5>
+        <div class="container1 _row _nowrap">
+            <div class="div-item"><h4>nowrap</h4></div>
+            <div class="div-item">Bloco 2</div>
+            <div class="div-item">Bloco 3</div>
+        </div>
+        <div class="container2 _row _wrap">
+            <h5></h5>
+            <div class="div-item_flex"><h4>wrap</h4></div>
+            <div class="div-item_flex">Bloco 2</div>
+            <div class="div-item_flex">Bloco 3</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="container1 _row _wrap-reverse">
+            <div class="div-item"><h4>row wrap-reverse</h4></div>
+            <div class="div-item">Bloco 2</div>
+            <div class="div-item">Bloco 3</div>
+            <h5>-</h5>
+        </div>
+        <div class="container2 _row-reverse _wrap-reverse">
+            <div class="div-item_flex"><h4>row-reverse</h4></div>
+            <div class="div-item_flex"><h4>wrap-reverse</h4></div>
+            <div class="div-item_flex">Bloco 3</div>
+        </div>
+    </div>
+
+    <h4>Container - flex-flow</h4>
+    <div class="container">
+        <h5></h5>
+        <div class="container1 _row _wrap">
+            <div class="div-item"><h4>direction: row</h4></div>
+            <div class="div-item"><h4>wrap: wrap</h4></div>
+            <div class="div-item">Bloco 3</div>
+        </div>
+        <div class="container2 _flex-flow_wrap">
+            <div class="div-item_flex"><h4>flex-flow: row wrap</h4></div>
+            <div class="div-item_flex">Bloco 2</div>
+            <div class="div-item_flex">Bloco 3</div>
+        </div>
+    </div>
+
+    <h4>Container - (flex-flow: nowrap) justify content - Eixo Principal - position</h4>
+    <div class="container">
+        <h5></h5>
+        <div class="container2 _flex-flow_nowrap _justify-content_start">
+            <div class="div-item"><h4>start</h4></div>
+            <div class="div-item">Bloco 1</div>
+            <div class="div-item">Bloco 2</div>
+        </div>
+        <div class="container2 _flex-flow_nowrap _justify-content_end">
+            <div class="div-item"><h4>end</h4></div>
+            <div class="div-item">Bloco 1</div>
+            <div class="div-item">Bloco 2</div>
+        </div>
+    </div>
+    <div class="container">
+        <h5></h5>
+        <div class="container2 _flex-flow_nowrap _justify-content_center">
+            <div class="div-item"><h4>center</h4></div>
+            <div class="div-item">Bloco 1</div>
+            <div class="div-item">Bloco 2</div>
+        </div>
+    </div>
+
+    <h4>Container - (flex-flow: nowrap) justify content - Eixo Principal - space </h4>
+    <div class="container">
+        <h5></h5>
+        <div class="container2 _flex-flow_nowrap _justify-content_around">
+            <div class="div-item"><h4>space-around</h4></div>
+            <div class="div-item">Bloco 1</div>
+            <div class="div-item">Bloco 2</div>
+        </div>
+        <div class="container2 _flex-flow_nowrap _justify-content_evenly">
+            <div class="div-item"><h4>space-evenly</h4></div>
+            <div class="div-item">Bloco 1</div>
+            <div class="div-item">Bloco 2</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h5></h5>
+        <div class="container2 _flex-flow_nowrap _justify-content_betweeen">
+            <div class="div-item"><h4>space-between</h4></div>
+            <div class="div-item">Bloco 1</div>
+            <div class="div-item">Bloco 2</div>
+        </div>
+    </div>
+
+    <h4>Container - (flex-flow: nowrap around) align itens - Eixo cross </h4>
+    <div class="container0">
+        <h5></h5>
+        <div class="container3 _flex-flow_nowrap _justify-content_around _align-items_start">
+            <div class="div-item"><h4>flex-start</h4></div>
+            <div class="div-item">Bloco 1</div>
+            <div class="div-item">Bloco 2</div>
+        </div>
+        <div class="container3 _flex-flow_nowrap _justify-content_around _align-items_end">
+            <div class="div-item"><h4>flex-end</h4></div>
+            <div class="div-item">Bloco 1</div>
+            <div class="div-item">Bloco 2</div>
+        </div>
+    </div>
+
+    <div class="container0">
+        <div class="container3 _flex-flow_nowrap _justify-content_around _align-items_center">
+            <div class="div-item"><h4>center</h4></div>
+            <div class="div-item">Bloco 1</div>
+            <div class="div-item">Bloco 2</div>
+        </div>
+        <div class="container3 _flex-flow_nowrap _justify-content_around _align-items_stretch">
+            <div class="div-item"><h4>stretch</h4></div>
+            <div class="div-item">Bloco 1</div>
+            <div class="div-item">Bloco 2</div>
+        </div>
+    </div>
+
+    <h4>Container - (flex-flow: wrap around align-itens) align-content - Eixo cross </h4>
+    <div class="container0">
+        <h5></h5>
+        <div class="container3 _flex-flow_wrap _justify-content_start _align-items_stretch _align-content_stretch">
+            <div class="div-item"><h4>stretch</h4></div>
+            <div class="div-item">Bloco 1</div>
+            <div class="div-item">Bloco 2</div>
+        </div>
+        <div class="container3 _flex-flow_wrap _justify-content_start _align-items_stretch _align-content_start">
+            <div class="div-item"><h4>flex-start</h4></div>
+            <div class="div-item">Bloco 1</div>
+            <div class="div-item">Bloco 2</div>
+        </div>
+    </div>
+
+    <div class="container0">
+        <div class="container3 _flex-flow_wrap _justify-content_start _align-items_stretch _align-content_end">
+            <div class="div-item"><h4>flex-end</h4></div>
+            <div class="div-item">Bloco 1</div>
+            <div class="div-item">Bloco 2</div>
+        </div>
+        <div class="container3 _flex-flow_wrap _justify-content_start _align-items_start _align-content_center">
+            <div class="div-item"><h4>center</h4></div>
+            <div class="div-item">Bloco 1</div>
+            <div class="div-item">Bloco 2</div>
+        </div>
+    </div>
+
+    <div class="container0">
+        <h5></h5>
+        <div class="container3 _flex-flow_wrap _justify-content_start _align-items_stretch _align-content_around">
+            <div class="div-item"><h4>space around</h4></div>
+            <div class="div-item">Bloco 1</div>
+            <div class="div-item">Bloco 2</div>
+        </div>
+        <div class="container3 _flex-flow_wrap _justify-content_start _align-items_stretch _align-content_between">
+            <div class="div-item"><h4>space between</h4></div>
+            <div class="div-item">Bloco 1</div>
+            <div class="div-item">Bloco 2</div>
+        </div>
+    </div>
+
+    <div class="container0">
+        <h5></h5>
+        <div class="container3 _flex-flow_wrap _justify-content_start _align-items_stretch _align-content_evenly">
+            <div class="div-item"><h4>space evenly</h4></div>
+            <div class="div-item">Bloco 1</div>
+            <div class="div-item">Bloco 2</div>
+        </div>
+        <div class="container3 _flex-flow_wrap_reverse _justify-content_end _align-items_stretch _align-content_between">
+            <div class="div-item"><h4>space between</h4></div>
+            <div class="div-item">Bloco 1</div>
+            <div class="div-item">Bloco 2</div>
+        </div>
+    </div>
+
+
+</body>
+</html>
