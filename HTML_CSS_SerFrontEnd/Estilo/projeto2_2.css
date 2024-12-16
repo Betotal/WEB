@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+}
+body {
+    background-color: aqua;
+    border: 1px solid black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    max-width: 700px;
+    margin: auto;
+}
+
+.list {
+    list-style-type: none;
+    display:flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 300px;
+}
+
+.list-item {
+    background-image: url('../Imagens/thumb02.jpg');
+}
+
+.list-item_imagem img{
+    width: 80px;
+    border-radius: 50%;
+}
