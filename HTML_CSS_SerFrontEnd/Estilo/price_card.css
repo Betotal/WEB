@@ -15,32 +15,42 @@ body, html {
 }
 
 .header {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .header_logo {
-    border: 1px solid black;
     font-size: 30px;
     flex-basis: 250px;
 }
-.header_nav {
-    border: 1px solid black;
 
-}
-.header-nav_itens {
+.header_nav ul{
     display: flex;
-    justify-content: space-evenly;
+    list-style-type: none;
 }
 
-.header-nav-itens_link {
+.header_nav a{
+    background-color: black;
+    color: #bbff00;
+    
     padding: 10px;
     margin: 10px;
-    border: 1px solid #bbff00;
-    background-color: #bbff00;
-    list-style-type: none;
+    font-weight: bold;
     border-radius: 5px;
+    text-decoration: none;    
+}
+
+.header_nav a:hover {
+    text-decoration: underline;
+}
+
+.header_nav-active a{
+    background-color: #bbff00;
+    color: black;
+    /* pointer-events: none;  sem o ponterio do browser  */
+    cursor: default;
 }
 
 .container {
@@ -54,29 +64,33 @@ body, html {
     font-size: 50px;
     text-transform: uppercase;
     text-align: center;
+    margin: 46px 0;
 }
 
 .list-item_subtitle {
-    padding: 10px;
+    padding: 20px;
     text-transform: capitalize;
     border-bottom: 2px solid #bbff00;
+    letter-spacing: 2px;
 }
 
 .list {
     display: flex;
     flex-wrap: wrap;
+    flex-grow: 1;
     gap: 10px;
 }
 
 .list-item {
     display: flex;
     flex-direction: column;
-
+    /* align-content: space-around; */
+    
     background-color: #222;
     list-style-type: none;
     padding: 0px 10px;
     border-radius: 10px;
-    box-shadow: 3px 3px 8px rgba(255, 255, 255, 0.253);
+    box-shadow: 3px 3px 8px #bbff0036;
 }
 
 .list-item p {
@@ -90,16 +104,19 @@ body, html {
 .list-item_subitem {
     list-style-type: disc;
     list-style-position: inside;
-    min-height: 150px;
-    min-width: 200px;    
+    line-height: 1.5;
+    padding-bottom: 15px;
+
+    flex-grow: 1;
 }
 
-.list-item_assine {
+.list-item_subitem li::marker {
+    color: #bbff00;
+}
+
+.list-item a {
     padding: 10px;
-    margin: auto;
     margin-bottom: 15px;
-    width: 150px;
-    border: 1px solid #bbff00;
     background-color: #bbff00;
     list-style-type: none;
     border-radius: 5px;
@@ -107,4 +124,13 @@ body, html {
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+}
+
+.list-item a:hover {
+    outline: 2px solid #bbff00;
+    color: #bbff00;
+    background-color: transparent;
+
 }
