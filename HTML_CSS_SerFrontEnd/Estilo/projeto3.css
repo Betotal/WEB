@@ -4,32 +4,10 @@
     margin: 0;
     padding: 0;
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Belleza&family=Federo&family=Italiana&family=Viaoda+Libre&display=swap');
-
-.italiana-regular {    
-    font-family: "Italiana", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.belleza-regular {
-    font-family: "Belleza", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.federo-regular {
-    font-family: "Federo", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.viaoda-libre-regular {
-    font-family: "Viaoda Libre", serif;
-    font-weight: 400;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
 
 :root {
     --color_header: #162028;
@@ -41,7 +19,163 @@
 
 }
 
+* {
+    max-width: 1000px;
+}
+
 body, html {
     width: 90vw;
     height: 90vh;
+    margin: auto;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-family: "Roboto", serif;
+    color: var(--color_texto);
+}
+
+.header-div {
+    background-size: 800px;
+    margin: auto;
+}
+
+.header-div img {
+    width: 90vw;
+}
+
+.cabecalho {
+    background-color: var(--color_header);
+    padding-top: 1em;
+    display: flex;
+    justify-content: space-around;
+    /* border: 1px solid yellow; */
+}
+.cabecalho h1{
+    color: white;
+    font-family: Italiana, serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.header-div_list {
+    display: flex;
+    gap: 2em;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid yellow; */
+}
+
+.header-div-list_menu {
+    color: var(--color_menu);
+    font-size: 1.2em;
+    list-style-type: none;
+}
+.header-div-list_menu a{
+    color: var(--color_menu);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.header-div-list_menu a:hover{
+    color: #0095c7;
+    text-decoration: underline;
+}
+
+.artigo_escolha {
+    width: 80vw;
+    margin: auto;
+}
+
+.artigo_escolha h2{
+    font-family: "Viaoda Libre", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+    text-align: center;
+    padding: 1em;
+}
+
+.artigo_escolha p{
+    /* font-family: "Viaoda Libre", serif; */
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2em;
+    text-align: center;
+    padding-bottom: 3em;
+}
+
+.artigo-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+    gap: 1em;
+}
+
+.artigo-list img{
+    width: 100%;
+    box-shadow: 2px 2px 3px #003e52a2;
+    border-radius: 5px;
+}
+
+.artigo-list_item {
+    flex-grow: 1;
+}
+
+.artigo-list_item h3, p{
+    /* font-family: "Viaoda Libre", serif; */
+    font-weight: 400;
+    font-style: normal;
+
+    text-align: center;
+    padding-top: 0.5em;
+}
+
+.artigo-list_item h3{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.aside_offtopic {
+    background-image: url('../Imagens/bg_detalhe.png');   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom right; 
+    border-radius: 5px 5px 0px 0px;
+    margin: auto;
+
+    font-family: Italiana, serif;
+    font-weight: 400;
+    font-style: normal;
+
+    padding: 3em;
+}
+
+.aside_offtopic h2{
+    color: white;
+    font-family: "Viaoda Libre", serif;
+    display: inline-block;
+    padding: 1em 2em;
+
+    font-size: 2.5em;
+    text-shadow: 2px 2px 3px black;
+}
+
+.aside_offtopic p{
+    color: white;
+    display: inline-block;
+    width: 50%;
+    padding-left: 5em;
+
+    text-indent: 2em;
+
+    text-align: left;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+}
+
+.rodape {
+    background-color: var(--color_footer);
+    color: var(--color_footer-texto);
+    text-align: center;
+    padding: 1em;
+    text-transform: uppercase;
 }
