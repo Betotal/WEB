@@ -1,31 +1,47 @@
 @charset "UTF-8";
 
 *{
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Belleza&family=Federo&family=Italiana&family=Viaoda+Libre&display=swap');
+
+.italiana-regular {    
+    font-family: "Italiana", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.belleza-regular {
+    font-family: "Belleza", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.federo-regular {
+    font-family: "Federo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.viaoda-libre-regular {
+    font-family: "Viaoda Libre", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --color_header: #162028;
+    --color_menu: #425564;
+    --color_texto: #555;
+    --color_box-image: #003d52;
+    --color_footer: #0b171f;
+    --color_footer-texto: #6f8597;
 
 }
 
-Possíveis fontes para títulos, que você pode encontrar no Google Fontes:
-
-Italiana
-
-Belleza
-
-Federo
-
-Viaoda Libre (fonte utilizada no print screen)
-
-
-
-Cores utilizadas no projeto:
-
-Background Top Header: #162028
-
-Cor do texto no menu: #425564
-
-Cor dos textos: #555
-
-Cor de fundo do box com imagem de detalhe: #003d52
-
-Cor de fundo do footer: #0b171f
-
-Cor de texto do footer: #6f8597
+body, html {
+    width: 90vw;
+    height: 90vh;
+}
