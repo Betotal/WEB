@@ -8,70 +8,82 @@
 </head>
 <body>
     <header class="header_cabecalho">
-        <img src="../Imagens/Projeto4/logoAprenser.png" alt="Logo Aprenser">
-        <nav>
-            <ul class="header-list">
-                <li><a href="#" class="header-list_item">Cursos</a></li>
-                <li><a href="#" class="header-list_item">Nossa escola</a></li>
-                <li><a href="#" class="header-list_item">Contato</a></li>
-            </ul>
-        </nav>
+        <div class="header-cabecalho_imagem">
+            <img src="../Imagens/Projeto4/logoAprenser.png" alt="Logo Aprenser">
+        </div>
+        <ul class="header-cabecalho-link_list">
+            <li><a href="#" class="header-list_item">Cursos</a></li>
+            <li><a href="#" class="header-list_item">Nossa escola</a></li>
+            <li><a href="#" class="header-list_item">Contato</a></li>
+        </ul>
     </header>
-    <main>
-        <section class="section-top">
-            <div class="section-top_banner">
-                <div>
+    <main class="main-principal">
+        <section class="section">
+            <div class="section-banner">
+                <div class="section-banner_texto">
                     <p>O saber é o que transforma nosso SER</p>
                     <a href="#">Saibas mais</a>
                 </div>
-                <img src="../Imagens/Projeto4/HeroImage.png" alt="banner">    
+                <div class ='section-banner_imagem'>
+                    <img src="../Imagens/Projeto4/HeroImage.png" alt="banner">    
+                </div>
             </div>
         </section>
                 
-        <section class="section-cursos">
+        <section class="section-grupo">
             <h1>Principais Cursos</h1>
             <article class="section-cursos_artigo">
-                <ul class="section-cursoa-list">
+                <ul class="section-cursos-list">
                     <li class="section-cursos-list_item">
-                        <h2>Design para webG</h2>
+                        <img src="../Imagens/Projeto4/curso-design-1.png" alt="Design para webG">
+                        <h3>Design para webG</h3>
                         <p>O curso Design para Web é perfeito para aqueles que desejam aprender a criar designs atraentes e funcionais para sites e aplicativos móveis.</p>
                     </li>
                 
                     <li class="section-cursos-list_item">
-                        <h2>Front End Developer</h2>
+                        <img src="../Imagens/Projeto4/curso-design-2.png" alt="Front End Developer">
+                        <h3>Front End Developer</h3>
                         <p>Aprenda HTML, CSS e Javascript e crei interfaces ricas e semânticas para páginas web, aplicativos on-line ou até mesmo aplicações para aparelhos celulares.</p>
                     </li>
                 
                     <li class="section-cursos-list_item">
-                        <h2>Back End Developer</h2>
+                        <img src="../Imagens/Projeto4/curso-design.png" alt="Back End Developer">
+                        <h3>Back End Developer</h3>
                         <p>Com este curso você vai dominar uma linguagem back-end a sua escolha, um sistema de banco de dados e aprenderá como funciona o protocolo HTTP na prática.</p>
                     </li>
                 </ul>
-            </article>
-            <a href="#">Ver mais cursos</a>
-        </section>
-        
-        <section class="section-escola">
-            <img src="../Imagens/Projeto4/nossa-escola.png" alt="Nossa escola">
-            <article class="section-escola_nossaEscola">
-                <h1>Nossa escola</h1>
-                <p>Aprenda habilidades tecnológicas em demanda e alcance seus objetivos de carreira com a nossa escola de tecnologia online. Oferecemos uma ampla gama de cursos online, desde programação e desenvolvimento de software até design gráfico e análise de dados. Nossos instrutores experientes fornecerão a você um ambiente de aprendizado interativo e de suporte para ajudá-lo a adquirir as habilidades necessárias para ter sucesso em sua carreira. Inscreva-se agora e comece sua jornada para se tornar um profissional de tecnologia bem-sucedido.</p>
+                <a href="#">Ver mais cursos</a>
             </article>
         </section>
         
-        <section class="section-contatos">
-            <h1>Localização</h1>
-            <img src="../Imagens/Projeto4/map.png" alt="Localização">
-            <h1>Contatos</h1>
-            <div class="section-local">
-                <p>Av. da Liberdade, 1001</p>
-                <p>Tel.: +351 21 123 456</p>
-                <p>E-mail: contato@aprenser.com</p>
-            </div>
+        <section class="section-grupo">
+            <article class="section-nossaEscola">
+                <div class="section-nossaEscola_imagem">
+                    <img src="../Imagens/Projeto4/nossa-escola.png" alt="Nossa escola">
+                </div>
+                <div class="section-nossaEscola_texto">
+                    <h2>Nossa escola</h2>
+                    <p>Aprenda habilidades tecnológicas em demanda e alcance seus objetivos de carreira com a nossa escola de tecnologia online. Oferecemos uma ampla gama de cursos online, desde programação e desenvolvimento de software até design gráfico e análise de dados. Nossos instrutores experientes fornecerão a você um ambiente de aprendizado interativo e de suporte para ajudá-lo a adquirir as habilidades necessárias para ter sucesso em sua carreira. Inscreva-se agora e comece sua jornada para se tornar um profissional de tecnologia bem-sucedido.</p>
+                </div>
+            </article>
         </section>
         
-        Desenvolvido por Serliv
+        <section class="section-grupo">
+            <article class="section-local">
+                <h1>Localização</h1>
+                <img src="../Imagens/Projeto4/map.png" alt="Localização">
+                <h1>Contatos</h1>
+                <div class="section-local">
+                    <p>Av. da Liberdade, 1001</p>
+                    <p>Tel.: +351 21 123 456</p>
+                    <p>E-mail: contato@aprenser.com</p>
+                </div>
+            </article>
+        </section>
+        
     </main>
-    
+    <footer class="footer-rodape">
+        Desenvolvido por Serliv
+    </footer>
 </body>
 </html>

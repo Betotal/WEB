@@ -10,10 +10,11 @@
 :root {
     --color-nav: #272700;
     --color-nav-text: #ffd900;
+    --width-padrao: 1000px;
 }
 
 body, html {
-    max-width: 1000px;
+    /* max-width: var(--width-padrao); */
 }
 
 body{
@@ -22,19 +23,26 @@ body{
 }
 
 .header_cabecalho{
+    max-width: var(--width-padrao);
+    margin: auto;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     align-items: center;
 
     background-color: var(--color-nav);
     padding: 20px;
 }
 
-.header_cabecalho img {
-    width: 110px;
+.header-cabecalho_imagem {
+    flex-shrink: 1;
+}
+.header-cabecalho_imagem img {
+    width: 100%;
 }
 
-.header-list {
+.header-cabecalho-link_list {
+    flex-shrink: 1;
     display: flex;
     list-style-type: none;
     gap: 1em;
@@ -54,25 +62,176 @@ body{
     text-transform: uppercase;
 }
 
-.header-list_item a{
-    list-style-type: none;
+.header-list a:hover {
+    text-decoration: underline;
+    background-color: var(--color-nav-text);
+    color: var(--color-nav);
 }
 
-.section-top {
-    height: 300px;
+.main-principal {
+    margin: auto;
+    max-width: var(--width-padrao);
+}
+
+.section-banner {
     background-image: linear-gradient(0deg, yellow, white);
 }
 
-.section-top_banner {
+.section-banner {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.section-top_banner p{
+.section-banner_texto {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 1;
+}
+.section-banner_imagem {
+    flex-shrink: 1;
+}
+
+.section-banner p{
     display: inline-block;
     font-size: 3em;
     width: 350px;
 }
-.section-top_banner img {
-    width: 330px;
+
+.section-banner a{
+    text-decoration: none;
+    background-color: var(--color-nav-text);
+    padding: 10px;
+    width: 100px;
+
+    border-radius: 5px;
+
+    text-align: center;
+}
+
+.section-banner a:hover{
+    text-decoration: underline;
+    outline: 2px solid var(--color-nav);
+    color: var(--color-nav);
+}
+
+
+.section-banner img {
+    width: 100%;
+}
+
+.section-grupo {
+    /* max-width: var(--width-padrao); */
+    padding-top: 50px ;
+}
+
+.section-grupo h1 {
+    text-align: center;
+    padding: 40px;
+}
+
+.section-cursos-list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: space-around;
+    /* align-items:stretch; */
+    /* justify-items: center; */
+    list-style-type: none;
+    gap: 1em;
+}
+
+.section-cursos-list_item {
+    align-content: center;
+    flex-shrink: 1;
+    padding-bottom: 50px;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.section-cursos-list_item img {
+    width: 100%; 
+}
+
+.section-cursos-list_item p, h3 {
+    max-width: 315px;
+}
+
+.section-cursos-list_item h3 {
+    text-align: center;
+    padding: 20px;
+    font-size: 1em;
+}
+
+.section-cursos-list_item p {
+    font-size: 0.8em;
+}
+
+.section-cursos_artigo a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--color-nav-text);
+    padding: 10px;
+    width: 150px;
+    margin: auto;
+    text-align: center;
+
+    border-radius: 5px;
+}
+    
+.section-cursos_artigo a:hover{
+    text-decoration: underline;
+    outline: 2px solid var(--color-nav);
+    color: var(--color-nav);
+}
+
+.section-nossaEscola {
+    background-color: rgb(0, 32, 90);
+    color: white;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.section-nossaEscola_imagem {
+    flex-basis: 490px;
+}
+
+.section-nossaEscola_imagem img {
+    align-items: center;
+    width: 100%;
+
+}
+.section-nossaEscola_texto {
+    width: 400px;    
+    padding: 30px;
+}
+.section-nossaEscola_texto h2{
+    padding: 30px 0px;
+}
+.section-nossaEscola_texto p {
+    font-size: 0.8em;
+}
+
+.section-local img {
+    width: 100%;
+}
+
+.section-local p {
+    text-align: right
+}
+
+.footer-rodape {
+    max-width: var(--width-padrao);
+    background-color: var(--color-nav);
+    color: var(--color-nav-text);
+    padding: 30px;
+    margin: auto;
+
+    text-align: center;
 }
