@@ -20,6 +20,7 @@ body, html {
 body{
     padding: 0 10px;
     font-family: Roboto, sans-serif;
+    background-color: rgb(224, 224, 224);
 }
 
 .header_cabecalho{
@@ -108,7 +109,6 @@ body{
     width: 100px;
 
     border-radius: 5px;
-
     text-align: center;
 }
 
@@ -117,7 +117,6 @@ body{
     outline: 2px solid var(--color-nav);
     color: var(--color-nav);
 }
-
 
 .section-banner img {
     width: 100%;
@@ -142,15 +141,18 @@ body{
     /* justify-items: center; */
     list-style-type: none;
     gap: 1em;
+    padding-bottom: 20px;
 }
 
 .section-cursos-list_item {
+    background-color: white;
     align-content: center;
     flex-shrink: 1;
-    padding-bottom: 50px;
     
     display: flex;
     flex-direction: column;
+    
+    border-radius: 5px;
 }
 
 .section-cursos-list_item img {
@@ -171,15 +173,16 @@ body{
     font-size: 0.8em;
 }
 
+.section-cursos_artigo {
+    text-align: center;
+}
+
 .section-cursos_artigo a {
     display: inline-block;
     text-decoration: none;
     background-color: var(--color-nav-text);
     padding: 10px;
     width: 150px;
-    margin: auto;
-    text-align: center;
-
     border-radius: 5px;
 }
     
@@ -216,6 +219,10 @@ body{
 }
 .section-nossaEscola_texto p {
     font-size: 0.8em;
+}
+
+.section-local {
+    padding-bottom: 10px;
 }
 
 .section-local img {
