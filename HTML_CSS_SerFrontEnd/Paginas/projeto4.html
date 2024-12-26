@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="../Estilo/projeto4.css">
 </head>
 <body>
-    <header class="header_cabecalho">
+    <header class="header_cabecalho  header-fixed">
         <div class="header-cabecalho_imagem">
             <img src="../Imagens/Projeto4/logoAprenser.png" alt="Logo Aprenser">
         </div>
         <ul class="header-cabecalho-link_list">
-            <li><a href="#" class="header-list_item">Cursos</a></li>
-            <li><a href="#" class="header-list_item">Nossa escola</a></li>
-            <li><a href="#" class="header-list_item">Contato</a></li>
+            <li><a href="#curso" class="header-list_item">Cursos</a></li>
+            <li><a href="#escola" class="header-list_item">Nossa escola</a></li>
+            <li><a href="#contato" class="header-list_item">Contato</a></li>
         </ul>
     </header>
     <main class="main-principal">
@@ -22,17 +22,15 @@
             <div class="section-banner">
                 <div class="section-banner_texto">
                     <p>O saber é o que transforma nosso SER</p>
-                    <a href="#">Saibas mais</a>
+                    <a href="#" class="btn">Saibas mais</a>
                 </div>
-                <div class ='section-banner_imagem'>
-                    <img src="../Imagens/Projeto4/HeroImage.png" alt="banner">    
-                </div>
+                <img src="../Imagens/Projeto4/HeroImage.png" alt="banner">    
             </div>
         </section>
                 
         <section class="section-grupo">
             <h1>Principais Cursos</h1>
-            <article class="section-cursos_artigo">
+            <article class="section-cursos_artigo" id="curso">
                 <ul class="section-cursos-list">
                     <li class="section-cursos-list_item">
                         <img src="../Imagens/Projeto4/curso-design-1.png" alt="Design para webG">
@@ -52,15 +50,13 @@
                         <p>Com este curso você vai dominar uma linguagem back-end a sua escolha, um sistema de banco de dados e aprenderá como funciona o protocolo HTTP na prática.</p>
                     </li>
                 </ul>
-                <a href="#">Ver mais cursos</a>
+                <a href="#" class="btn">Ver mais cursos</a>
             </article>
         </section>
         
         <section class="section-grupo">
-            <article class="section-nossaEscola">
-                <div class="section-nossaEscola_imagem">
-                    <img src="../Imagens/Projeto4/nossa-escola.png" alt="Nossa escola">
-                </div>
+            <article class="section-nossaEscola" id="escola">
+                <img src="../Imagens/Projeto4/nossa-escola.png" alt="Nossa escola">
                 <div class="section-nossaEscola_texto">
                     <h2>Nossa escola</h2>
                     <p>Aprenda habilidades tecnológicas em demanda e alcance seus objetivos de carreira com a nossa escola de tecnologia online. Oferecemos uma ampla gama de cursos online, desde programação e desenvolvimento de software até design gráfico e análise de dados. Nossos instrutores experientes fornecerão a você um ambiente de aprendizado interativo e de suporte para ajudá-lo a adquirir as habilidades necessárias para ter sucesso em sua carreira. Inscreva-se agora e comece sua jornada para se tornar um profissional de tecnologia bem-sucedido.</p>
@@ -69,7 +65,7 @@
         </section>
         
         <section class="section-grupo">
-            <article class="section-local">
+            <article class="section-local" id="contato">
                 <h1>Localização</h1>
                 <img src="../Imagens/Projeto4/map.png" alt="Localização">
                 <h1>Contatos</h1>

@@ -3,6 +3,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -24,7 +25,7 @@ body{
 }
 
 .header_cabecalho{
-    max-width: var(--width-padrao);
+    /* max-width: var(--width-padrao); */
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -33,6 +34,13 @@ body{
 
     background-color: var(--color-nav);
     padding: 20px;
+}
+
+.header-fixed {
+    position: sticky;     /* fixed  >> errado */
+    width: 100%;
+    left: 60px;
+    top: 0px;
 }
 
 .header-cabecalho_imagem {
@@ -92,9 +100,6 @@ body{
     justify-content: center;
     flex-shrink: 1;
 }
-.section-banner_imagem {
-    flex-shrink: 1;
-}
 
 .section-banner p{
     display: inline-block;
@@ -102,24 +107,25 @@ body{
     width: 350px;
 }
 
-.section-banner a{
+.btn {
+    display: inline-block;
     text-decoration: none;
     background-color: var(--color-nav-text);
     padding: 10px;
-    width: 100px;
+    width: max-content;
 
     border-radius: 5px;
     text-align: center;
 }
 
-.section-banner a:hover{
+.btn:hover{
     text-decoration: underline;
     outline: 2px solid var(--color-nav);
     color: var(--color-nav);
 }
 
 .section-banner img {
-    width: 100%;
+    /* width: 100%; */
 }
 
 .section-grupo {
@@ -177,21 +183,6 @@ body{
     text-align: center;
 }
 
-.section-cursos_artigo a {
-    display: inline-block;
-    text-decoration: none;
-    background-color: var(--color-nav-text);
-    padding: 10px;
-    width: 150px;
-    border-radius: 5px;
-}
-    
-.section-cursos_artigo a:hover{
-    text-decoration: underline;
-    outline: 2px solid var(--color-nav);
-    color: var(--color-nav);
-}
-
 .section-nossaEscola {
     background-color: rgb(0, 32, 90);
     color: white;
@@ -201,15 +192,6 @@ body{
     align-items: center;
 }
 
-.section-nossaEscola_imagem {
-    flex-basis: 490px;
-}
-
-.section-nossaEscola_imagem img {
-    align-items: center;
-    width: 100%;
-
-}
 .section-nossaEscola_texto {
     width: 400px;    
     padding: 30px;
@@ -234,7 +216,7 @@ body{
 }
 
 .footer-rodape {
-    max-width: var(--width-padrao);
+    /* max-width: var(--width-padrao); */
     background-color: var(--color-nav);
     color: var(--color-nav-text);
     padding: 30px;
