@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="../Estilo/formulario.css">
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Introdução</legend>
+            <label for="email">E-mail</label><br>
+                <input type="email" name="email" id="emial" placeholder="meuemail@seuemail.com"> <br><br>
+            <label for="filhos">Qtde de filhos</label><br>
+                <input type="number" name="filhos" id="filhos" min="0" max="20"> <br><br>
+
+            <label for="data">Data de entrada</label><br>
+                <input type="date" id="data" min="2020-01-01" max="2024-12-31"><br><br>
+
+            Possui atividade extra?
+            <label><input type="radio" name="atvExtra" value="s">Sim</label>
+            <label><input type="radio" name="atvExtra" value="n">Não</label><br>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>Área de interesse</legend>
+            <label><input type="checkbox" name="interesse" value="html">HTML</label>
+            <label><input type="checkbox" name="interesse" value="css">CSS</label>
+            <label><input type="checkbox" name="interesse" value="js">Javascript</label>
+            <label><input type="checkbox" name="interesse" value="python">Python</label>
+            <label><input type="checkbox" name="interesse" value="java">Java</label><br><br>
+
+            <label >Escolha uma linguagem</label>
+            <select name="linguagem" multiple size="5">
+           <!-- multiple >> multiplas opções >> press ctrl
+                size     >> quantidade de linhas exibidas -->
+                <option value="">Selecione</option>
+                <optgroup label="Front-end">
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">Javascript</option>
+                </optgroup>
+                <optgroup label="Front-end">
+                    <option value="nodejs">Node JS</option>
+                    <option value="ruby">Ruby</option>
+                    <option value="cobol">COBOL</option>
+                    <option value="php">PHP</option>
+                </optgroup>
+            </select>
+
+            <input type="text" list="linguagemList">
+            <datalist id="linguagemList">
+                <option value="HTML">
+                <option value="CSS">
+                <option value="Javascript">
+                <option value="Node JS">
+                <option value="Ruby">
+                <option value="COBOL">
+                <option value="PHP">
+
+            </datalist>
+
+        </fieldset><br>
+        
+        <fieldset>
+            <legend>Mensagem</legend>
+            <textarea name="msg" rows="5" cols="50" maxlength="500" placeholder="Dados da mensagem"></textarea><br>
+            <textarea name="msg2" rows="5" cols="20" readonly>
+                bla bla bla de ble ble ble
+            </textarea>
+            <textarea name="msg3" rows="5" cols="20" disabled>
+                bla bla bla de ble ble ble
+            </textarea>
+            <input type="checkbox" checked>Li e aceito
+        </fieldset>
+
+        <input type="search" > <br>
+        <input type="range" min="1" max="10" step="2">
+        <input type="time" name="" id="">
+        <input type="color" name="" id="">
+
+        <br><br>
+            <input type="submit" value="Enviar">
+            <input type="button" value="botão">
+            <button type="submit"><strong>Mandar com tag button</strong></button>
+    </form>
+    
+</body>
+</html>
