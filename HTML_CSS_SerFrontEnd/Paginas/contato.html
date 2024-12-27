@@ -7,6 +7,23 @@
     <link rel="stylesheet" href="../Estilo/contato.css">
 </head>
 <body>
+    <form action="#" method="dialog">
+        <fieldset class="form">
+            <legend>Formulário de contato</legend>
+            <label for="nome">Seu nome</label>
+            <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="Informe um e-mail válido" required>
+
+            <label for="assunto">Assunto</label>
+            <input type="text" id="assunto" placeholder="Informe o motivo do contato">
+
+            <label for="msg">Mensagem</label>
+            <textarea id="msg" rows="7" minlength="20" maxlength="500" required placeholder="Por favor, descreva a sua solicitação"></textarea>
+        </fieldset>
+        <button type="submit" class="btn">Enviar </button>
+    </form>
     
 </body>
 </html>
