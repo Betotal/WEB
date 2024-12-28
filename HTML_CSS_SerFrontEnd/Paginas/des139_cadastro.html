@@ -8,6 +8,25 @@
     
 </head>
 <body>
-    
+    <form action="#" method="dialog" target="_self" autocomplete="off">
+        <div class="design">
+            <fieldset class="form_fielset">
+                <legend class="form_title">Cadastro</legend>
+                <label for="user" class="form_label">Usuário</label>
+                <input type="text"  class="form_input" id="user" required placeholder="Por favor informar o usuário" minlength="5" maxlength="20"> 
+                
+                <label for="mail" class="form_label">E-mail</label>
+                <input type="email" class="form_input" id="mail" required placeholder="Informe um e-mail válido">
+                
+                <label for="pass" class="form_label">Senha</label>
+                <input type="text" class="form_input" id="pass" required placeholder="informe uma senha válida" minlength="8">
+            </fieldset>
+            <div class="botoes">
+                <button type="submit" class="envio">Cadatre-se</button>
+                <p class="link">Já possui Cadastro? <a href="des139_login.html">Login</a></p>
+            </div>
+        </div>
+    </form>
+
 </body>
 </html>
