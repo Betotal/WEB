@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+a[href^="http"]::after{
+    content: url('../Imagens/desafios/newWindow-icon.png');
+}
+
+a[href$="pdf"]::before{
+    content: url('../Imagens/desafios/pdf-icon.gif');
+}
+
+input[type="checkbox"]:checked + label{
+    color: green;
+} 
+input[type="checkbox"]:not(checked) + label{
+    color: red;
+} 
+
+input[type="checkbox"]:disabled + label {
+    color: blue;
+}
+
+li li:nth-child(3) {
+    background-color: yellow;
+}
+
