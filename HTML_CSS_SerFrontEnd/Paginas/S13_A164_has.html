@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-elemento has()Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border-bottom: 1px solid black;
+            padding: .5em;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background-color: #e9e9e9;
+        }
+        tr:hover{
+            background-color: rgb(247, 231, 202);
+        }
+
+        tr:has(td:first-child input[type="checkbox"]:checked) {
+            background-color: #b2f585;
+        } 
+    </style>
+</head>
+<body>
+    <H1>Tabela</H1>
+    <Table>
+        <tr>
+            <th></th>
+            <th>Nome</th>
+            <th>Email</th>
+        </th>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>Pedro</td>
+            <td>pedro@serfrontend.com</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="" id=""></td>
+            <td>Joseja</td>
+            <td>josefa@serfrontend.com</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="" id=""></td>
+            <td>Genoveva</td>
+            <td>genoveva@serfrontend.com</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="" id=""></td>
+            <td>Jurema</td>
+            <td>jurema@serfrontend.com</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="" id=""></td>
+            <td>José</td>
+            <td>jose@serfrontend.com</td>
+        </tr>
+    </Table>
+    
+</body>
+</html>
