@@ -12,3 +12,46 @@
 :root {
 
 }
+
+.main-galeria {
+    max-width: 900px;
+    margin: auto;
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.galeria {
+    background-color: whitesmoke;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.495);
+    border-radius: 0.5em;
+
+    padding: 1em;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.imagem{
+    margin: auto;
+    width: 200px;
+    height: 160px;
+    overflow: hidden;
+}
+
+.imagem img{
+    width: 100%;
+}
+
+.imagem img:not(focus) {
+    opacity: 0.6;
+    transition: transform 1s, opacity 1s;
+}
+
+.imagem img:hover{
+    transform: scale(1.4);
+    opacity: 1;
+    transition: transform 1s, opacity 1s;
+}
