@@ -102,13 +102,70 @@
             /* outline-offset: -2px; */
         }
 
+        .swt3 {
+            --switch-color: #00be753a;
+        }
 
+        .swt3 span {
+            display: inline-block;
+            width: 2em;
+            height: 1em;
+            outline: 1px solid #c0c0c0;
+            border-radius: 1em;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .swt3 span::after {
+            content: "";
+            display: block;
+            width: 1em;
+            height: 1em;
+            border-radius: 1em;
+            background-color: #ff7b00;
+            transform: translateX(0);
+            transition: transform .2s ease-in-out;
+        }
+
+        .swt3 input:checked + span::after {
+            transform: translateX(100%);
+        }
+
+        .swt3 span::before {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background-color: var(--switch-color);
+            transform: translate(-100%);
+            transition: transform .2s ease-in-out;
+            position: absolute;
+        }
+        .swt3 input:checked + span::before {
+            transform: translateX(-10%);
+        }
+
+        .swt3 input[type=checkbox] {
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+
+            position: absolute;
+            outline: none;
+        }
+        .swt3 input[type=checkbox]:focus + span {
+            outline: 2px solid #555;
+            /* outline-offset: -2px; */
+        }
 
 </style>
 
 
 </head>
 <body>
+    <!--  Transform
     <div class="dTransform">
         <p>Lorem ipsum dolor sit amet. - - transform: rotate(10deg);</p>
         <p class="tRotate">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, facilis!</p>
@@ -129,8 +186,9 @@
         <p class="tSkew">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, veritatis.</p>
         <p>Lorem ipsum dolor sit amet.</p>
     </div><br>
-
+-->
     <h1>Checkbox</h1>
+    <!--  pseudo checkbox display none
     <input type="checkbox" name="html" id="html" class="chk1" checked>
     <label for="html">
         <span class="tCheck"></span>
@@ -150,6 +208,8 @@
     </Label>
      - (display: none;)  para input type= checkbox
     <hr>
+-->
+    <!--  pseudo checkbox : focus
 
     <label class="lbl2">
         <input type="checkbox">
@@ -168,7 +228,7 @@
     </label>
      - input[type=checkbox]: focus e outline no span
     <hr>
-
+-->
     <label class="swt3">
         <input type="checkbox">
         <span></span>
