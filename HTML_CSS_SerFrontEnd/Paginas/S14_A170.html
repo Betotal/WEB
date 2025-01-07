@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform ( Rotate e Translate)</title>
+
+    <style>
+        .dTransform {
+            border: 1px solid;
+            width: max-content;
+        }
+        .tRotate {
+            transform-origin: 0 0;
+            transform: rotate(10deg);
+        }
+
+        .tTranslate {
+            transform: translate(30px, 50px);
+        }
+
+        .tScale {
+            transform: scale(0.5, 6);
+        }
+
+        .tSkew {
+            transform: skew(30deg);
+        }
+
+        .chk1 {
+            display: none;
+        }
+
+        .chk1 + label span {
+            display: inline-block;
+            background-color: red;
+            font-size: 20px;
+            width: 1em;
+            height: 1em;
+        }
+
+        .chk1:checked + Label span {
+            background-color: blue;
+            position: relative;
+        }
+
+        .chk1:checked + Label span::before {
+            content: "";
+            display: block;
+            border: 0.087em solid white;
+
+            position: absolute;
+            top: .077em;
+            left: .38em;
+            right: .3em;
+            bottom: .3em;
+            transform: rotate(45deg); 
+            border-left-color: transparent;
+            border-top-color: transparent;          
+        }
+
+        .lbl2 span {
+            display: inline-block;
+            background-color: red;
+            font-size: 20px;
+            width: 1em;
+            height: 1em;
+        }
+
+        .lbl2 input[type=checkbox]:checked + span {
+            background-color: blue;
+            position: relative;
+        }
+        .lbl2 input[type=checkbox]:checked + span::before {
+            content: "";
+            display: block;
+            border: 0.087em solid white;
+
+            position: absolute;
+            top: .077em;
+            left: .38em;
+            right: .3em;
+            bottom: .3em;
+            transform: rotate(45deg); 
+            border-left-color: transparent;
+            border-top-color: transparent; 
+        }
+
+        .lbl2 input[type=checkbox] {
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+
+            position: absolute;
+            outline: none;
+        }
+
+        .lbl2 input[type=checkbox]:focus + span {
+            outline: 2px solid #555;
+            /* outline-offset: -2px; */
+        }
+
+
+
+</style>
+
+
+</head>
+<body>
+    <div class="dTransform">
+        <p>Lorem ipsum dolor sit amet. - - transform: rotate(10deg);</p>
+        <p class="tRotate">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, facilis!</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div><br>
+    <div class="dTransform">
+        <p>Lorem ipsum dolor sit amet. - - transform: translate(30px, 50px);</p>
+        <p class="tTranslate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, magni.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div><br>
+    <div class="dTransform">
+        <p>Lorem ipsum dolor sit amet. - - transform: scale(0.5, 6);</p>
+        <p class="tScale">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, veritatis.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div><br>
+    <div class="dTransform">
+        <p>Lorem ipsum dolor sit amet. - - transform: skew(30deg);</p>
+        <p class="tSkew">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, veritatis.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div><br>
+
+    <h1>Checkbox</h1>
+    <input type="checkbox" name="html" id="html" class="chk1" checked>
+    <label for="html">
+        <span class="tCheck"></span>
+        HTML
+    </label>
+
+    <input type="checkbox" name="css" id="css" class="chk1">
+    <Label for="css">
+        <span></span>
+        CSS
+    </Label>
+
+    <input type="checkbox" name="js" id="js" class="chk1">
+    <Label for="js">
+        <span></span>
+        Javascript
+    </Label>
+     - (display: none;)  para input type= checkbox
+    <hr>
+
+    <label class="lbl2">
+        <input type="checkbox">
+        <span></span>
+        HTML
+    </label>
+    <label class="lbl2">
+        <input type="checkbox">
+        <span></span>
+        CSS
+    </label>
+    <label class="lbl2">
+        <input type="checkbox">
+        <span></span>
+        Javascript
+    </label>
+     - input[type=checkbox]: focus e outline no span
+    <hr>
+
+    <label class="swt3">
+        <input type="checkbox">
+        <span></span>
+        HTML
+    </label>
+    <label class="swt3">
+        <input type="checkbox">
+        <span></span>
+        CSS
+    </label>
+    <label class="swt3">
+        <input type="checkbox">
+        <span></span>
+        Javascript
+    </label>
+    
+    <hr>
+    
+</body>
+</html>
