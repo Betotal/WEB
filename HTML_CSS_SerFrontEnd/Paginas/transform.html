@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+
+    <style>
+        body {
+            margin-bottom: 100vh;
+        }
+        div {
+            outline: 1px solid;
+            width: 200px;
+            margin: .5em auto;
+        }
+
+        p{
+            width: 50%;
+        }
+
+        .destaque, 
+        .destaque1,
+        .destaque2 {
+            background-color: yellow;
+        } 
+
+        .div1 .destaque {
+            transform: translate(50%); /* proprio elemento */
+        }
+            
+        .div1_1 .destaque {
+            position: relative;  /* relativo ao pai */
+            top: -50px;
+            left: 50px;
+        }
+
+        .div2 .destaque {
+            transform: rotate(90deg);
+        }
+        .div3 .destaque1 {
+            transform: scale(1.3);
+        }
+        .div3 .destaque2 {
+            transform: scale(0.7);
+        }
+        .div4 .destaque1 {
+            transform: skew(30deg);
+        }
+        .div4 .destaque2 {
+            transform: skew(0deg, -30deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, sed.</p>
+        <p class="destaque">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, sed?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, perferendis?</p>
+    </div>
+
+    <div class="div1_1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, sed.</p>
+        <p class="destaque">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, sed?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, perferendis?</p>
+    </div>
+ 
+    <div class="div2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, sed.</p>
+        <p class="destaque">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, sed?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, perferendis?</p>
+    </div>
+     
+    <div class="div3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, sed.</p>
+        <p class="destaque1">Lorem ipsum, dolor sit amet ted?</p>
+        <p class="destaque2">Lorem ipsum, dolor sit amet sed?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, perferendis?</p>
+    </div>
+    <div class="div4">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, sed.</p>
+        <p class="destaque1">Lorem ipsum, dolor sit amet ted?</p>
+        <p class="destaque2">Lorem ipsum, dolor sit amet sed?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, perferendis?</p>
+    </div>
+
+</body>
+</html>
