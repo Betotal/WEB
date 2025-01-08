@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: #ff7833;
+    --color2: #31313B;
+    --color3: #444856;
+}
+
+html {
+    font-size: 62.5%;  /* gambiarra para utilizar tamanho padrão de 10px */
+}
+body {
+    display: flex;
+    min-height: 100vh;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    background-color: #ccc;
+    color: #e7e7e7;
+}
+
+.header-menu {
+    flex: 0 0 26rem;   /*  grow shrink basis */
+    background-color: var(--color2);
+}
+
+main {
+
+    background-color: var(--color3);
+
+}
+
+
