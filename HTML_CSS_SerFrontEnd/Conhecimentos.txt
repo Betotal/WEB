@@ -4,3 +4,5 @@ developer.mozilla.org/pt-Br/docs/Web/CSS/Pseudo-elementos
 https://picsum.photos
     <img src="https://picsum.photos/200/300?random=1">
 
+    verificar o uso de tags: caniuse.com
+
