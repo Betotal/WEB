@@ -25,15 +25,43 @@ body {
     color: #e7e7e7;
 }
 
-.header-menu {
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header, .main {
+    font-size: 1.6rem;
+}
+
+.header {
     flex: 0 0 26rem;   /*  grow shrink basis */
     background-color: var(--color2);
 }
 
-main {
+.header-imagem{
+    padding-top: 50%;
+    max-width: 10rem;
+}
 
+.header-menu {
+    text-align: right;
+}
+
+.header-menu li{
+    margin: 0 3rem;
+    padding: 1.5rem;
+    list-style-type: none;
+    border-bottom: 2px solid var(--color3);
+}
+
+.header-menu li:hover {
     background-color: var(--color3);
+}
 
+.main {
+    background-color: var(--color3);
+    flex: 1;
 }
 
 
