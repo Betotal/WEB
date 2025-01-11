@@ -10,6 +10,7 @@
     --color1: #ff7833;
     --color2: #31313B;
     --color3: #444856;
+    --color4: #a9a7a7;
 }
 
 html {
@@ -23,11 +24,20 @@ body {
 
     background-color: #ccc;
     color: #e7e7e7;
+    /* line-height: 2.5; */
+}
+
+h1 {
+    font-size: 4rem;
+    color: var(--color4);
+}
+
+h2, h3, h4 {
+    color: var(--color1);
 }
 
 a {
     color: inherit;
-    text-decoration: none;
 }
 
 .header, .main {
@@ -37,31 +47,123 @@ a {
 .header {
     flex: 0 0 26rem;   /*  grow shrink basis */
     background-color: var(--color2);
+    padding-top: 6rem;
 }
 
-.header-imagem{
-    padding-top: 50%;
-    max-width: 10rem;
-}
-
-.header-menu {
+.header-nav {
     text-align: right;
+    padding: 3rem;
+}
+.header-nav ul{
+    list-style-type: none;
 }
 
-.header-menu li{
-    margin: 0 3rem;
-    padding: 1.5rem;
-    list-style-type: none;
+.header-nav ul a {
+    display: block;
+    text-decoration: none;
+    padding: 1rem 0;
+    background-color: transparent;
+    transition: padding .3s, background-color .5s;
+}
+
+.header-nav ul a:hover,
+.header-nav ul a:focus {
+    padding-right: 2rem;
+    background-color: var(--color3);
+}
+
+.header-nav li {
+    padding: 0.2rem 0;
     border-bottom: 2px solid var(--color3);
 }
 
-.header-menu li:hover {
-    background-color: var(--color3);
+.header-imagem{
+    max-width: 10rem;
 }
 
 .main {
     background-color: var(--color3);
     flex: 1;
+
+    padding: 7rem;
 }
+
+blockquote {
+    margin: 2rem;
+}
+
+article {
+    padding: 1rem 0;
+}
+
+.destaque {
+    border-left: 2px solid var(--color1);
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.wave {
+    text-decoration: red wavy underline;
+}
+
+.cards_group {
+    margin-bottom: 3rem;
+}
+
+.row {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    justify-content: space-between;
+}
+
+.row > *{
+    flex: 1 0 0%;
+}
+
+.card {
+    max-width: 740px;
+    background-color: var(--color2);
+    padding: 0;
+}
+
+.card_content {
+    padding: 2rem;
+}
+
+.card_content p {
+    padding-top: 1rem;
+}
+
+.card img {
+    max-width: 100%;
+
+}
+
+ol, ul, li {
+    margin-left: 2rem;
+}
+
+.alternate {
+    list-style-type: none;
+    margin-left: 0;
+}
+.alternate li{
+    margin-left: 0;
+}
+
+.alternate li:not(:last-child){
+    border-bottom: 1px solid;
+}
+
+.ol-list {
+    list-style-type: upper-roman;
+}
+
+.list-emoji {
+    list-style-type: "\002746";
+}
+
+
 
 
