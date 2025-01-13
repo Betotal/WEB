@@ -25,68 +25,78 @@
     
     <main class="main">
         <h1>My Components</h1>
-        <article  class="destaque">
+        <article class="destaque">
+            <h2>Formulários</h2>
+            <p>São interfaces digitais que permitem que os usuários preencham campos e enviem informações para um site. Eles podem ser usados para coletar dados pessoais, preferências do usuário ou qualquer outra informação necessária para o funcionamento de um sistema online. </p>
         </article>
-        
+
         <section>
+            <h3>Entre em contato</h3>
             <article class="row">
                 <div>
-                    <h3>Entre em contato</h3>
 
-                    <form action="#" method="post" name="contato">
-                        <label for="nome">Nome</label>
-                        <input type="text" name="" id="nome" placeholder="nome completo">
-                        <label for="email">E-mail</label>
-                        <input type="email" name="" id="email" placeholder="seu e-mail">
-                        <label for="msg">Digite sua mensagem</label>
-                        <textarea name="" id="msg" placeholder="Por favor deixe-nos uma mensagem"></textarea>
-                        <button>Enviar</button>
+                    <form action="#" method="post" name="contato" autocomplete="off">
+                        <div class="row">
+                            <div>
+                                <label for="nome">Nome</label>
+                                <input type="text" name="" id="nome" placeholder="nome completo">
+                            </div>
+                            <div>
+                                <label for="email">E-mail</label>
+                                <input type="email" name="" id="email" placeholder="seu e-mail">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="msg">Digite sua mensagem</label>
+                            <textarea name="" id="msg" rows="6" placeholder="Por favor deixe-nos uma mensagem"></textarea>
+                            <input type="submit" value="Enviar" class="btn btn-border">
+                        </div> 
                     </form>
                 </div>
-                <div>
-                    <p>Endereço 1234 Somewhere Rd. Nashville, TN 00000 United States</p>
-        
-                    <p>Telefone 000-000-000</p>
-                    
-                    <p>Email email@server.com</p>
-                        
-                </div>
+                <address>
+                <p><b>Endereço:</b> 1234 Somewhere Rd. Nashville, TN 00000 United States</p>
+                <p><b>Telefone:</b> 000-000-000</p>
+                    <p><b>Email:</b> email@server.com</p>
+                </address>
 
             </article>
             <article>
                 <div>
+                    <h3>Quiz</h3>
 
-                    <form action="" method="post" name="quiz">
+                    <form action="" method="post" name="quiz" class="form-quiz">
                         <label for="code">Qual a sua linguagem favorita?</label>
-                        <select name="code" id="">
+                        <select name="linguagem" id="code">
+                            <option value="null">Selecione</option>        
                             <option value="html">HTML</option>        
                             <option value="css">CSS</option>
-                            <option value="Javascript">Javascript</option>
+                            <option value="js">Javascript</option>
                             <option value="php">PHP</option>
-                            <option value="COBOL">Cobol</option>
+                            <option value="cobol">Cobol</option>
                             <option value="C#">CSharp</option>
                         </select>
                         <div>
-                            <label for="">Baixa prioridade</label>
-                            <input type="radio" name="" id="">
+                            <label>Baixa prioridade
+                                <input type="radio" name="prioridade" id="baixa">
+                            </label>
+                            <label>Media prioridade
+                                <input type="radio" name="prioridade" id="media">
+                            </label>
+                            <label>Alta prioridade
+                                <input type="radio" name="prioridade" id="alta">
+                            </label>
+
+                            <label><input type="checkbox" name="copy" value="true"> Envie-me um cópia</label>
+                            <label><input type="checkbox" name="humano" value="true"> Sou um humano</label>
                         </div>
-                        <div>
-                            <label for="">Media prioridade</label>
-                            <input type="radio" name="" id="">
-                        </div>
-                        <div>
-                            <label for="">Alta prioridade</label>
-                            <input type="radio" name="" id="">
+                        <div class="row">
+                            <input type="reset" value="Limpar" class="btn btn-border">
+                            <input type="submit" value="Enviar" class="btn btn-outline">
                         </div>
                     </div>
-                    
-                    <input type="text" name="" id="">
                 </form>
             </article>        
-        </section>
-        
-        Envie-me uma cópia  Sou um humano
-         
+        </section>         
     </main>
 </body>
 </html>
