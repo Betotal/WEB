@@ -11,6 +11,8 @@
     --color2: #31313B;
     --color3: #444856;
     --color4: #a9a7a7;
+    --color5: #161616;
+    --gap: 1.5rem;
 }
 
 html {
@@ -112,9 +114,9 @@ article {
 
 .row {
     display: flex;
-    gap: 1rem;
     padding-top: 1.5rem;
     justify-content: space-between;
+    gap: var(--gap);
 }
 
 .row .row {
@@ -189,23 +191,42 @@ select {
     background-color: var(--color2);
     color: white;
     cursor: pointer;
+    /* padding: 1rem; */
+    padding: .5em 1.5em;
+    border-radius: 5px;
+    border: none;
 }
 
-.btn-size {
-    width: auto;
+.btn +.btn {
+    margin-left: 2rem;
+}
+
+.btn-big {
+    font-size: 1.6rem;
+}
+
+.btn-full {
+    display: inline-block;
+    width: 100%;
+}
+
+.btn-full + .btn-full {
+    margin-left: 0;
+    margin-top: 2rem;
 }
 
 .btn-border {
-    border: 1px solid var(--color4);
+    border: 2px solid var(--color5);
+    box-shadow: 2px 3px 3px rgb(255, 255, 255, 0.148);
 }
 
 .btn-outline {
     background-color: transparent;
-    outline: 1px solid var(--color4);
+    outline: 2px solid var(--color5);
 }
 
 .btn:hover, .btn:focus {
-    background-color: var(--color4);
+    background-color: var(--color5);
 }
 
 input[type="radio"],
@@ -215,7 +236,32 @@ input[type="checkbox"] {
 }
 
 .form-quiz {
-    width: 50%;
+    /* width: 50%; */
+    width: calc(50% - (var(--gap) / 2));
+}
+
+
+.tab{
+    width: 100%;
+    text-align: left;
+}
+
+.tab th:last-child
+,.tab td:last-child {
+    text-align: right;
+}
+
+.tab {
+    padding-bottom: 3rem;
+}
+
+.tab-default td {
+    border-top: 2px solid var(--color5);
+}
+
+.tab-zebra tr:nth-child(even)
+,.tab-vert tr:nth-child(even) {
+    background-color: var(--color2);
 }
 
 
