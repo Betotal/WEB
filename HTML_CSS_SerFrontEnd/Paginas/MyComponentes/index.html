@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto 6 - My Components</title>
     <link rel="stylesheet" href="../../Estilo/projeto6.css">
+    <!-- fontawesome
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/> -->
+
+    <!-- icomnoon -->
+    <link rel="stylesheet" href="../../Imagens/MyComponents/Icons/style.css">
+    <style>
+        .adress-link {
+            display: inline-block;
+            margin-right: 3rem;
+            transition: color .4s;
+            text-decoration: none;
+            font-style: normal;
+        }
+
+        .adress-link svg{
+            width: 2rem;
+            height: 2rem;
+            fill: currentColor;
+            vertical-align: -0.2rem;
+
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+        .adress-link:hover {
+            color: var(--color1);
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -34,10 +62,28 @@
         <address>            
             <h3>Venha conhecer nossas redes sociais</h3>
             <p>
-                <a href="#">Youtube</a> 
-                <a href="#">Instagram</a> 
-                <a href="#">Twitter</a> 
-                <a href="#">Linkedin</a>
+                <!-- fontawesome
+                <a href="#"><i class="fab fa-youtube"></i>Youtube</a> 
+                <a href="#"><i class="fab fa-instagram"></i>Instagram</a> 
+                <a href="#"><i class="fab fa-twitter"></i>Twitter</a> 
+                <a href="#"><i class="fab fa-linkedin-in"></i>Linkedin</a> -->
+
+                <a href="#" class="adress-link">
+                    <svg>
+                        <use xlink:href="../../Imagens/MyComponents/Icons/symbol-defs.svg#icon-youtube"></use>               
+                    </svg>Youtube</a> 
+                <a href="#" class="adress-link">                    
+                    <svg>
+                        <use xlink:href="../../Imagens/MyComponents/Icons/symbol-defs.svg#icon-instagram"></use>               
+                    </svg>Instagram</a> 
+                <a href="#" class="adress-link">
+                    <svg>
+                        <use xlink:href="../../Imagens/MyComponents/Icons/symbol-defs.svg#icon-twitter"></use>               
+                    </svg>Twitter</a> 
+                <a href="#" class="adress-link">
+                    <svg>
+                        <use xlink:href="../../Imagens/MyComponents/Icons/symbol-defs.svg#icon-linkedin2"></use>               
+                    </svg>Linkedin</a>
             </p>
         </address>
     </main>

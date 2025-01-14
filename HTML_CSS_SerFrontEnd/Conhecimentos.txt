@@ -6,3 +6,24 @@ https://picsum.photos
 
     verificar o uso de tags: caniuse.com
 
+    pagina para icones on-line
+    fontawesome.com
+
+buscar por instalar manualmente ( Install Manually )
+procurar: Load All Styles
+Colar o link
+
+depois procurar o icone desejado e colar no html
+Exemplo de twiitter: <i class="fab fa-twitter"></i>
+
+ou 
+
+icomoon.io
+ - Clicar em app
+ - Procurar os icones
+ - seleciona-los
+ - clicar em Generate SVG & More
+ - clicar em download
+
+
+
