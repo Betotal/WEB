@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-image: linear-gradient(to top, rgb(0 0 255 / .5), rgb(255 0 0 / 0.5)), url(imagens/tile.png);
+    background-attachment: fixed, scroll;
+    background-blend-mode: color;
+}
+
+.cores {
+    width: 80%;
+    border: 4px dashed black;
+    margin: 20px auto;
+    padding: 20px;
+    counter-increment: contador;
+}
+
+.cores p {
+    margin: 0;
+}
+
+section {
+    counter-reset: contador;
+}
+
+.cores::before {
+    content: "[ " counter(contador) " ]";
+}
