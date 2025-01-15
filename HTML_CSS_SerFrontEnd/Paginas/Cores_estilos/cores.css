@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+:root {
+    --color1: #17ada6;
+    --color3: #ad7817;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,8 +19,10 @@ body {
 }
 
 .cores {
-    width: 80%;
-    border: 4px dashed black;
+    --color2: color-mix(in srgb, var(--color1), transparent 30%);
+
+    width: 30%;
+    border: 4px dashed var(--color2);
     margin: 20px auto;
     padding: 20px;
     counter-increment: contador;
@@ -27,8 +34,178 @@ body {
 
 section {
     counter-reset: contador;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .cores::before {
     content: "[ " counter(contador) " ]";
 }
+ .cores:nth-child(odd) {
+    --color2: color-mix(in srgb, var(--color3), transparent 50%);
+    border: 4px dashed var(--color2);
+} 
+
+.cores:nth-child(2) {
+    background-color: orange;
+    background-clip:border-box;
+}
+.cores:nth-child(3) {
+    background-color: #17ada6;
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px orange;
+}
+.cores:nth-child(4) {
+    background-color: orange;
+    background-clip: content-box;
+    box-shadow: 10px 10px 10px #17ada6 inset;
+}
+
+.cores:nth-child(5) {
+    background-color: hsl(90deg, 100%, 50%);
+    /*                      tom  , satu, lumin  ( circulo cromático) */  
+}
+.cores:nth-child(5):hover {
+    background-color: hsl(90deg, 100%, 70%); /* claro */
+}
+
+.cores:nth-child(6) {
+    background-color: hsl(180deg, 100%, 50%);
+}
+
+.cores:nth-child(6):hover {
+    background-color: hsl(180deg, 100%, 30%); /* escuro */
+}
+
+.cores:nth-child(7) {
+    background-image: linear-gradient(to right, orange, transparent), linear-gradient(to left, blue, red);
+    background-clip: padding-box, content-box;
+}
+
+.cores:nth-child(8) {
+    background-image: radial-gradient(#17ada6, orange, black) ;
+}
+
+.cores:nth-child(9) {
+    background-image: radial-gradient(ellipse,#17ada6, orange, black) ;
+}
+.cores:nth-child(10) {
+    background-image: radial-gradient(circle,#17ada6 10%, orange 12%, black) ;
+}
+
+.cores:nth-child(11) {
+    background-image: radial-gradient(circle at top,#17ada6 10%, orange 15%, black) ;
+}
+
+.cores:nth-child(12) {
+    background-image: radial-gradient(circle at left ,#17ada6 10%, orange 15%, black) ;
+}
+
+.cores:nth-child(13) {
+    background-image: radial-gradient(circle at 10% 20% ,#17ada6 10%, orange 15%, black) ;
+}
+
+.cores:nth-child(14) {
+    background-image: radial-gradient(circle closest-corner at 10% 20% ,orange, black);
+    color: white;
+}
+
+.cores:nth-child(15) {
+    background-image: radial-gradient(circle farthest-corner at 10% 20% ,orange, black);
+    color: white;
+}
+.cores:nth-child(16) {
+    background-image: radial-gradient(circle closest-side at 10% 20% ,orange, black);
+    color: white;
+}
+.cores:nth-child(17) {
+    background-image: radial-gradient(circle farthest-side at 10% 20% , orange, black);
+    color: white;
+}
+
+.cores:nth-child(18) {
+    background-image: 
+        radial-gradient(at bottom, red, transparent),
+        radial-gradient(at top,orange, #17ada6)   ;
+}
+
+.cores:nth-child(19) {
+    background-image: conic-gradient(red, purple, blue, green, yellow, orange, red );
+}
+.cores:nth-child(20) {
+    background-image: conic-gradient(red, purple, blue, green, yellow, orange, red );
+    filter: invert(); /* sem valor, inverte as cores  = 100%*/
+}
+.cores:nth-child(21) {
+    background-image: conic-gradient(red, purple, blue, green, yellow, orange, red );
+    filter: invert(10%); /* com valor, mistura na porcentagem 50% cinza) */}
+
+.cores:nth-child(22) {
+    background-image: conic-gradient(red, purple, blue, green, yellow, orange, red);
+    filter: blur(2px);
+}
+.cores:nth-child(23) {
+    background-image: conic-gradient(red, purple, blue, green, yellow, orange, red);
+    filter:grayscale(100%);
+}
+.cores:nth-child(24) {
+    background-image: conic-gradient(red, purple, blue, green, yellow, orange, red);
+    filter:grayscale(70%);
+}
+.cores:nth-child(25) {
+    background-image: conic-gradient(red, purple, blue, green, yellow, orange, red);
+    filter: sepia(100%);
+}
+
+.cores:nth-child(26) {
+    background-image: conic-gradient(red, purple, blue, green, yellow, orange, red);
+    transition: filter 2s linear;
+}
+.cores:nth-child(26):hover{
+    filter:hue-rotate(90deg);
+}
+.cores:nth-child(27) {
+    background-image: conic-gradient(red, purple, blue, green, yellow, orange, red);
+    transition: filter 2s linear;
+}
+.cores:nth-child(27):hover{
+    filter:hue-rotate(2turn);
+}
+
+.cores:nth-child(28) {
+    background-image: conic-gradient(red, purple, blue, green, yellow, orange, red);
+    transition: filter 2s linear;
+    aspect-ratio: 19 /6;
+}
+.cores:nth-child(28):hover{
+    filter:hue-rotate(5turn);
+}
+
+.cores:nth-child(29) {
+    background-image:
+    repeating-linear-gradient(to top right, orange 0px, orange 10px ,#17ada6 10px, orange 25px );
+}
+
+.cores:nth-child(30) {
+    background-image:
+        repeating-radial-gradient(orange 0%, orange 5% ,#17ada6 5%, orange 10% );
+}
+
+.cores:nth-child(31) {
+    background-image:
+        repeating-conic-gradient(orange 0deg, orange 15deg ,#17ada6 15deg, orange 30deg );}
+
+.cores:nth-child(32) {
+    background-image:
+        repeating-conic-gradient(orange 0deg, orange 15deg, transparent 15deg, transparent 30deg ,#17ada6 30deg, orange 45deg ),
+        repeating-linear-gradient(red, blue, black);
+    background-attachment: fixed, scroll;
+}
+.cores:nth-child(34) {
+    box-shadow: 5px 5px 5px rgb(0 0 0 / .5);
+}
+
+.cores:nth-child(35) {
+    filter: drop-shadow(5px 5px 5px rgb(255 0 0 / .5 ));
+}
+
