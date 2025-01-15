@@ -13,7 +13,7 @@
 
 body {
     font-family: sans-serif;
-    background-image: linear-gradient(to top, rgb(0 0 255 / .5), rgb(255 0 0 / 0.5)), url(imagens/tile.png);
+    background-image: linear-gradient(to top, rgb(0 0 255 / .5), rgb(255 0 0 / 0.5)), url(../imagens/tile.png);
     background-attachment: fixed, scroll;
     background-blend-mode: color;
 }
@@ -206,6 +206,6 @@ section {
 }
 
 .cores:nth-child(35) {
-    filter: drop-shadow(5px 5px 5px rgb(255 0 0 / .5 ));
+    filter: drop-shadow(10px 10px 10px rgb(0 0 255 ));
 }
 
