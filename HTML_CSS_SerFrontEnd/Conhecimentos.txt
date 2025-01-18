@@ -25,5 +25,7 @@ icomoon.io
  - clicar em Generate SVG & More
  - clicar em download
 
+ clip-path generator: https://bennettfeely.com/clippy/
+
 
 
