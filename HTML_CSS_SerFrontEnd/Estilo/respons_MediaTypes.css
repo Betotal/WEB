@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+@media screen { 
+    body {
+        background-color: darkgray;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(238, 173, 173);
+    }
+}        
+
+ 
+@media print {
+    body {
+        color: black;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    a::after {
+        content: "(link: " attr(href) ") - " attr(title) ")";
+        margin: 1rem;
+    }
+} 
