@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+* {
+
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2 {
+    font-weight: lighter;
+}
+
+div {
+    outline: 2px solid red;
+    min-height: 80px;
+}
+
+div:nth-of-type(1) {
+    background-color: yellow;
+    font-size: 32px;
+}
+
+div:nth-of-type(1) b {
+    font-size: 24px;
+}

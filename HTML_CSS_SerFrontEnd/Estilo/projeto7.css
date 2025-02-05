@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: rgb(131, 61, 145);
+    --color2: rgb(155, 73, 172);
+
+}
+
+html, 
+body {
+    font-size: 62.5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header-imagem {
+    /* background-color: var(--color2); */
+}
+

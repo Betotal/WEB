@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+
+/* @media screen and (min-width: 50em) { */
+@container containerWrapper (min-width: 50em) {
+    .card {
+        flex-direction: row;
+    }
+    .card-header img{
+        max-height: initial;
+    }    
+}
+
+/* @media screen and (min-width: 60em) {  */
+@container containerMain (min-width: 60em) { 
+.cards-container {
+        flex-direction: row;
+    }
+
+    .card-wrapper {
+        flex-grow: 1;
+    }
+} 
