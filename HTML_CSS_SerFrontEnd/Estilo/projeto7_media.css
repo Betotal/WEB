@@ -1,6 +1,12 @@
 @charset "UTF-8";
- 
-@media screen and (min-width:48.75em){
+
+/*
+    small   - sd    0       <> 40em
+    midium  - md    40      <> 48.75
+    large   - lg    48.75   <>  74em
+    xLarge  - xl   74       <>  999 
+*/    
+@media screen and (min-width:40em){
     .top-header {
         display: flex;
         justify-content: space-between;
@@ -8,7 +14,7 @@
     }
 
     .top-header-imagem {
-        margin-left: 2rem;
+        /* margin-left: 2rem; */
     }
     .top-header-nav {
         background-color: initial;
@@ -45,9 +51,9 @@
 }
 
 
-@media screen and (min-width:56.25em){
+@media screen and (min-width:48.75em){
     .banner {
-        background-image: url("../Imagens/projeto7/bg_topo_1198x670.jpg");
+        background-image: linear-gradient(transparent, var(--color1)), url("../Imagens/projeto7/bg_topo_1198x670.jpg");
         aspect-ratio: 1198 / 670;
 
         display: flex;
