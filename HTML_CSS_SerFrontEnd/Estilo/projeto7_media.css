@@ -1,10 +1,85 @@
 @charset "UTF-8";
+ 
+@media screen and (min-width:48.75em){
+    .top-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-@media screen and (min-width:60em){
-    
+    .top-header-imagem {
+        margin-left: 2rem;
+    }
+    .top-header-nav {
+        background-color: initial;
+    }
+    .top-header-nav li{
+        display: inline-block;
+    }
+    .top-header-nav li a{
+        color: var(--color1);
+    }
+    .top-header-nav li a:hover{
+        color: var(--color1);
+        background-color: color-mix(in srgb, var(--color1), white 85%);
+        border-radius: .5rem;
+    }
+
+    .banner {
+        background-color: var(--color1);    
+    }    
+    .banner-iconPlay {
+        display: block;
+        text-align: center;    
+        margin: auto;
+    }
+    .banner-title {
+        color: white;
+        font-size: 1.6em;
+        padding-bottom: 1em;
+    }
+    .banner-subtitle {
+        font-size: 1.1em;
+        color: color-mix(in srgb, var(--color1), white 80%);
+    }
 }
 
 
-@media screen and (min-width:102.4em){
-    
+@media screen and (min-width:56.25em){
+    .banner {
+        background-image: url("../Imagens/projeto7/bg_topo_1198x670.jpg");
+        aspect-ratio: 1198 / 670;
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .banner .maxWidth {
+        margin: initial;
+        margin-bottom: 3em;
+        width: 75%;
+    }
+}
+
+@media screen and (min-width:74em){
+    .banner {
+        background-image: linear-gradient(transparent, var(--color1)), url("../Imagens/projeto7/bg_topo_1600x1374.jpg");
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: var(--color1);
+
+        max-height: 80vh;
+        width: 100%;
+    }
+    .banner .maxWidth {
+        margin: initial;
+        margin-bottom: 3em;
+        width: 50%;
+    }
+
+    .banner-iconPlay {
+        height: 7rem;
+        width: 7rem;
+    }
 }

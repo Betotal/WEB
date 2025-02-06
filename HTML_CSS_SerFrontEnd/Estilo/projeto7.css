@@ -8,17 +8,85 @@
 
 :root {
     --color1: rgb(131, 61, 145);
-    --color2: rgb(155, 73, 172);
-
 }
 
 html, 
 body {
-    font-size: 62.5%;
+    /* font-size: 62.5%; */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.header-imagem {
-    /* background-color: var(--color2); */
+h1, h2, h3, h4 {
+    font-family: Oxygen, sans-serif;
+}
+h1 {
+    /* font-size: 2rem; */
 }
 
+.maxWidth {
+    max-width: 90vh;
+    margin: auto;
+}
+.top-header {
+    text-align: center;
+}
+
+.top-header-nav {
+    background-color: var(--color1);
+}
+
+.top-header-nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.top-header-nav ul a{
+    display: block;     /*   torna todo o espaço do texto clicável*/
+
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 0.5rem;
+}
+
+.top-header-nav ul a:hover{
+    background-color: color-mix(in srgb, var(--color1), white 10%);
+            /* color-mix: faz a mistura das cores */
+}
+
+.banner {
+    text-align: center;
+    background-color: #f6f6f6;
+    padding: 1rem;
+}
+.banner-iconPlay {
+    height: 5rem;
+    width:5rem;
+    display: none;
+}
+.banner-iconPlay img {
+    width: 100%;
+}
+
+.banner-title {
+    color: var(--color1);
+    font-size: 1.6em;
+    padding: 1em;
+    line-height: 1.5;
+}
+
+.banner-subtitle {
+    font-size: 1.1em;
+    color: color-mix(in srgb, var(--color1), white 45%);
+}
+
+.banner-btn {
+    display: inline-block;
+    padding: 1em 2em;
+    background-color: #58c4c4;
+
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    margin: 2em;
+}
