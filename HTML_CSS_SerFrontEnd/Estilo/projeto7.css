@@ -134,8 +134,10 @@ h1, h2, h3, h4 {
 
 .mainContent {
     background-color: #f6f6f6;
-    display: flex;
-    flex-direction: column;
+
+    /* solução minha, usando media query */
+    /* display: flex;
+    flex-direction: column; */
     padding: 1em; 
 }
 
@@ -162,6 +164,22 @@ h1, h2, h3, h4 {
 
 .mainContent p{
     line-height: 1.2;
+}
+
+.mainContent-art {
+    container: main-Content / inline-size;
+}
+
+@container main-Content (min-width: 48.75em){
+    .mainContent-container {
+        display: flex;
+    }
+    .mainContent-texto {
+        padding: 0;
+    }
+    .mainContent-tittle {
+        padding: 0 0 1em 0;
+    }
 }
 
 
