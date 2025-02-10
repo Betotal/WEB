@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incorporação de Elementos - Video</title>
+
+    <style>
+        /* formatar visualização da legenda */
+        ::cue {
+            font-size: 2em;
+            color: yellow;
+            background-color: rgb(0 0 0 / .3);
+
+        }
+    </style>
+</head>
+<body>
+    <video controls>
+        <source src="../../media/video.mp4" type="video/mp4">  <!-- mimetype -->
+        <source src="../../media/video.ogv" type="video/ogv'">
+        <source src="../../media/video.webm" type="video/webm">
+        <track src="../../media/track.pt.vtt" kind="captions" srclang="pt" label="Português" default></track>
+        <track src="../../media/track.en.vtt" kind="captions" srclang="en" label="English"></track>
+        <p>O seu browser não suporta vidios no formato: mp4, ogv ou webm</p>
+    </video>
+    
+</body>
+</html>

@@ -21,7 +21,7 @@ h1, h2, h3, h4 {
 }
 
 .maxWidth {
-    max-width: 56.25em;
+    max-width: 64em;
     margin: auto;
 }
 .top-header {
@@ -174,8 +174,12 @@ h1, h2, h3, h4 {
     .mainContent-container {
         display: flex;
     }
+    .mainContent-imagem {
+        flex: 0 0 25%;
+    }
     .mainContent-texto {
-        padding: 0;
+        flex-grow: 1;
+        padding: 0 1em;
     }
     .mainContent-tittle {
         padding: 0 0 1em 0;

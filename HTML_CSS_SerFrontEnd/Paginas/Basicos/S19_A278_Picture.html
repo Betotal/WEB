@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incorporação de Elementos - Picture</title>
+
+    <style>
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tag Pcture</h1>
+
+    <img src="../../media/1280.jpg" alt="Texto alternativo"
+         srcset="../../media/960.jpg 960w, ../../media/640.jpg 640w, ../../media/480.jpg 480w"
+         sizes="(min-width: 900px) 33.33vw, (min-width: 600px) 50vw, 100vw" >
+
+    <hr>
+    
+    <picture>
+<!-- 
+        <source media="(min-width: 900px)" 
+                srcset="../../media/1280.jpg 1280w, ../../media/960.jpg 960w, ../../media/640.jpg 640w, ../../media/480.jpg 480w"
+                sizes="33.33vw" >
+
+        <source media="(min-width: 600px)" 
+                srcset="../../media/1280.jpg 1280w, ../../media/960.jpg 960w, ../../media/640.jpg 640w, ../../media/480.jpg 480w"
+                sizes="50vw" >
+         -->
+
+        <!-- Guanabara  -->
+        <source media="(max-width: 400px)"     
+                srcset="../../media/480.jpg 480w"
+                sizes="100vh" >
+        <source media="(max-width: 600px)" 
+                srcset="../../media/640.jpg 640w"
+                sizes="75vw" >
+        <source media="(max-width: 900px)" 
+                srcset="../../media/960.jpg 960w"
+                sizes="50vw" >
+        <img src="../../media/1280.jpg" alt="Texto alternativo"      
+    </picture>
+    
+</body>
+</html>
