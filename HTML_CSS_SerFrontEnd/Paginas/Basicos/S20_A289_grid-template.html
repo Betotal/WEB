@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .gridContainer {
+            width: 100vw;
+            height: 50vh;
+            background: #ccc;
+        }
+
+        .gridItem {
+            background-color: orange;
+            padding: 15px;
+            font-family: sans-serif;
+        }
+
+        /*   GRID   */ 
+        .gridContainer {
+            display: grid;
+            gap: 1em;
+
+            /* template area */
+            grid-template:
+                "header header header"  75px
+                "nav    nav     ."      50px
+                "main   main    aside"  1fr
+                "footer footer  aside"  50px / 1fr 1fr 1fr
+            ;
+        }
+        .header {
+            /* grid-area: header; */
+            /* grid-column: header-start / header-end; */
+            grid-column: header;
+        }
+        .nav {
+            /* grid-area: nav; */
+            /* grid-column: nav-start / nav-end; */
+            grid-column: nav;
+        }
+        .aside {
+            background-color: rgba(255, 166, 0, 0.3);
+            /* grid-area: aside; */
+            /* grid-column: aside-start / aside-end;
+            grid-row: aside-start / aside-end; */
+            grid-column: aside;
+            grid-row: aside;
+        }
+        .main {
+            grid-area: main;
+        }
+        .footer {
+            background-color: rgb(0 0 0 /.3);
+            /* grid-area: footer; */
+            grid-column: footer-start / footer-end;
+            grid-column: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gridContainer">
+        <header class="header gridItem">header</header>
+        <nav class="nav gridItem">nav</nav>
+        <aside class="aside gridItem">aside</aside>
+        <main class="main gridItem">
+            main
+        </main>
+        <footer class="footer gridItem">footer</footer>
+    </div>
+</body>
+
+</html>
