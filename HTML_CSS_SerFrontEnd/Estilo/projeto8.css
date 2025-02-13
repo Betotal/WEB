@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", serif;
+    /* font-size: 62.5%; */
+    height: 100vh;
+
+    background-color: #ebebeb;
+}
+
+.mainGrid {
+    background-color: white;
+    margin: auto;
+    height: 90%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    grid-template-rows: auto 1fr;
+
+    padding: 1rem;
+}
+
+.mainGrid-menu {
+    background-color: white;
+    grid-row: span 2;
+    border: 3px solid black;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.mainNav-topo > h1 {
+    padding: 1rem;
+    
+    text-align: center;
+    text-transform: uppercase;    
+}
+
+li {
+    list-style-type: none;
+}
+
+.mainNav-topo a {
+    text-decoration: none;
+}
+
+.menuNav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.mainGrid-header {
+    background-color: white;
+    text-transform: capitalize;
+}
+
+.menuHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.menuHeader-settings {
+    padding-left: 3rem;
+    display: flex;
+    gap: 3rem;
+}
+
+.menuHeader-profile {
+    display: flex;
+    flex-direction: column;
+
+    padding-right: 3rem;
+}
+
+.mainGrid-header{
+    grid-column: 2;
+    border: 3px solid rgb(128, 81, 81);    
+}
+
+.mainGrid-main {
+    grid-column: 2;
+    border: 3px solid blue;
+}
+
+.mainBody {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+
+.mainBody-principal {
+    grid-column: 1 / span 2;
+}
+
+.mainBody-alter1 {
+    grid-column: 1;
+
+}
+.mainBody-alter2 {
+    grid-column: 2;
+}
+
+.image {
+    max-width:100%;
+}
