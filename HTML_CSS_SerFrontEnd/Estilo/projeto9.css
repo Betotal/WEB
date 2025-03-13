@@ -27,6 +27,10 @@ body {
     margin: auto;
 }
 
+.imagem{
+    text-align: center;
+}
+
 .header-menu {
     list-style-type: none;
     padding: 0;
@@ -115,6 +119,13 @@ img {
     padding: 1rem;
 }
 
+.testemunho_thumb{
+    width: 9rem;
+    height: 9rem;
+}
+
+
+
 .contato {
     background-color: var(--gray);
     border-radius: 5px;
@@ -128,7 +139,6 @@ img {
 
 .footer {
     background-color: var(--gray);
-    padding: 3rem 0;
 }
 
 .footer ul {
@@ -169,11 +179,56 @@ img {
     grid-auto-flow: dense;
 }
 
+.row.testemunhos_wrapper {
+    row-gap: 3rem;
+}
+
+.row.contato {
+    padding: 4rem 0;
+}
+.contato_content a{
+    margin-top: 3rem;
+}
+
 .row > .small-12 {
     grid-column: 1 / span 12;
 }
 
 @media screen and (min-width: 46.25em){
+    body{
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 6.25rem;
+    }
+    
+    h2 {
+        font-size: 2.875rem;
+    }
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header-menu{
+        display: block;
+    }
+    .header-menu li{
+        display: inline-block;
+        margin-left: 2rem;
+    }
+
+    .testemunho{
+        display: flex;
+        gap: 1rem;
+    }
+    .contato_image {
+        display: block;
+        text-align: center;
+    }
+    
     .row{
         gap: 3rem;
     }
@@ -198,6 +253,25 @@ img {
 }
 
 @media screen and (min-width: 90em){
+    body{
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 6.25rem;
+    }
+    
+    h2 {
+        font-size: 2.875rem;
+    }
+    .testemunho{
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        text-align: center;
+    }
+
     .row{
         gap: 3rem;
     }
@@ -215,6 +289,9 @@ img {
     }
     .row > .large-7 {
         grid-column: span 7;
+    }
+    .row > .large-1-7 {
+        grid-column: 1 / span 7;
     }
     .row > .large-8-13 {
         grid-column: 8 / span 5;
