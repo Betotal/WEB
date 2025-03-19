@@ -1,0 +1,98 @@
+
+@media screen and (min-width: 46.25em){
+    body{
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 4.25rem;
+    }
+    
+    h2 {
+        font-size: 2.875rem;
+    }
+    .header{
+        align-items: center;
+    }
+
+    .menu-icon, .menu-btn {
+        display: none;
+    }
+
+    .header-menu{
+        display: inline-block;
+        margin-left: 2rem;
+    }
+    
+    .header-menu li{
+        display: inline-block;
+        margin-left: 2rem;
+    }
+
+    .contato_image {
+        display: block;
+        text-align: center;
+    }
+    
+    .row{
+        gap: 3rem;
+    }
+    .row > .midle-3 {
+        grid-column: span 3;
+    }
+    .row > .midle-4 {
+        grid-column: span 4;
+    }
+    .row > .midle-6 {
+        grid-column: span 6;
+    }
+    .row > .midle-1-6 {
+        grid-column: 1 / span 6;
+    }
+    .row > .midle-7-13 {
+        grid-column: 7 / span 6;
+    }
+    .row > .midle-9 {
+        grid-column: span 9;
+    }
+}
+
+@media screen and (min-width: 90em){
+    body{
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 6.25rem;
+    }
+    
+    h2 {
+        font-size: 2.875rem;
+    }
+
+    .row{
+        gap: 3rem;
+    }
+    .row > .large-3 {
+        grid-column: span 3;
+    }
+    .row > .large-4 {
+        grid-column: span 4;
+    }
+    .row > .large-5 {
+        grid-column: span 5;
+    }
+    .row > .large-6 {
+        grid-column: span 6;
+    }
+    .row > .large-7 {
+        grid-column: span 7;
+    }
+    .row > .large-1-7 {
+        grid-column: 1 / span 7;
+    }
+    .row > .large-8-13 {
+        grid-column: 8 / span 5;
+    }
+
+}
