@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedade Animation</title>
+    <style>
+        @keyframes anda{
+            from {
+                transform: translateX(0);
+                background-color: yellow;
+            }
+            50%{
+                background-color: green;
+            }
+            to {
+                transform: translateX(300px);
+                background-color: blue;
+            }
+        }
+        @keyframes altura {
+            0% {
+                height: 80px;
+            }
+            20% {
+                height: 120px;
+            }
+            80% {
+                height: 120px;
+            }
+            100% {
+                height: 80px;
+            }
+        }
+        @keyframes largura {
+            0% {
+                width: 100px;
+            }
+
+            100%{
+                width: 400px;
+            }
+        }
+
+        #anima {
+            outline: 3px solid red;
+            width: 400px;
+        }
+
+        #anima div{
+            width: 100px;
+            height: 50px;
+            background-color: #ccc;
+            margin-bottom: 5px;
+        }
+
+        #anima div:nth-child(1) {
+            animation-name: anda;
+            animation-duration: 2s;
+            animation-iteration-count: 2;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+        }
+        #anima div:nth-child(2){
+       /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+            animation: anda 2s       linear          1s    2              alternate  both      running;
+            /* animation-fill-mode: both; */
+            /* animation-play-state: running; */
+        }
+        #anima div:nth-child(2):hover{
+            animation-play-state: paused;    
+        }
+
+        #anima div:nth-child(3){
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: anda   2s ease-in-out 2s infinite alternate,
+                       altura 2s linear         infinite alternate    forwards;
+            will-change: height;
+        }
+
+        #anima div:nth-child(4){
+            animation: largura 5s;
+            animation-timing-function: steps(5); /*steps(5, jump-end) - padrão */
+        }
+        #anima div:nth-child(5){
+            animation: largura 5s;
+            animation-timing-function: steps(5, jump-start); /*steps(5, jump-end) - padrão */
+        }
+        #anima div:nth-child(6){
+            animation: largura 5s;
+            animation-timing-function: steps(5, jump-none); /*steps(5, jump-end) - padrão */
+        }
+        #anima div:nth-child(7){
+            animation: largura 5s;
+            animation-timing-function: steps(5, jump-both); /*steps(5, jump-end) - padrão */
+        }
+
+    </style>
+</head>
+<body>
+    <div id="anima" >
+        <div>vai e volta</div>
+        <div>3 V com Hover</div>
+        <div>Move e aumenta</div>
+        <div>jump-end</div>
+        <div>jump-start</div>
+        <div>jump-none</div>
+        <div>jump-both</div>
+    </div>
+</body>
+</html>
