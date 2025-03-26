@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root{
+            --angle: 0deg;
+            --bg-color: lightblue;
+        }
+        @property --angle{
+            syntax: '<angle>';
+            inherits: true;
+            initial-value: 0deg;
+        }
+
+        body{
+            background-color: #333;
+            color: white;
+        }
+
+        .anima{
+            width: 150px;
+            height: 150px;
+            margin: auto;
+            margin-top: 6rem;
+            transform: rotate(var(--angle));
+            animation: rotateAnima 10s linear infinite;
+            background-color: var(--bg-color);
+        }
+
+
+        @keyframes rotateAnima {
+            0% {
+                --angle: 0deg;
+            }
+            100% {
+                --angle: 360deg;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="anima"> Anima</div>
+    
+</body>
+</html>

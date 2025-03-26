@@ -13,18 +13,36 @@
             background-position: 0 0;
             background-repeat: no-repeat;
 
-            animation: gato 1s steps(12) infinite;
-            transform: scaleX(-1);
+            animation: gato 2s steps(12) 1;
+            /* transform: scaleX(-1); */
+            /* animation: gato1 2s steps(12) 1s 1s; */
+            /* animation: gato2 3s steps(12) 2s 1; */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
         }
 
         @keyframes gato {
-            from{
-                background-position: 0 0;
+              
+            0%{
+                background-position: 0px 0px;
             }
-            to {
-                background-position: 0 -2390px;
+            33.33%{
+                background-position: 0px -2390px;
             }
-        }
+            
+            33.34%{
+                background-position: -800px 0px;
+            }
+            66.66%{
+               background-position: -800px -2390px;
+            }
+            
+            66.67%{
+                background-position: -1200px 0px;
+            }
+            100% {
+                background-position: -1200px -2390px;
+            }
+        } 
     </style>
 </head>
 <body>
