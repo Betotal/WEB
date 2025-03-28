@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    width: 100vh;
+}
+
+.tabulaeiro {
+    margin: auto;
+}
+
+.cartas {
+    margin: auto;
+    border: 2px solid brown;
+    border-radius: 10px;
+    width: 100px;
+    height: 80px;
+    perspective: 200px;
+}
+
+.carta {
+    position: relative;  
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 1s transform; 
+    transform-origin: right center;
+}
+
+.carta img {
+    border-radius: 8px;
+}
+
+.cartas:hover:nth-child(1) .carta:nth-child(1){
+    transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden; 
+}
+
+.card-front {
+    transform: rotateY(-180deg); 
+}
