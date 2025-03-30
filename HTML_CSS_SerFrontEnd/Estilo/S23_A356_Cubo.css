@@ -1,0 +1,61 @@
+
+body {
+    font-family: sans-serif;
+}
+.cena {
+    margin: auto;
+    margin-top: 100px;
+    width: 300px;
+    height: 300px;
+    border: 2px solid rgba(0, 0, 0, 0.116);
+    perspective: 600px;
+}
+
+.cubo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.178);
+    outline: 3px solid black;
+    color: white;
+    font-size: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .cubo{
+    transform: rotateY(30deg) rotateX(30deg);
+} */
+
+.face1{
+    transform: rotateY(0deg);
+}
+
+.face2{
+    transform: rotateY(90deg) translateX(150px) translateZ(150px);
+}
+
+.face3{
+    transform: rotateX(90deg) translateY(-150px) translateZ(150px);
+}
+
+.face4{
+    transform: rotateX(270deg) translateY(150px) translateZ(150px);
+}
+
+.face5{
+    transform: rotateY(270deg) translateX(-150px) translateZ(150px);
+}
+
+.face6{
+    transform: rotateY(-180deg) translateZ(300px);
+}
