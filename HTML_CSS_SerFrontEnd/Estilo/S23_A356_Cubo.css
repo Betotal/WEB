@@ -2,6 +2,52 @@
 body {
     font-family: sans-serif;
 }
+
+:root {
+    --xAngle: 0deg;
+    --yAngle: 0deg;
+    --zAngle: 0deg;
+}
+
+:root:has([name="x"][value="  0"]:checked){ --xAngle:   0deg; }
+:root:has([name="x"][value=" 30"]:checked){ --xAngle:  30deg; }
+:root:has([name="x"][value=" 60"]:checked){ --xAngle:  60deg; }
+:root:has([name="x"][value=" 90"]:checked){ --xAngle:  90deg; }
+:root:has([name="x"][value="120"]:checked){ --xAngle: 120deg; }
+:root:has([name="x"][value="150"]:checked){ --xAngle: 150deg; }
+:root:has([name="x"][value="180"]:checked){ --xAngle: 180deg; }
+:root:has([name="x"][value="210"]:checked){ --xAngle: 210deg; }
+:root:has([name="x"][value="240"]:checked){ --xAngle: 240deg; }
+:root:has([name="x"][value="270"]:checked){ --xAngle: 270deg; }
+:root:has([name="x"][value="300"]:checked){ --xAngle: 300deg; }
+:root:has([name="x"][value="330"]:checked){ --xAngle: 330deg; }
+
+:root:has([name="y"][value="  0"]:checked){ --yAngle:   0deg; }
+:root:has([name="y"][value=" 30"]:checked){ --yAngle:  30deg; }
+:root:has([name="y"][value=" 60"]:checked){ --yAngle:  60deg; }
+:root:has([name="y"][value=" 90"]:checked){ --yAngle:  90deg; }
+:root:has([name="y"][value="120"]:checked){ --yAngle: 120deg; }
+:root:has([name="y"][value="150"]:checked){ --yAngle: 150deg; }
+:root:has([name="y"][value="180"]:checked){ --yAngle: 180deg; }
+:root:has([name="y"][value="210"]:checked){ --yAngle: 210deg; }
+:root:has([name="y"][value="240"]:checked){ --yAngle: 240deg; }
+:root:has([name="y"][value="270"]:checked){ --yAngle: 270deg; }
+:root:has([name="y"][value="300"]:checked){ --yAngle: 300deg; }
+:root:has([name="y"][value="330"]:checked){ --yAngle: 330deg; }
+
+:root:has([name="z"][value="  0"]:checked){ --zAngle:   0deg; }
+:root:has([name="z"][value=" 30"]:checked){ --zAngle:  30deg; }
+:root:has([name="z"][value=" 60"]:checked){ --zAngle:  60deg; }
+:root:has([name="z"][value=" 90"]:checked){ --zAngle:  90deg; }
+:root:has([name="z"][value="120"]:checked){ --zAngle: 120deg; }
+:root:has([name="z"][value="150"]:checked){ --zAngle: 150deg; }
+:root:has([name="z"][value="180"]:checked){ --zAngle: 180deg; }
+:root:has([name="z"][value="210"]:checked){ --zAngle: 210deg; }
+:root:has([name="z"][value="240"]:checked){ --zAngle: 240deg; }
+:root:has([name="z"][value="270"]:checked){ --zAngle: 270deg; }
+:root:has([name="z"][value="300"]:checked){ --zAngle: 300deg; }
+:root:has([name="z"][value="330"]:checked){ --zAngle: 330deg; }
+
 .cena {
     margin: auto;
     margin-top: 100px;
@@ -16,14 +62,15 @@ body {
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
+    transition: transform .5s;
 }
 
 .face{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.178);
-    outline: 3px solid black;
+    background-color: rgba(0 0 0 / 0.3);
+    outline: 1px solid black;
     color: white;
     font-size: 200px;
 
@@ -32,30 +79,47 @@ body {
     align-items: center;
 }
 
-/* .cubo{
-    transform: rotateY(30deg) rotateX(30deg);
-} */
+@property --xAngle {
+    syntax: '<angle>';
+    inherits: true;
+    initial-value: 0deg;
+}
+@property --yAngle {
+    syntax: '<angle>';
+    inherits: true;
+    initial-value: 0deg;
+}
+@property --zAngle {
+    syntax: '<angle>';
+    inherits: true;
+    initial-value: 0deg;
+}
+
+.cubo{
+    transform: rotateX(var(--xAngle)) rotateY(var(--yAngle)) rotateZ(var(--zAngle));
+} 
 
 .face1{
-    transform: rotateY(0deg);
+    /*transform: rotateY(0deg);  */ /* ponto 0 da imagem, sendo a face 1 */
+    transform: translateZ(150px); 
 }
 
 .face2{
-    transform: rotateY(90deg) translateX(150px) translateZ(150px);
+    transform: rotateY(90deg) translateZ(150px);
 }
 
 .face3{
-    transform: rotateX(90deg) translateY(-150px) translateZ(150px);
+    transform: rotateX(90deg) translateZ(150px);
 }
 
 .face4{
-    transform: rotateX(270deg) translateY(150px) translateZ(150px);
+    transform: rotateX(270deg) translateZ(150px);
 }
 
 .face5{
-    transform: rotateY(270deg) translateX(-150px) translateZ(150px);
+    transform: rotateY(270deg)  translateZ(150px);
 }
 
 .face6{
-    transform: rotateY(-180deg) translateZ(300px);
+    transform: rotateY(-180deg) translateZ(150px);
 }
