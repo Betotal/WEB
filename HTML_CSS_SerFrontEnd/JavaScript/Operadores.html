@@ -7,44 +7,173 @@
 </head>
 <body>
     <H1>Operadores aritméticos</H1>
-    
+    <H1>Boolean, Number e String</H1>
+    <H1>Exercicio de Operador - Comparação</H1>
+    <H1>Exercicio de Operador - Lógicos</H1>
     <script>
-        /*
+        let n1, n2, n3, mensagem
+        /*  Desafio 1 - Operadores
         // pedir para o usuário digitar 2 números
-        let N1 = parseFloat (prompt ("Digite o primeiro número:"));
-        let N2 = parseFloat (prompt ("Digite o segundo número:"));
-        let N3
+        n1 = parseFloat (prompt ("Digite o primeiro número:"));
+        n2 = parseFloat (prompt ("Digite o segundo número:"));
         // convertê-los
         // monstrar a soma
-        alert('A soma dos números: ' + N1 + " e " + N2 + " é " + (N1 + N2))
+        alert('A soma dos números: ' + n1 + " e " + n2 + " é " + (n1 + n2))
         // monstrar a subtração
-        alert('A subtração dos números: ' + N1 + " e " + N2 + " é " + (N1 - N2))
+        alert('A subtração dos números: ' + n1 + " e " + n2 + " é " + (n1 - n2))
         // monstrar a divisão
-        N3 = parseInt(N1 / N2) 
-        alert('A divisão dos números: ' + N1 + " e " + N2 + " é " + N3 + ", com resto " + (N1 % N2))
+        N3 = parseInt(n1 / n2) 
+        alert('A divisão dos números: ' + n1 + " e " + n2 + " é " + n3 + ", com resto " + (n1 % n2))
         // monstrar a multiplicação
-        alert('A multiplicação dos números: ' + N1 + " e " + N2 + " é " + (N1 * N2))
+        alert('A multiplicação dos números: ' + n1 + " e " + n2 + " é " + (n1 * n2))
 
-        alert("A média entre os números: " + N1 + " e " + N2 + " é igual a " + ((N1 + N2) / 2))
+        alert("A média entre os números: " + n1 + " e " + n2 + " é igual a " + ((n1 + n2) / 2))
         */
 
-        let numeroUnico
-        numeroUnico = 10
-        numeroUnico += 5
-        numeroUnico *= 5
-        ++numeroUnico
+        /*  Desafio 2 - atribuição
+        n1 = 10
+        n1 += 5
+        n1 *= 5
+        ++n1
 
-        alert ("O resto da divisão de " + numeroUnico + " por 6 é " + (numeroUnico % 6));
-        alert ("O quadrado do resto da divisão de " + numeroUnico + " por 6 é " + ((numeroUnico % 6) ** 2));
+        alert ("O resto da divisão de " + n1 + " por 6 é " + (n1 % 6));
+        alert ("O quadrado do resto da divisão de " + n1 + " por 6 é " + ((n1 % 6) ** 2));
 
-        alert("A variável para os calculos " + numeroUnico)
+        alert("A variável para os calculos " + n1)
 
-        numeroUnico /= 4
+        n1 /= 4
 
-        alert("Após dividir por 4: " + numeroUnico)
+        alert("Após dividir por 4: " + n1)
+        */
+
+        /* typeof
+        let mensagem = 'Olá eu sou uma "mensagem de texto"';
+        console.log(mensagem)
+
+        console.log(typeof 0)
+        console.log(typeof "0")
+        console.log(typeof String(0))
+
+        console.log(Boolean("0"))
+        console.log(Boolean(0))
+        console.log(Boolean(undefined))
+        console.log(Boolean(null))
+        console.log(Boolean(NaN))
+        console.log(Boolean(""))
+        
+        let n = parseInt("a")
+        console.log(n)
+        console.log(typeof(n))
+        console.log("-----")
+        console.log(typeof undefined)
+        console.log(typeof null)
+        console.log(typeof true)
+        console.log()
+        console.log()
+        */
+
+        /* BaNaNa
+        let BaNaNa = "Ba"
+        BaNaNa += parseInt(BaNaNa)
+        BaNaNa += "a"
+        alert (BaNaNa)
+        */
+        
+        /* operadores - comparação 
+        n1 = parseFloat(prompt('Digite o 1º número, entre 1 a 10: '))
+        n2 = parseFloat(prompt('Digite o 2º número: entre 1 e 10'))
+
+        alert('O 1º número (' + n1 +') é maior ou igual ao 2º número (' + n2 +'): ' + (n1 >= n2))
+
+        n1 = parseFloat(prompt('Digite o 1º número, entre 1 a 10: '))
+        n2 = parseFloat(prompt('Digite o 2º número: entre 1 e 10'))
+        alert('A média entre o 1º número (' + n1 +') o e o 2º número (' + n2 +') é maior que 7: ' + (((n1 + n2) / 2) > 7) + ' - média: (' + ((n1 + n2) / 2) + ')')
+        */
+
+        /* operador lógico
+        n1 = parseFloat(prompt('Digite o 1ª nota, entre 1 a 10: '))
+        n2 = parseFloat(prompt('Digite o 2ª nota: entre 1 e 10'))
+        
+        if (((n1 + n2) > 5) && (n1 > 0) && (n2 > 0)) {
+            alert("Aprovado!")
+        } else {
+            if (n1 <= 0) {
+                alert("Reprovado! 1ª Nota = 0")
+            } else {
+                if (n2 <= 0) {
+                    alert("Reprovado! 2ª Nota = 0")
+                } else {
+                    alert("Reprovado! média < 5.00001")
+                }
+            }
+          alert  
+        }
+        */
+        n1 = parseFloat(prompt('Digite o 1ª nota, entre 0.1 a 10.0: '))
+        n2 = parseFloat(prompt('Digite o 2ª nota: entre 0.1 e 10.0: '))
+
+        /* IF encadeados
+        if (isNaN(n1))
+        {
+            mensagem = "A 1ª nota não é um número!"            
+        } else 
+            {
+            if (isNaN(n2))
+            {
+                mensagem = "A 2ª nota não é um número!"
+            } else
+                {
+                if (n1 > 10 || n1 <= 0)
+                {
+                    mensagem = "A 1ª nota deve ser um número entre 0.1 e 10.0!"
+                } else
+                    {
+                    if (n2 > 10 || n2 <= 0)
+                    {
+                        mensagem = "A 2ª nota deve ser um número entre 0.1 e 10.0!"
+                    } else
+                        {
+                        if ((n1 + n2) > 5){
+                            mensagem = "Aprovado com média: " + ((n1 + n2) / 2)
+                        } else{
+                            mensagem = "Reprovado com média: " + ((n1 + n2) / 2)
+                        }
+                    }
+                }
+            }
+        }           
+        */
+
+        /* switch
+        mensagem = " ";
+        switch (true) {
+            case isNaN(n1):
+                mensagem = "A 1ª nota não é um número!"
+                break;
+            case isNaN(n2):
+                mensagem ="A 2ª nota não é um número!"
+                break;
+            case (n1 > 10 || n1 <= 0):
+                mensagem = "A 1ª nota deve ser um número entre 0.1 e 10.0!"
+                break;
+            case (n2 > 10 || n2 <= 0):
+                mensagem = "A 2ª nota deve ser um número entre 0.1 e 10.0!"
+                break;
+            case ((n1 + n2) > 5):
+                mensagem ="Aprovado com média: " + ((n1 + n2) / 2)
+                break;
+
+            default:
+                mensagem = "Reprovado com média: " + ((n1 + n2) / 2)
+                break;
+        }
+        alert(mensagem);
+
+        alert("Final do programa!")         
+        */
 
 
-    </script>
+</script>
 
 
 </body>
