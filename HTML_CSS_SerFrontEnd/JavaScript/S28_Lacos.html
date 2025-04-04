@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>LOOPs - Tabuada</h1>
+    <h1>Jogue 2 dados</h1>
+    <h1>Jogo de 2 dados - Quantas vezes foi lançado</h1>
+
+    <script>
+        let n1, n2, contador, laco, index
+        
+        /* laços - while    
+
+        n1 = parseInt(prompt("Digite um número (\"N\") para mostrar a tabuada até 1000 "))
+        if (isNaN(n1)) {
+            alert("Número digitado "+ n1 +" não é um número válido")
+        }else {
+        
+            laco = "while"
+            contador = 0
+            
+            while (contador <= 1000) {
+                document.write( n1 + " x " + contador + " = " + (n1 * contador) + "<br>")       
+                contador++     
+            }
+            document.write("saiu do loop - " + laco)
+        }    
+        */
+
+        /* laços - for
+        n1 = parseInt(prompt("Digite um número (\"N\") para mostrar a tabuada até 1000 "))
+        if (isNaN(n1)) {
+            alert("Número digitado "+ n1 +" não é um número válido")
+        }else {
+            laco = "for"
+            for (let i = 0; i <= 1000; i++) {
+                document.write( n1 + " x " + i + " = " + (n1 * i) + "<br>")       
+            }
+            document.write("saiu do loop - " + laco )
+        }  // fecha o if
+        */
+
+        /* do while dados
+        contador = 0
+        do {
+            contador++
+            n1 = parseInt(Math.random() * 20) + 1
+            n2 = parseInt(Math.random() * 20) + 1
+            document.write(n1 + " - " + n2 + "<br>")
+        } while (n1 !== n2)
+
+        document.write("os dados foram jogados " + contador + " vez(es). <br>")
+        document.write("valores dos dados: " + n1)
+        */
+
+        /* do while e for
+        n1 = parseInt(prompt("Digite um número (\"N\") e te mostrarei os numeros pares entre 0 e o número digitado"))
+        if (isNaN(n1)) {
+            alert("Número digitado "+ n1 +" não é um número válido")
+        }else {
+            for (index = 0; index <= n1 ; index += 2) {
+                document.write(index + "<br>")
+            }
+
+            document.write("<br><br> Tabuada do " + n1  + " com 1000 elementos <br>");
+            index = 1
+            do {
+                document.write (n1 + " x " + index + " = " + (n1 * index) + "<br>")
+                if ((index % 10) == 0){
+                    document.write("<hr>")
+                }
+                index++
+            } while (index <= 1000);
+
+            
+        }
+        */
+
+        /* // jogo de dados
+        contador = 0
+        index = 0
+        do {
+            n1 = parseInt((Math.random() * 6) + 1)
+            n2 = parseInt((Math.random() * 6) + 1)
+            if (((n1 + n2) % 2) == 0){
+                document.write("soma dos dados " + n1 + " e " + n2 + "<br>")
+                if (n1 != n2){
+                    contador++
+                }
+            }
+            index++
+            document.write(index + "<br>")
+        } while (contador < 10);
+
+            document.write("O dado foi lançado " + index + " vezes")
+        */
+
+        index = 0
+        n1 = 0
+        do {
+            index++
+
+            n1 = parseInt((Math.random() * 100) + 1)
+            
+            if ((index % 10) != 0){
+               document.write("numero: " + index + " - Sorteado: " + n1 + "<br>")
+            }
+
+            if (((index % n1) == 0) ) {
+                break
+            }
+        } while (index <= 1000);
+        document.write("<br>numero: " + index + " - Sorteado: " + n1 )
+
+    </script>
+</body>
+</html>
