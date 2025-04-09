@@ -7,17 +7,84 @@
 </head>
 <body>
     <H1>Arrays</H1>
+    <h1>Dia da Semana</h1>
 
     <script>
-        let nome1, nome2, nome3, nome4 
+
+        let nome1, nome2, nome3, nome4, nome5, nome6, nomeaux, mensagem
+        let index, numero
+        let nomes = [], nomes1 = []
+        let numeros = [], numerosAux = []
+        /*   Arrays Base
+
         nome1 = "maria"
         nome2 = "Joao"
         nome3 = "pedro"
-        name4 = "Marcia"
+        nome4 = "Marcia"
+        nome5 = "Ricardo"
+        nome6 = "Luciene"
+        
+        nomes 
+        nomes = [nome1, nome2, nome3, nome4, nome5, nome6 ] // sintaxe literal
 
-        let nomes =["maria", "Joao", "pedro", "Marcia" ] // sintaxe literal
+        nomes1 = new Array("maria1", "Joao1", "pedro1", "Marcia1") // sintaxe construtora
 
-        let nomes1 = new Array("maria1", "Joao1", "pedro1", "Marcia1") // sintaxe contrutora
+        nomes[nomes.length] = prompt("Digite seu nome: ")
+
+        for (index = 0; index < nomes.length; index++) {
+            document.write(nomes[index] + "<br>")
+        //    document.write(nomes1[index] + "<br>")
+        }
+
+        document.write("<hr> A lista de nomes contém " + nomes.length + " elementos")
+
+        */
+
+        /*  2 arrays
+        numeros = [4, 8, 1, 0, 23, 98, 9, 100, 7, 25]
+
+        for (index = 0; index < numeros.length; index++) {
+        //    numerosAux [numerosAux.length] = numeros[index] * 2;   
+            numerosAux.push((numeros[index] * 2), " - ")  //método push coloca o elemento no final do array       
+        }
+
+        for (index = 0; index < numerosAux.length; index++) {
+            document.write(numerosAux[index])
+        }
+        */
+
+        /*  dia da semana num array
+        const diaSemana = ["Domingo", "2ª-Feira", "3ª-Feira", "4ª-Feira", "5ª-Feira", "6ª-Feira", "Sabado"]
+
+        nomeaux = prompt("Digite seu nome")
+
+        let dia = new Date()
+
+        alert("Olá " + nomeaux + ". Hoje é " + diaSemana[dia.getDay()])
+        */
+
+        numeros = [10, true, [], "qquer coisa", 8, 4, 89, 125, false, null, "1000",undefined, 13, 10, 22]
+        numero = 0
+    
+        for (index = 0; index < numeros.length; index++) {
+        //    if (isNaN(numeros[index]))     // tenta fazer a conversão para numero
+            if (typeof numeros[index] === "number")  // o que realmente é um número
+                {
+                numero += numeros[index];
+                
+                if (index == 0) {
+                    mensagem = "A soma dos números (" + numeros[index]
+                }else {
+                    if (index < numeros.length ) {
+                        mensagem += ", " + numeros[index]
+                    }
+                }
+            }
+        }
+        document.write (mensagem + " é " + numero)
+         
+
+
 
     </script>
 </body>

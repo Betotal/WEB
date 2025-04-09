@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto</title>
+</head>
+<body>
+    <h1>Objetos</h1>
+    <h1>Objeto dentro de objeto</h1>
+
+    <script>
+
+        /*  Estrutura de um objeto
+        const produto = {
+            nome: "caneta",
+            preco: 2.99,
+            qtde: 5
+        }
+
+        const Produto = new Object() 
+        Produto.nome = 'Lapis'
+        Produto.preco = 0.99
+        Produto.qtde = 15
+
+        document.write("A " + produto.nome + " custa R$ " + produto.preco + " e tem em estoque " + produto.qtde + " unidades <BR>")
+
+        document.write(`O ${Produto.nome} custa R$ ${Produto.preco} e tem em estoque ${Produto.qtde} unidades <BR>`) 
+            */
+        /* objeto carro
+        const carro = {
+            marca: "Honda",
+            modelo: "FIT",
+            ano: 2012,
+            kmInicial: 251432,
+            kmFinal: 252812,
+            combustivel: "gasolina",
+            litrosConsumidos:105.21
+        }
+
+        let consumo = 
+
+        alert(`O veículo ${carro.marca} ${carro.modelo}, ano ${carro.ano} fez em média ${(carro.kmFinal - carro.kmInicial) / carro.litrosConsumidos} km/L, utilizando ${carro.litrosConsumidos} litros de ${carro.combustivel} num trecho de ${(carro.kmFinal - carro.kmInicial)} kilometros`)
+        */
+
+        
+        // const pessoa = {
+        //     nome: "Pedro",
+        //     sobrenome: "Bó",
+        //     endereco
+        // }
+
+        const endereco = {
+            logradouro: "Rua das Pedras",
+            numero: 533
+        }
+        //  ▲▲▲ nesta estrutura (acima) da erro, pois na criação do objeto pessoa, ainda não existe o objeto endereco 
+        const pessoa1 = {
+            nome: "Pedro",
+            sobrenome: "Bó",
+            // endereco:endereco  isso é dispensável, pois é o mesmo nome  
+            endereco
+        }
+        document.write (`O ${pessoa1.nome} ${pessoa1.sobrenome} mora em ${pessoa1.endereco.logradouro} número ${pessoa1.endereco.numero} <br>` )
+
+        
+        //    loop for ..in >> propriedades do objeto
+        for (let prop in pessoa1) {
+            console.log(prop) 
+            console.log(pessoa1[prop])
+        }
+
+
+    </script>
+</body>
+</html>

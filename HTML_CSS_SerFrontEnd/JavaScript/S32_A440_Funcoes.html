@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <H1>Funções</H1>
+
+    <input type="number" id="tabuada">
+    <button onclick="mostrarTabuada()">Mostrar tabuada</button> 
+       <!-- onclick -> Atributo -->
+
+    <table>
+        <thead>
+            <tr><th>         </th>
+                <th>ate x10 </th>
+                <th>ate x20 </th>
+                <th>ate x30 </th>
+                <th>ate x40 </th>
+                <th>ate x50 </th>
+                <th>ate x60 </th>
+                <th>ate x70 </th>
+                <th>ate x80 </th>
+                <th>ate x90 </th>
+                <th>ate x100 </th>
+            </tr>
+        </thead>
+        <tbody id="corpoTabuada">
+
+        </tbody>
+    </table>   
+    
+    <script>
+
+        const input = document.getElementById("tabuada")   //elemento do DOM
+        const corpoTabuada = document.getElementById("corpoTabuada")
+        
+        function mostrarTabuada() {
+            const inputValue = input.value  // valor do elemento no DOM
+            
+            for (let i = 0; i < 10; i++) {
+                let txtTable = "<tr>"
+                let x = i + 1    
+                txtTable += `<td><strong> X ${x} </strong></td>`    
+                
+                for (let j = 0; j < 10; j++) {
+                    txtTable += `<td> ${inputValue * x} </td>`
+                    x += 10                    
+                }
+                txtTable += "</tr>"
+                corpoTabuada.innerHTML += txtTable
+            }
+            alert("Cliquei no botão")
+        }
+
+    </script>   
+</body>
+</html>

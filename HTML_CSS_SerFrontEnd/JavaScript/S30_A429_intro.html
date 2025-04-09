@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <H1 id="titulo">Um título qquer</H1>
+    <p id="paragrafo">Este é um paragrafo apenas para exemplos</p>
+    <hr>
+
+    <input type="text" id="user" value="Valor preenchido">
+    <hr>
+    <h2>Lista Ordenada 4 Itens + 1</h2>
+    <ol id = "listaOrdenada">
+        <li>Item 01</li>
+        <li>Item 02</li>
+        <li>Item 03</li>
+        <li>Item 04</li>
+
+    </ol>
+
+    <script>
+        document.getElementById("titulo").textContent = "Testo alterado e elado"
+
+        const lista = document.getElementById("listaOrdenada")
+        let novaTarefa = "<li>Item adicionado via JS</li>"
+
+        lista.innerHTML += novaTarefa
+    </script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complexos</title>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 5px;
+        }
+        
+        td +td+td {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Usando estruturas mais complexas</h1>
+
+    <h2>Lista de Contatos</h2>
+    <ul id="listaPessoas">
+
+    </ul>
+    <hr>
+
+    <h2>Tabela com produto, preço e quantidade</h2>
+
+    <Table>
+        <thead>
+            <tr><th>Produto</th>
+                <th>Preço</th>
+                <th>Qtde estoque</th>
+            </tr>
+        </thead>
+        <tbody id="tableDados">
+        </tbody>
+    </Table>
+    <hr>
+
+    <h2>Aluno, notas e situação</h2>
+    <ul id="alunoSituacao">
+        
+    </ul>
+
+    <h2>Alunos - Lista de Objetos, com Array</h2>
+
+    <ul id="listaAlunos">
+
+    </ul>
+
+    <script>
+        const pessoas = [
+            {nome: "Daniel", email: "daniel@server.com"},
+            {nome: "Maria", email: "maria@server.com"},
+            {nome: "Pedro Bó", email: "pedrobo@server.com"},
+            {nome: "Joaquina", email: "djoaquina@server.com"},
+            {nome: "José", email: "jose@server.com"},
+        ]
+        // [] -> array   {} -> objeto  (nome: email:) ->proprieddades do objeto
+
+        const listaPessoas = document.getElementById("listaPessoas")
+
+        for (let i = 0; i < pessoas.length; i++) {
+            listaPessoas.innerHTML += `<li> ${pessoas[i].nome}: ${pessoas[i].email} </li>`            
+        }
+    // ---------------------------------------------------------------------------------------
+        const produtos = [
+           {nome: "Caneta",    preco: 2,  estoque: 10},
+           {nome: "Lapis",     preco: 1,  estoque: 50},
+           {nome: "Régua",     preco: 5,  estoque: 7},
+           {nome: "Caderno",   preco: 10, estoque: 12},
+           {nome: "Borracha",  preco: 0.75, estoque: 45},
+           {nome: "Cola",      preco: 4.95, estoque: 10},
+           {nome: "Apontador", preco: 3.12, estoque: 5},
+           {nome: "Mochila",   preco: 65, estoque: 9},
+           {nome: "Estojo",    preco: 7,  estoque: 15},
+        ]
+
+        const tableDados = document.getElementById("tableDados")
+
+        for (let i = 0; i < produtos.length; i++) {
+            tableDados.innerHTML += `<tr><td>${produtos[i].nome} </td>
+                                         <td>R$ ${produtos[i].preco.toFixed(2)}</td>
+                                         <td>${produtos[i].estoque}</td></tr>`
+        }
+    // ----------------------------------------------------------------------------------------
+    
+        const aluno = {
+            nome: "Pedro Bó",
+            notas:[7,8,3,8]
+        }
+
+        let totalNotas = 0;
+
+        const alunoSituacao = document.getElementById("alunoSituacao")
+
+        alunoSituacao.innerHTML += `<li>Nome: ${aluno.nome}</li>`
+        alunoSituacao.innerHTML += `<li>Notas: `
+        for (let i = 0; i < aluno.notas.length; i++) {
+            alunoSituacao.innerHTML += aluno.notas[i]
+            if (i < (aluno.notas.length - 1)){
+                alunoSituacao.innerHTML += " - "
+            }
+            totalNotas += aluno.notas[i]
+        }
+        alunoSituacao.innerHTML += "</li>"
+
+        let media = totalNotas / (aluno.notas.length + 1)
+
+        alunoSituacao.innerHTML += `<li>Média: ${media.toFixed(1)} </li>`
+
+
+        if (media > 5){
+            alunoSituacao.innerHTML += `<li>Aluno: Aprovado</li>`
+        }else {
+            alunoSituacao.innerHTML += `<li>Aluno: Reprovado</li>`
+        }
+
+        alunoSituacao.innerHTML += (media > 7)? `<li>Aluno: Aprovado</li>` : `<li>Aluno: Reprovado</li>`
+    //----------------------------------------------------------------------------------------------------    
+
+        const alunos = [
+            { nome: "Helena Beividas", notas: [10, 5, 7, 8, 5] },
+            { nome: "Heitor Beividas", notas: [9, 3, 10, 6, 7] },
+            { nome: "Priscila Beividas", notas: [1, 9, 8, 6, 10] },
+            { nome: "Beto Reis", notas: [10, 8, 3, 5, 10] },
+        ]
+
+        const listaAlunos = document.getElementById("listaAlunos")
+
+        let texto = " "
+
+        for (let i = 0; i < alunos.length; i++) {
+            texto += `<li> ${alunos[i].nome}`
+            texto += "<ul><li>Notas: "
+            for (let j = 0; j < alunos[i].notas.length; j++) {
+                texto += alunos[i].notas[j]
+                if(j < (alunos[i].notas.length - 1)){
+                    texto += ' - '
+                }
+            }    
+            texto += "</li></ul>"
+        }
+        texto += "</li>"
+
+        listaAlunos.innerHTML = texto
+        //  ---------------------------------------------------------------------------------
+
+        texto += "<li> </li>"
+
+        for (let i = 0; i < alunos.length; i++) {
+            texto += `<li> ${alunos[i].nome}, média: `
+            media = 0
+            for (let j = 0; j < alunos[i].notas.length; j++) {
+                media += alunos[i].notas[j]
+            }
+            texto += `${(media / alunos[i].notas.length).toFixed(1)} </li>`
+        }
+        listaAlunos.innerHTML = texto
+        
+
+
+    </script>
+    
+</body>
+</html>
