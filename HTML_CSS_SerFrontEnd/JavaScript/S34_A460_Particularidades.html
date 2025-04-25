@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo de variáveis: var x let x const</title>
+</head>
+<body>
+    <h1>JavaScript particularidades</h1>
+
+    <h2>Tipo de variáveis: var x let x const</h2>
+
+    <ul>
+        <li>// JavaScript === ECMAScript</li>
+        <li>// ES5 < 2015</li>
+        <li>// ES6 - ES2015</li>
+        <li>// ES7 - ES2016</li>
+        <li>            </li>
+        <li>// ES5 - Variaveis apenas 'var'</li>
+        <li>// ES6 - 'let' e 'const'</li>
+        <li>            </li>
+        <li>// 'var' escopo de funcao  </li>
+        <li>// 'let' escopo de bloco  (for, if, switch</li>
+        <li>            </li>
+        <li>// let   - , pode declarar e fazer a atribuição depois;</li>
+        <li>// const - necessita fazer a atribuição, no momento da declaração</li>
+    </ul>
+
+    <oL><H2>Em JavaScript <br></H2>
+        <li>ha 2 tipos de dados possiveis: primitivos (passados por valor) e objetos(passados pro referência)
+            <ul>
+                <li>String</li>
+                <li>Number</li>
+                <li>Boolean</li>
+                <li>null</li>
+                <li>undefined</li>
+                <li>Symbol (ES2015)</li>
+            </ul>
+        </Li>
+        <li>variaveis podem armazenar valores de tipos diferentes - fracamente tipada
+            <ul>
+                <li>let n = 10</li>
+                <li>n = false</li>
+                <li>n = 'texto'</li>
+            </ul>
+        </li>
+        <li>truthy vs falsy - valores como 0, "", NaN, undefined, null e false
+            <ul>
+                <li>são avaliados como <strong>false</strong>, quando convertidos para Boolean</li>
+                <li>todos os outros valores serão <strong>true</strong></li>
+            </ul>
+        </li>
+        <li>Curto-circuito - Operador logicos
+            <ul>
+                <li>|| - será <strong>true</strong> se alguma das expressões for verdade</li>
+                <li>&& - será <strong>true</strong> se ambas as expressões forem verdadeiras</li>
+                <li>toString() - pode mudar a base do numero - Nos usamos base padrão 10 ou base decimal</li>
+                <ul>
+                    <Li>Base binária</Li>
+                    <ul>
+                        <li>0 -> 0</li>
+                        <li>1 -> 1</li>
+                        <li>2 -> 10</li>
+                        <li>3 -> 11</li>
+                        <li>4 -> 100</li>
+                        <li>5 -> 101</li>
+                    </ul>
+                    <Li>Base hexadecimal</Li>
+                    <ul>
+                        <li>0 -> 0</li>
+                        <li>1 -> 1</li>
+                        <li>...</li>
+                        <li>9 -> 9</li>
+                        <li>10 -> A</li>
+                        <li>11 -> B</li>
+                        <li>...</li>
+                        <li>15 -> F</li>
+                        <li>16 -> 10</li>
+                        <li>17 -> 11</li>
+                        <li>...</li>
+                        <li>26 -> 1A</li>
+                        <li></li>
+                    </ul>
+                    <li>n = 10 </li>
+                    <li>n.toString(2) = 1010</li>
+                    <li>n.toString(16) = A</li>
+                </ul>
+            </ul>
+
+        </li>
+        <li>Functions - A466
+            <ul>
+                <li>Function declaration</li>
+                <ul>
+                    <li>function ola1(nome){</li>
+                    <li>         console.log("Ola mundo, function declaration:" + nome)</li>
+                    <li>}</li>
+                </ul>
+                <li>function expression</li>
+                <ul>
+                    <li>const ola2 = function (nome){</li>
+                    <li>    console.log("Ola mundo, function expression:" + nome)</li>
+                    <li>}</li>
+                    <li>   </li>
+                    <li>const arr = [ola1, ola2, function(){("Ola mundo, function anonima dentro de array executada")}]</li>
+                </ul>
+                <li>arrow function</li>
+                <ul>
+                    <li>const ola3 = (nome) => {</li>
+                    <li>    console.log("Ola mundo, function expression:" + nome)</li>
+                    <li>}</li>
+                    <li>ola3 ("Ola mundo, arrow function")</li>
+                    <li>   </li>
+                    <li>   </li>
+                    <li>arrow function em uma unica linha</li>
+                    <li>const soma = (n1,n2) => {</li>
+                    <li>     return n1 + n2</li>
+                    <li>}</li>
+                    <li> é o mesmo que: </li>
+                    <li>const soma = (n1,n2) => n1 + n2</li>
+                    <li>    </li>
+                    <li> console.log(soma(7,3))</li>
+                </ul>
+            </ul>
+
+        </li>
+
+        <li>Metodos
+            <pre>
+                const produto = {
+                    nome: "caneta",
+                    qtde: 10,
+                    comprar: function(qtd){
+                        console.log(`comprar caneta`)
+                        if(qtd > this.qtde){
+                            console.log (`Quantidade requerida (${qtd}) é maior que a quantidade em estoque (${this.qtde}) `)
+                            return null
+                        }
+                        console.log(this)
+                        this.qtde -= qtd
+                    },
+        
+                    teste1: function(){
+                        console.log("Teste 1")
+                        console.log(this)
+                    },
+                    
+                    teste2: () => {
+                        console.log("Teste 2")
+                        console.log(this)                
+                    } 
+                }
+        
+                console.log(produto)
+        
+                produto.comprar(3)
+                console.log(produto)
+        
+                produto.teste1()
+                produto.teste2()
+        
+            </pre>
+        </li>
+
+        <li>Vetor, Array, Lista e Matriz
+            <pre>
+                const notas = [ [3,5,7,3], [2,5,10,9], [8,4,6,1] ]
+                console.log(notas[1])
+                console.log(notas[1][2])
+        
+            </pre>
+        </li>
+
+    <script>
+        let param = 10
+
+        function teste(param){
+            console.log(++param)
+        }
+
+        teste(param)  // valor 20   passando o valor
+
+        console.log("n externo " , param)
+
+        const arr = [1, 2, 3]  // endereço de memoria, por exemplo 123bng45
+        const arr2 = [1, 2, 3]  // endereço de memoria, por exemplo 987bng45
+
+        function addArray (valor, arr){
+            arr[arr.length] = valor
+        }
+
+        addArray('novo valor', arr)
+        console.log(arr)
+
+        // por referencia: Array, função, objetos - tudo oque não for dado primitivo
+
+
+    </script>
+
+    <script>
+        const produto = {
+            nome: "caneta",
+            qtde: 10,
+            comprar: function(qtd){
+                console.log(`comprar caneta`)
+                if(qtd > this.qtde){
+                    console.log (`Quantidade requerida (${qtd}) é maior que a quantidade em estoque (${this.qtde}) `)
+                    return null
+                }
+                console.log(this)
+                this.qtde -= qtd
+            },
+
+            teste1: function(){
+                console.log("Teste 1")
+                console.log(this)
+            },
+
+            teste2: () => {
+                console.log("Teste 2")
+                console.log(this)                
+            } 
+        }
+
+        console.log(produto)
+
+        produto.comprar(3)
+        console.log(produto)
+
+        produto.teste1()
+        produto.teste2()
+    </script>
+
+    <script>
+        const notas = [ [3,5,7,3], [2,5,10,9], [8,4,6,1] ]
+        console.log(notas[1])
+        console.log(notas[1][2])
+    </script>
+</body>
+</html>

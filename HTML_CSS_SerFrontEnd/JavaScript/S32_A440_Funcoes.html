@@ -11,27 +11,37 @@
         td {
             border: 1px solid black;
         }
+
+        #tabuada th {
+            width: 5rem;
+        }
+        #tabuada td {
+            text-align: right;
+        }
+
     </style>
 </head>
 <body>
     <H1>Funções</H1>
 
+    <h2>Tabuada</h2>
     <input type="number" id="tabuada">
     <button onclick="mostrarTabuada()">Mostrar tabuada</button> 
+    <button onclick="limparTabuada()">Limpar tabuada</button> 
        <!-- onclick -> Atributo -->
 
-    <table>
+    <table id="tabuada">
         <thead>
-            <tr><th>         </th>
-                <th>ate x10 </th>
-                <th>ate x20 </th>
-                <th>ate x30 </th>
-                <th>ate x40 </th>
-                <th>ate x50 </th>
-                <th>ate x60 </th>
-                <th>ate x70 </th>
-                <th>ate x80 </th>
-                <th>ate x90 </th>
+            <tr><th>        </th>
+                <th>1 a 10 </th>
+                <th>11 a 20 </th>
+                <th>21 a 30 </th>
+                <th>31 a 40 </th>
+                <th>41 a 50 </th>
+                <th>51 a 60 </th>
+                <th>61 a 70 </th>
+                <th>71 a 80 </th>
+                <th>81 a 90 </th>
                 <th>ate x100 </th>
             </tr>
         </thead>
@@ -39,6 +49,39 @@
 
         </tbody>
     </table>   
+    <hr>
+
+    <H2>Área</H2>
+    <table id="area">
+        <thead>
+            <tr>
+                <th>Retangulo</th>
+                <th>Circulo</th>
+                <th>Triângulo Retângulo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Base: <input type="number" id="RetBase" ></td>
+                <td rowspan="2">Raio: <input type="number" id="CircRaio" ></td>
+                <td>Base: <input type="number" id="TriBase" ></td>
+            </tr>
+            <tr>
+                <td>Altura: <input type="number" id="RetAltura" ></td>
+                <td>Altura: <input type="number" id="TriAltura" ></td>
+            </tr>
+            <tr>
+                <td><button onclick="AreaRet()">Calcular Área</button></td>
+                <td><button onclick="AreaCirc()">Calcular Área</button></td>
+                <td><button onclick="AreaTri()">Calcular Área</button></td>
+            </tr>
+            <tr>
+                <td><output id="AreaRetangulo"></output></td>
+                <td><output id="AreaCirculo"></output></td>
+                <td><output id="AreaTriangulo"></output></td>
+            </tr>
+
+        </tbody>
+    </table>
     
     <script>
 
@@ -46,6 +89,7 @@
         const corpoTabuada = document.getElementById("corpoTabuada")
         
         function mostrarTabuada() {
+            limparTabuada()
             const inputValue = input.value  // valor do elemento no DOM
             
             for (let i = 0; i < 10; i++) {
@@ -60,7 +104,56 @@
                 txtTable += "</tr>"
                 corpoTabuada.innerHTML += txtTable
             }
-            alert("Cliquei no botão")
+        }
+
+        function limparTabuada() {
+            corpoTabuada.innerHTML = ' '
+        }
+
+        const BaseRet = document.getElementById("RetBase")
+        const AlturaRet = document.getElementById("RetAltura")
+        const OutputRetangulo = document.getElementById("AreaRetangulo")
+
+        const RaioCirc = document.getElementById("CircRaio")
+        const OutputCirculo = document.getElementById("AreaCirculo")
+
+        const BaseTri = document.getElementById("TriBase")
+        const AlturaTri = document.getElementById("TriAltura")
+        const OutputTriangulo = document.getElementById("AreaTriangulo")
+
+        let area = 0;
+        let base = 0
+        let altura = 0
+        function AreaRet() {
+            baseValue = BaseRet.value
+            alturaValue = AlturaRet.value
+
+            Quadrado(baseValue, alturaValue)
+
+            OutputRetangulo.innerHTML = `A area do Retangulo: ${baseValue} x ${alturaValue} é: ${area.toFixed(2)}`
+
+        }
+
+        function AreaCirc() {
+            let area = parseFloat (Math.PI * (RaioCirc.value ** 2))
+            OutputCirculo.innerHTML = `A area do Circulo de raio: ${RaioCirc.value} é: ${area.toFixed(2)}`
+        }
+
+        function AreaTri() {
+            baseValue = BaseTri.value
+            alturaValue = AlturaTri.value
+
+            Triangulo(Quadrado(baseValue, alturaValue))
+            
+            OutputTriangulo.innerHTML = `A area do Triangulo retângulo: ${baseValue} x ${alturaValue} é: ${area.toFixed(2)}`            
+        }
+
+        function Quadrado (base, altura) {
+            return area = base * altura  /* aqui retorna o valor de area */
+        }
+
+        function Triangulo (areaQuadrado){
+            area = parseFloat (areaQuadrado / 2) /* aqui apenas altera o valor da variável */
         }
 
     </script>   
