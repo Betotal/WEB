@@ -28,4 +28,69 @@ icomoon.io
  clip-path generator: https://bennettfeely.com/clippy/
 
 
+Array: 
+    Os array precisam de uma função para ter alguma ação
+    arr.every(function(){
+        return ...
+    })
+
+    every() - Retorna um booleano,
+            true se todos elementos forem true
+
+    some() -  Retorna um boleano,
+            true se algum elemento for true
+
+    foreach() - Somente interage com o array
+
+    filter() - filtra os elementos de acordo com a 
+             condição, mas não altera diretamente o array original
+
+    map()    - o mesmo que o filter, mas alterar o array,
+            de acordo com a condição
+
+    find()   - retorna o primeiro elemento que satisfaça
+             a condição        
+
+    findIndex() - retorna o indice do primeiro
+                elemento que satisfaça a condição        
+
+    Não precisam de função:
+        arr.IndexOf(valor)
+        indexof - retorna o indice do primeiro valor
+        lastindexof - retorna o indice o ultimo valor
+
+        arr.Includes() - retorna true se existir o valor
+
+        arr.toString() - converte para toString
+        arr.join(" - ") - utiliza o separador informado
+        arr.concat(arr1) - concatena os array
+
+        push() - Adiciona no final do array
+        pop() - retira do final do array
+
+        shift() - retira do inicio do array
+        unshift() - adiciona no inicio do array
+
+        slice() - exibe os valores contido no array, 
+                  a aprtir do indice informado
+                
+        splice() - retira os elementos, a partir do indice informado.
+                 - pode adicionar elementos, a aprtir do indice   
+
+        reverse() -  inverte a ordem dos elementos no array original       
+
+        ... (spred operator) - divide a array, em elementos
+               arr = [1,2,3,['ola', 'pedro', true]]
+               arr = [1
+                      2
+                      3
+                      ['ola', 'pedro', true]]
+               arr1 = ...arr
+               arr1 = [1,2,3,'ola','pedro', true]    
+
+        const [] = arr - destructuring
+              - separa o valor do array existente em variavies diferentes (Aula 518)         
+
+
+  
 

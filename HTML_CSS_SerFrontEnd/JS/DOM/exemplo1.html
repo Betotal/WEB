@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">Curso JavaScript Completo </h1>
+
+    <main class="classMain" id="idMain">
+        <h2 id="title2">Alterando o texto pelo ID </h2>
+        <p>Para trocar o valor do elemento pelo id, por exemplo titulo usamos:</p>
+        <ul>
+            <li>document.getElementById("title").textContent = "Alterando o texto"</li>
+            <li>document.querySelector("#title").textContent = "Alterando o texto querySelector" </li>
+        </ul>
+    </main>
+    <section class="classSection1" id="idSection1">
+        <h2 id="title3">Alterando o texto pela Classe ID (Nodelist) -  Mundo CSS</h2>
+        <p class="paragrafo2">Para alterar usando a classe:</p>
+        <p class="paragrafo2">Como é um pseudo array, precisa do indice.</p>
+        <ul>
+            <li>document.getElementsByClassName("paragrafo2")[0].textContent = "alterado por nome da classe"</li>
+            <li>document.querySelectorAll(".paragrafo2")[1].textContent = "Alterado via querySelectorAll"</li>
+        </ul>
+    </section>
+    <section  class="classSection2" id="idSection2">
+        <h2 id="title3">Acessando elementos dentro de elementos</h2>
+        <p class="paragrafo3">Para alterar elemento dentro de outro elemento (igual no css):</p>
+        <p class="paragrafo3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, ea.</p>
+        <ul>
+            <li>document.getElementByTagName("p") >> Retorna Nodelist com todos elemnetos do tipo, que existem no DOM</li>
+            <li>document.querySelector("#idSection2 p") >> Pega o primeiro elemento </li>
+            <li>ocument.querySelectorAll("#idSection2 p").[1] >> precisa do indice, para informar qual o elemento</li>
+        </ul>
+    </section>
+    <section  class="classSection3" id="idSection3">
+        <h2 id="title4">Propriedades</h2>
+        <h3>Subtitulo</h3>
+        <p class="paragrafo3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, ea.</p>
+        <form action="#">
+            <input type="text" id="txtNome" placeholder="Nome" disabled><br>
+            <input type="text" id="txtEmail" placeholder="Email" readonly maxlength="70"><br>
+            <textarea name="" id="" cols="30" rows="5" readonly>
+                Este contrato blablabla 
+            </textarea><br>
+            <input type="checkbox" id="contrato">
+            <label for="contrato">Li e aceito o contrato</label>
+        </form>
+        <ul>
+            <li>input > value    >> Acesso js texto.value</li>
+            <li>input > desableb >> Acesso js texto.desabled</li>
+            <li>input > maxlength >> Acessp js texto.maxLenght </li>
+            <li>input > readonly >> Acesso js texto.readOnly</li>
+            <li>label > for      >> Acesso js texto.HTMLFor</li>
+            <li>class            >> Acesso js texto.className</li>
+
+        </ul>
+    </section>
+
+</body>
+</html>
