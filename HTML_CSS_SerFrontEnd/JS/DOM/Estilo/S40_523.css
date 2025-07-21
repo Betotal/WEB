@@ -9,3 +9,11 @@
 .underlined{
     border-bottom: 3px solid currentColor;
 }
+
+.reprovado {
+    background-color: pink;
+}
+
+.aprovado {
+    background-color: lightgreen;
+}

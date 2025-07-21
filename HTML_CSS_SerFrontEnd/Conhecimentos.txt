@@ -28,6 +28,7 @@ icomoon.io
  clip-path generator: https://bennettfeely.com/clippy/
 
 
+#region Array
 Array: 
     Os array precisam de uma função para ter alguma ação
     arr.every(function(){
@@ -89,7 +90,16 @@ Array:
                arr1 = [1,2,3,'ola','pedro', true]    
 
         const [] = arr - destructuring
-              - separa o valor do array existente em variavies diferentes (Aula 518)         
+              - separa o valor do array existente em variavies diferentes (Aula 518)        
+    #endRegion          
+
+Nodelist vs Colletion
+
+    nodelist é estatico
+    Collection é dinamico. Se houver uma nova informação será carregada em tempo de execução os dados serão atualizados
+
+    node (nó) vs Element
+        Tipos de nós (12) > document, Elemento, Atributo, Comentarios, texto
 
 
   

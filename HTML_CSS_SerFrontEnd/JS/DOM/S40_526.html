@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Media dos alunos</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../DOM/Estilo/materialize.min.css" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style src="../dom/Estilo/S40_523.css"></style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="hero center card-panel materialize-red darken-4 white-text z-depth-3">
+            <h1 class="materialize-red-text text-lighten-3"> Curso Javascript Completo</h1>
+        </div>
+        <h2 class="materialize-red-text text-lighten-2 underlined">Dados de Alunos</h2>
+
+        <table class="striped">
+            <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th nota="n1">Nota 1</th>
+                  <th nota="n2">Nota 2</th>
+                  <th nota="n3">Nota 3</th>
+                  <th nota="n4">Nota 4</th>
+                  <th nota="n5">Nota 5</th>
+                  <th nota="m0">Média</th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Daniel</td>
+                    <td>10</td>
+                    <td>3</td>
+                    <td>7.5</td>
+                    <td>3</td>
+                    <td>8</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Maria</td>
+                    <td>10</td>
+                    <td>9</td>
+                    <td>3</td>
+                    <td>9.5</td>
+                    <td>8</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>João</td>
+                    <td>10</td>
+                    <td>4.5</td>
+                    <td>1</td>
+                    <td>3.5</td>
+                    <td>8</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Joana</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>9</td>
+                    <td>1.5</td>
+                    <td>8</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>José</td>
+                    <td>10</td>
+                    <td>4.5</td>
+                    <td>7</td>
+                    <td>3</td>
+                    <td>8</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Arnaldo</td>
+                    <td>10</td>
+                    <td>4.5</td>
+                    <td>7</td>
+                    <td>3</td>
+                    <td>8</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Lucas</td>
+                    <td>4.5</td>
+                    <td>9</td>
+                    <td>8</td>
+                    <td>3</td>
+                    <td>8</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Luana</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>9</td>
+                    <td>3</td>
+                    <td>8</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Beatriz</td>
+                    <td>10</td>
+                    <td>4</td>
+                    <td>7</td>
+                    <td>9</td>
+                    <td>8</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Sergio</td>
+                    <td>4.5</td>
+                    <td>9.5</td>
+                    <td>10</td>
+                    <td>2</td>
+                    <td>8</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+  <!--JavaScript at end of body for optimized loading-->
+  <!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
+  <script src="../DOM/js/S40_523.js"></script>
+  <script>
+
+      ;(function () {
+          const trHeader = document.querySelector("thead tr")
+          const tCabecalho = trHeader.querySelectorAll("th")
+
+          const theadNotas = trHeader.querySelectorAll("[nota]")
+          //console.log(theadNotas)
+          const IndicesNotas = { }
+
+          Array.from(theadNotas).forEach(function(nIndice){
+              let propNota = nIndice.getAttribute("nota") 
+              IndicesNotas[propNota] = pegaIndice(propNota)
+          }) 
+          console.log(IndicesNotas)
+
+          function pegaIndice(indice) {
+              const indCabec = trHeader.querySelector(`[nota = "${indice}"]`)
+              //                                       [nota] -> indicador do Atributo
+
+              const i = [...tCabecalho].indexOf(indCabec)
+              return i
+          }
+
+          let trows = document.querySelectorAll("tbody tr")
+
+          let x = 0
+          while (trows[x]) {
+            let tdivisions = trows[x].querySelectorAll("td")
+
+            let media = avarege(
+              parseFloat(tdivisions[IndicesNotas.n1].textContent),
+              parseFloat(tdivisions[IndicesNotas.n2].textContent),
+              parseFloat(tdivisions[IndicesNotas.n3].textContent),
+              parseFloat(tdivisions[IndicesNotas.n4].textContent),
+              parseFloat(tdivisions[IndicesNotas.n5].textContent)
+            )
+            tdivisions[IndicesNotas.m0].textContent = media
+            x++
+          }
+      })()
+  </script>
+
+</body>
+
+</html>
