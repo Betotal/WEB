@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array.From</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, sunt.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, sunt.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, sunt.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, sunt.</p>
+<hr>
+
+
+    <script>
+        const arr1 = new Array(1,2,3)
+        const arr2 = Array.from(arr1)
+
+        console.log(arr1)
+        arr2.push(4,5)
+        console.log(arr2)
+
+        const arr3 = new Array(3)
+        console.log(arr3)
+        console.log(arr3.length)
+
+        const arr4 = Array.of(3)
+        console.log(arr4)
+        console.log(arr4.length)
+
+        let paragrafos = document.querySelectorAll("p")
+        console.log(paragrafos)
+
+        paragrafos = Array.from(paragrafos)
+        // Array.from transforma uma nodelist em Array
+        paragrafos.map (function(p,i){
+            p.textContent = `${++i} - ${p.textContent}`
+        })
+
+    </script>
+    
+</body>
+</html>
