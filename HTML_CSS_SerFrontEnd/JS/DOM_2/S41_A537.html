@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .container2 {
+            background: #ccc;
+            padding: 15px;
+        }
+
+        .container2 p{
+            border: 1px solid red;
+            padding: 10px;
+            margin: 15px;
+        }
+        </style>
 </head>
 <body>
     <h1>teste DOM 2</h1>
+    
+    <!-- beforeBegin -->
+    <div class="container2">
+        <!-- aferBegin -->
+        <p>Paragrafo 1</p>
+        <p>Paragrafo 2</p>
+        <p>Paragrafo 3</p>
+        <!-- beforEnd -->
+    </div>
+    <!-- afterEnd -->
+    
     <div class="container">
         <p>teste 1</p>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum eos est dignissimos eaque ducimus adipisci, non magnam dolore eligendi. Ducimus doloremque ex eveniet quos natus earum voluptas esse id modi. <a href="#">link</a></p>
@@ -26,6 +50,7 @@
         </ul>
     </div>
 
+
     <script>
         const title = document.createElement("h1")
         const atributo = document.createAttribute("id")
@@ -43,7 +68,58 @@
         console.log(title)
 
         document.body.appendChild(title) // no final do documento (depois do script)
-        document.querySelector(".container").appendChild(title) // no final do documento, dentro do container
+
+        const container = document.querySelector(".container")
+        container.appendChild(title) // no final do documento, dentro do container
+    //    container.append(title) // adiciona 
+    //    container.prepend(title) // adiciona antes do primeiro filho
+      
+        const title2 = document.createElement("h1")
+        title2.textContent = "titulo 2 - teste insertBefore"
+        const lista = document.querySelector("ul")
+        container.insertBefore(title2, lista) // insere antes de algum elemento
+        container.insertBefore(title2,container.firstChild) // nesta situação ele movimenta o elemento (title2)  
+
+        let sublevel = document.querySelector("ul ul")
+    //    sublevel = sublevel.cloneNode() // clona o nó, 
+        sublevel = sublevel.cloneNode(true) // clona o nó, com os filhos 
+
+        const h2 = document.querySelector("h2")
+
+        container.insertBefore(sublevel, h2.nextElementSibling)
+
+        const secParagrafo = container.firstElementChild.nextElementSibling
+        const span = document.createElement("span")
+        span.textContent = "Span, span dinamica"
+
+        secParagrafo.before(span)  // ou after
+
+//////////////////////////////////////////////////////  aula 540
+        const container2 = document.querySelector(".container2")
+
+        container2.insertAdjacentHTML("beforebegin", "<b> texto HTML inderido beforebegin</b><br>")
+        container2.insertAdjacentHTML("afterbegin", "<b> texto HTML inderido afterbegin</b><br>")
+        container2.insertAdjacentHTML("beforeend", "<b> texto HTML inderido beforeend</b><br>")
+        container2.insertAdjacentHTML("afterend", "<b> texto HTML inderido afterend</b><br>")
+
+        container2.insertAdjacentText("beforebegin", "<b> texto HTML inderido beforebegin</b>")    
+
+        const em = document.createElement("em")
+        em.textContent = "texto com enfase"
+        container2.insertAdjacentElement("beforeend", em)   
+
+//////////////////////////////////////////////////////  aula 541
+        lista.remove()
+        lista.parentElement.removeChild(lista)
+
+        const pai = document.body
+        const novo = container.querySelector("h1")
+        const velho = document.querySelector("h1")
+        pai.replaceChild(novo, velho)
+
+
+        
+        
 
     </script>
     
