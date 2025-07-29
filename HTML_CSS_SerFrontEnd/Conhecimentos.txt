@@ -101,6 +101,10 @@ Nodelist vs Colletion
     node (nó) vs Element
         Tipos de nós (12) > document, Elemento, Atributo, Comentarios, texto
 
+Eventos
+    DOM  Level 0
+        Não é uma boa pratica, pois não permite atrelar mais de 1 funcão a 1 evento - restrição       
+
 
   
 

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container2 {
+            background-color: #ccc;
+            padding: 10px
+        }
+    </style>
+</head>
+<body>
+    <H1>Eventos</H1>
+    <div id="container">
+        <button id="btn1">Botão 1 </button>
+        <button id="btn2">Botão 2 </button>
+        <button id="btn3">Botão 3 </button>
+    </div>
+
+    <hr>
+    <h1>Delegação de eventos</h1>
+    <div class="container2">
+        <button>Botão 1 </button>
+        <button>Botão 2 </button>
+        <button>Botão 3 </button>
+    </div>
+
+    <script>
+        const btn1 = document.getElementById("btn1")
+        const btn2 = document.getElementById("btn2")
+        const btn3 = document.getElementById("btn3")
+        const container = document.getElementById("container")
+
+        // DOM level 0
+        function clicou(){
+            console.log("Click funcao clicou")
+        };
+        btn1.onclick = function(){
+            console.log("Click bt1 funcao anonima")
+        };
+        //bt1.onclick = clicou(); //não aceita no DOM Level 0
+
+        // DOM Level 2
+        btn2.addEventListener("click", clicou)
+
+        btn2.addEventListener("click", function(){
+            console.log("Click bt2 funcao anonima")
+        })
+
+        btn2.onclick = function(){
+            console.log("DOM 0 - Função anonima no btn2")
+        };
+
+        // Evento de Bolha (Padrão) ou Captura
+
+        // variável,addEventListener(evento, funcao, fase)
+        //                           fase, o padrão é false (bolha) 
+        
+        document.addEventListener("click", function(e){
+            console.log("Clicou no documento, comportamento de bolha")
+            console.log(e.target)
+            console.log(e.currentTarget)
+            console.log(e.this)
+        }, false)
+
+        container.addEventListener("click", function(){
+            console.log("clicou no container")
+        }, true)
+
+    //    btn3.addEventListener("click", function(){ // segue o 
+        btn3.addEventListener("click", function(e){
+            console.log(e)
+            e.stopPropagation    // para a propagação do evento
+            console.log("Cliclou no btn3")
+        }, false)
+
+ //////////////////////////////////////////////////////////////////////
+        //  delegação de eventos
+        const container2 = document.querySelector(".container2")
+        const btns = document.querySelectorAll(".container2 button")
+        console.log(btns);
+
+        // ******* ERRO - não consigo atrelar um evento às coleções
+        //btns.addEventListener("click", function(){
+        //    console.log("botoes de delegação")
+        //})
+        
+        // ****** teria que separa 1 a 1 - Inviável
+        //btns[0].addEventListener("click", function(e){
+        //    e.stopPropagation()
+        //    console.log("botoes de delegação - 1")
+        //})
+        //btns[1].addEventListener("click", function(e){
+        //    e.stopPropagation()
+        //    console.log("botoes de delegação - 2")
+        //})
+        //btns[2].addEventListener("click", function(e){
+        //    e.stopPropagation()
+        //    console.log("botoes de delegação - 3")
+        //})
+
+        // ****   melhorando o código acima 
+        // *****  funciona, mas pode gerar problema de performance
+        //[...btns].forEach(botao => {
+        //    botao.addEventListener("click", function(e){
+        //        e.stopPropagation()
+        //        console.log(e.target)
+        //    })
+        //})
+
+    //    container2.addEventListener("click", function(e){  //this dinamico
+        container2.addEventListener("click", (e) => {   // this estatico
+        //    e.stopPropagation()
+            console.log("Clicou no container2")
+            console.log(e.target)
+            console.log(e.currentTarget)
+            console.log(e.this)
+        // como o click esta no container, se cliclar no espaço container, teremos retorno do DOM
+        if (e.target.nodeName === "BUTTON"){
+            console.log("Clicou no botão")
+            console.log(e.target)
+            console.log(e.currentTarget)
+            console.log(e.this)
+            }
+        })
+
+
+    </script>
+</body>
+</html>
