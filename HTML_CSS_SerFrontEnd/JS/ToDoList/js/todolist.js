@@ -127,20 +127,23 @@
 
                 editContainer.style.display = "flex";
             },
+
             deleteButton: function(){
                 arrTasks.splice(currentLiIndex,1)
-                renderTask() //renderiza a pagina
+                renderTask(); //renderiza a pagina
             //    currentLi.remove()  // remove o elemento da interface
             //    currentLi.parentElement.removeChild(currentLi)
             },
+
             containerEditButton: function(){
                 const valTexto = currentLi.querySelector(".editInput").value
-                debugger
+            //    debugger
                 console.log(valTexto)
                 console.log(arrTasks[currentLiIndex].name)
                 arrTasks[currentLiIndex].name = valTexto
-                renderTask() //renderiza a pagina
+                renderTask(); //renderiza a pagina
             },
+
             containerCancelButton: function(){
 
             }
@@ -157,6 +160,7 @@
     // }
 
     toDoAddForm.addEventListener("submit", function (e){
+        debugger
         e.preventDefault()
         console.log(itemInput.value)
         addTask(itemInput.value)
