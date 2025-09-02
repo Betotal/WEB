@@ -1,4 +1,5 @@
 function Task(name){
+    "use strict"
     let _oldName = name
     let _newName = name
     this.createAt = new Date()
@@ -17,13 +18,22 @@ function Task(name){
 }
 
 const task1 = new Task("minha tarefa")
-console.log(task1)
-
-const task2 = new Task("Segunda tarefa")
-console.log(task2)
+console.log(task1.GetNewName())
 
 task1.ChangeName("Minha tarefa Atualizada")
+console.log(task1.GetNewName())
+
+const task2 = new Task("Segunda tarefa")
+
+console.log(task1)
+console.log(task1.GetNewName())
+
+task1.ChangeName("La la la")
+console.log(task1.GetNewName())
+
+console.log(task2)
+console.log(task2.GetNewName())
+
 console.log(task1)
 
-console.log(task1.GetNewName())
 

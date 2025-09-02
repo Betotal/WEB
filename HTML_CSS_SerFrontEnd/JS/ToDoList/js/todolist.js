@@ -1,27 +1,79 @@
-;(function (){
-    "use strict";
+; (function () {
+    "use strict"
 
-    // Armazenar o DOM em variáveis
-    const itemInput = document.getElementById("item-input") // campo
-    const toDoAddForm = document.getElementById("todo-add") // formulário
-    const ul = document.getElementById("todo-list")
-    const li_s = ul.getElementsByTagName("li")
 
-    let arrTasks = [
-        { // objeto do array
-            name: "Exemplo",
-            createAt: Date.now(),
-            completed: false
-        },
-        { // objeto do array
-            name: "Task Exemplo",
-            createAt: Date.now(),
-            completed: false
+
+	function Task(name, completed, createdAt, updatedAt){
+		// crie uma funcao construtora chamada Task. 
+        // essa funcao recebe por parametro obrigatório o nome da tarefa
+        // também recebe tres parametros opcionais (completed, createdAt, updatedAt)
+        // o objeto retornado por essa funcao deve ter quatro propriedades:
+        //  - name - string - obrigatório, 
+        //  - completed - boolean - opcional, false é o default, 
+        //  - createdAt - timestamp - opcional, timestamp atual é o valor default) 
+        //  - updatedAt - timestamp - opcional, null é o valor default
+        // o objeto retornado por essa funcao deve ter um método chamado toggleDone, que deve inverter o boolean completed
+        if (!name)
+        {
+            throw new Error ("Tarefa precisa do parametro: nome")
         }
+        //this.name = name  tornando privada
+        let _name = name
+        this.completed = completed || false
+        this.createdAt = createdAt || Date.now()
+        this.updatedAt = updatedAt || null
+        this.toggleDone = function(){
+            this.completed = !this.completed
+        }
+        this.getName = () => _name
+        this.setName = function (newName){
+            _name =newName
+            this.updatedAt = Date.now()
+            console.log("--------")
+            console.log(this)
+        }
+	}
 
-    ]
+	let arrTasks = [
+		{
+			name: "task 1",
+			completed: true,
+			createdAt: 1592667375012,
+			updatedAt: null
+		},
+		{
+			name: "task 2",
+			createdAt: 1581667345723,
+			updatedAt: 1592667325018
+		},
+		{
+			name: "task 3",
+			completed: true,
+			createdAt: 1592667355018,
+			updatedAt: 1593677457010
+		}
+	]
 
-    function generateLiTask(obj){
+
+    // a partir de um array de objetos literais, crie um array contendo instancias de Tasks. 
+    // Essa array deve chamar arrInstancesTasks
+	 const arrInstancesTasks = arrTasks.map(task => {
+        const {name, completed, createdAt, updatedAt} = task
+//        return new Task(task.name, task.completed, task.createdAt, task.updatedAt)
+        return new Task(name, completed, createdAt, updatedAt)
+    }); 
+
+
+
+    //ARMAZENAR O DOM EM VARIAVEIS
+    const itemInput = document.getElementById("item-input")
+    const todoAddForm = document.getElementById("todo-add")
+    const ul = document.getElementById("todo-list")
+    const lis = ul.getElementsByTagName("li")
+
+
+    function generateLiTask(obj) {
+
         const li = document.createElement("li")
         const p = document.createElement("p")
         const checkButton = document.createElement("button")
@@ -29,150 +81,129 @@
         const deleteButton = document.createElement("i")
 
         li.className = "todo-item"
-        
+
         checkButton.className = "button-check"
-        checkButton.innerHTML = '<i class="fas fa-check displayNone"></i'
+        checkButton.innerHTML = `
+            <i class="fas fa-check ${obj.completed ? "" : "displayNone"}" data-action="checkButton"></i>`
         checkButton.setAttribute("data-action", "checkButton")
 
         li.appendChild(checkButton)
 
         p.className = "task-name"
-        p.textContent = obj.name
+        p.textContent = obj.getName()
         li.appendChild(p)
 
         editButton.className = "fas fa-edit"
         editButton.setAttribute("data-action", "editButton")
         li.appendChild(editButton)
 
-/////////     aula 565   ////////////////////////////////
-        //  criando container de edicao
-            let containerEdit = document.createElement("div")
-            containerEdit.className = "editContainer"
 
-            const inputEdit = document.createElement("input")
-            inputEdit.setAttribute("type", "text")
-            inputEdit.className = "editInput"
-            containerEdit.appendChild(inputEdit)
-            inputEdit.value = obj.name
+        const containerEdit = document.createElement("div")
+        containerEdit.className = "editContainer"
+        const inputEdit = document.createElement("input")
+        inputEdit.setAttribute("type", "text")
+        inputEdit.className = "editInput"
+        inputEdit.value = obj.getName()
 
-        // criando botao de edição dentro do contaienr    
-            const containerEditButton = document.createElement("button")
-            containerEditButton.className = "editButton"
-            containerEditButton.textContent = "Edit"
-            containerEditButton.setAttribute("data-action", "containerEditButton")
-            containerEdit.appendChild(containerEditButton)
+        containerEdit.appendChild(inputEdit)
+        const containerEditButton = document.createElement("button")
+        containerEditButton.className = "editButton"
+        containerEditButton.textContent = "Edit"
+        containerEditButton.setAttribute("data-action", "containerEditButton")
+        containerEdit.appendChild(containerEditButton)
+        const containerCancelButton = document.createElement("button")
+        containerCancelButton.className = "cancelButton"
+        containerCancelButton.textContent = "Cancel"
+        containerCancelButton.setAttribute("data-action", "containerCancelButton")
+        containerEdit.appendChild(containerCancelButton)
 
-        // criando botao de cancelamento dentro do contaienr    
-            const containerCancelButton = document.createElement("button")
-            containerCancelButton.className = "cancelButton"
-            containerCancelButton.textContent = "Cancel"
-            containerCancelButton.setAttribute("data-action", "containerCancelButton")
-            containerEdit.appendChild(containerCancelButton)
+        li.appendChild(containerEdit)
 
-            li.appendChild(containerEdit)
-////////////////////////////////////////////////////////
-//        deleteButton.classList.add("fas", "fa-trash-alt")
+
+
         deleteButton.className = "fas fa-trash-alt"
         deleteButton.setAttribute("data-action", "deleteButton")
         li.appendChild(deleteButton)
 
-//        addEventLi(li)
         return li
     }
 
-    function renderTask(){
+    function renderTasks() {
         ul.innerHTML = ""
-        arrTasks.forEach(taskObj => {
-                ul.appendChild(generateLiTask(taskObj))
-        })
+        arrInstancesTasks.forEach(taskObj => {
+            ul.appendChild(generateLiTask(taskObj))
+        });
     }
 
-    function addTask(task){
-        arrTasks.push({
-            name: task,
-            createAt: Date.now(),
-            completed: false
-        })
+    function addTask(taskName) {
+        // adicione uma nova instancia de Task
+        arrInstancesTasks.push(new Task(taskName))
+        renderTasks()
+
     }
 
-    function clickedUl(e){
-        //#region 
-        //  console.log(e.target)
-        //  console.log(e.target.getAttribute("data-action"))
-        ////        if (e.target.className === "fa-edit"){  // não re
-        // comendado
-        //        if (e.target.getAttribute("data-action") === "e
-        // ditButton"){
-        //  console.log ("clicou no edit") 
-        //        }
-        //#endregion             
-        
+    function clickedUl(e) {
         const dataAction = e.target.getAttribute("data-action")
-        if (!dataAction) { return }
+        console.log(e.target)
+        if (!dataAction) return
 
         let currentLi = e.target
-        while (currentLi.nodeName !== "LI"){
+        while (currentLi.nodeName !== "LI") {
             currentLi = currentLi.parentElement
         }
+        const currentLiIndex = [...lis].indexOf(currentLi)
 
-        const currentLiIndex = [...li_s].indexOf()
-
-        const action = {    //criando e usando objeto, como retorno do atributo
-            editButton: function(){
-            //    console.log("editButton no objeto")
+        const actions = {
+            editButton: function () {
                 const editContainer = currentLi.querySelector(".editContainer");
-                [...ul.querySelectorAll(".editContainer")].forEach(container =>{
+
+                [...ul.querySelectorAll(".editContainer")].forEach(container => {
                     container.removeAttribute("style")
                 });
 
                 editContainer.style.display = "flex";
+
+
             },
+            deleteButton: function () {
+                arrInstancesTasks.splice(currentLiIndex, 1)
+                renderTasks()
 
-            deleteButton: function(){
-                arrTasks.splice(currentLiIndex,1)
-                renderTask(); //renderiza a pagina
-            //    currentLi.remove()  // remove o elemento da interface
-            //    currentLi.parentElement.removeChild(currentLi)
             },
-
-            containerEditButton: function(){
-                const valTexto = currentLi.querySelector(".editInput").value
-            //    debugger
-                console.log(valTexto)
-                console.log(arrTasks[currentLiIndex].name)
-                arrTasks[currentLiIndex].name = valTexto
-                renderTask(); //renderiza a pagina
+            containerEditButton: function () {
+                const val = currentLi.querySelector(".editInput").value
+                arrInstancesTasks[currentLiIndex].setName(val)
+                renderTasks()
             },
+            containerCancelButton: function () {
+                currentLi.querySelector(".editContainer").removeAttribute("style")
+                currentLi.querySelector(".editInput").value = arrInstancesTasks[currentLiIndex].getName()
+            },
+            checkButton: function () {
+                // DEVE USAR O MÉTODO toggleDone do objeto correto
+                arrInstancesTasks[currentLiIndex].toggleDone()    
 
-            containerCancelButton: function(){
-
+	            renderTasks()
             }
         }
-        if(action[dataAction]){
-           action[dataAction]()
+
+        if (actions[dataAction]) {
+            actions[dataAction]()
         }
     }
 
-    // function addEventLi(li){
-    //     li.addEventListener("click", function(){
-    //         console.log(this)
-    //     })
-    // }
-
-    toDoAddForm.addEventListener("submit", function (e){
-        debugger
+    todoAddForm.addEventListener("submit", function (e) {
         e.preventDefault()
         console.log(itemInput.value)
         addTask(itemInput.value)
-        renderTask()
-        
+        renderTasks()
+
         itemInput.value = ""
         itemInput.focus()
     });
 
     ul.addEventListener("click", clickedUl)
 
-
-    renderTask();
+    renderTasks()
 
 })();
