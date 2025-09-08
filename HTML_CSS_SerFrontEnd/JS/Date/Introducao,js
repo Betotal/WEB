@@ -1,0 +1,3 @@
+let data = new Date()
+console.log(data)
+console.log(data.toLocaleString("pt-BR", {month: "long", weekday: "long", day: "numeric"}))
