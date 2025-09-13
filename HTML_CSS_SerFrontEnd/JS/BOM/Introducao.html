@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Introdução ao BOM</h1>
+    <p>O BOM (Browser Object Model) é um conjunto de objetos que representam o navegador e permitem a interação com ele. Diferente do DOM, que lida com a estrutura do documento HTML, o BOM lida com aspectos do navegador, como janelas, histórico, localização e outros.</p>
+
+    <h2>Objetos Principais do BOM</h2>
+    <ul>
+        <li><strong>window</strong>: Representa a janela do navegador. É o objeto global em JavaScript e contém propriedades e métodos para manipular a janela.</li>
+        <li><strong>navigator</strong>: Fornece informações sobre o navegador, como nome, versão e plataforma.</li>
+        <li><strong>location</strong>: Permite acessar e modificar a URL da página atual.</li>
+        <li><strong>history</strong>: Permite navegar pelo histórico de páginas visitadas.</li>
+        <li><strong>screen</strong>: Fornece informações sobre a tela do dispositivo, como largura e altura.</li>
+    </ul>
+
+    <h2>Exemplo de Uso do BOM</h2>
+    <script>
+        // Exemplo de uso do objeto window
+        console.log("Largura da janela: " + window.innerWidth);
+        console.log("Altura da janela: " + window.innerHeight);
+
+        // Exemplo de uso do objeto navigator
+        console.log("Nome do navegador: " + navigator.appName);
+        console.log("Versão do navegador: " + navigator.appVersion);
+
+        // Exemplo de uso do objeto location
+        console.log("URL atual: " + location.href);
+        
+        // Exemplo de uso do objeto history
+        console.log("Número de páginas no histórico: " + history.length);
+        
+        // Exemplo de uso do objeto screen
+        console.log("Largura da tela: " + screen.width);
+        console.log("Altura da tela: " + screen.height);
+
+
+        history.back(); // Navega para a página anterior no histórico
+        history.forward(); // Navega para a próxima página no histórico  
+    </script>
+</body>
+</html>
