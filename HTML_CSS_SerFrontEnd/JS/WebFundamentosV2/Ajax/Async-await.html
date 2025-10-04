@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+</head>
+<body>
+    <ul id="lista"></ul>
+
+    <script>
+        console.log("inicio codigo")
+
+        const lista = document.querySelector("#lista")
+
+        function mostraDados(dados){
+            let resultado = ""
+
+            dados.forEach(element => {
+                console.log(element)
+                resultado += `<li>Nome: ${element.nome} - E-mail: ${element.email} </li>`
+            });
+
+            lista.innerHTML = resultado
+        }
+        
+        async function buscarDados(){
+            console.log("inicio buscarDados")
+
+            try {
+                const resposta = await fetch("./dados.json") // fetch é assincrono.
+                                                         // await faz com que aguarde o retoro do fetch 
+                                                         // await necessita que a funcção seja async
+                if (!resposta.ok){
+                    throw error("Erro na requisição")
+                }
+
+                const dados = await resposta.json
+                console.log(dados)
+            
+                mostraDados(dados)
+                
+            } catch (error) {
+                console.error("Error: ", error)                
+            }
+            
+            
+            console.log("fim do buscarDados")
+        }
+
+        buscarDados()
+
+        console.log("fim codigo")
+    </script>
+</body>
+</html>

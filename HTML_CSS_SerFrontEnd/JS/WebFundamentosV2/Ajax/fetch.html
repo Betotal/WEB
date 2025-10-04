@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+</head>
+<body>
+    <ul id="lista"></ul>
+
+    <script>
+        console.log("inicio codigo")
+
+        const lista = document.querySelector("#lista")
+
+        function mostraDados(dados){
+            let resultado = ""
+
+            dados.forEach(element => {
+                console.log(element)
+                resultado += `<li>Nome: ${element.nome} - E-mail: ${element.email} </li>`
+            });
+
+            lista.innerHTML = resultado
+        }
+        
+        fetch("./dados.json")  // fetch retorma uma promese
+            .then( resposta => {
+                if(!resposta.ok){
+                    throw error("Erro na requisição")
+                }
+                return resposta.json()
+            })
+            .then(dados => {
+                console.log(dados)
+                mostraDados(dados)
+            })
+            .catch(erro => console.log("Erro: ", erro))
+
+        console.log("fim codigo")
+    </script>
+</body>
+</html>

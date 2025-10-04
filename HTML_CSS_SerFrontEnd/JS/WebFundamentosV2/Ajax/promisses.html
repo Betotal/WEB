@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promisses</title>
+</head>
+<body>
+    <script>
+        console.log("inicio codigo")
+        
+        setTimeout(function (){
+            console.log("Executado com timeout")
+        }, 1000)
+
+        const promessa = new Promise( (resolve, reject) => {  //arrow function
+                // Promese - tentativa sem certeza de retorno     
+                // parametro resolve - se deu certo
+                // parametro reject - Se não deu certo - erro
+            setTimeout(function (){
+            //    resolve("Sucesso vindo do TimeOut")
+                reject("Erro vindo do TimeOut")
+            }, 1000)
+        })  
+
+        promessa
+            // then - retorno do resolve
+            .then( resposta => console.log(resposta) )  
+            .then(() => {
+                console.log("novo 'then' encadeamento")
+                return "  retorno do then anterior"
+            })
+            .then((r) => {  // recebe o return do then anterior
+                console.log("novo 'then' encadeamento 2", r)
+            })
+            // catch - retorno no reject
+            .catch (erro => console.log("erro:", erro))
+            //
+            .finally(() =>{
+                console.log("Finally sempre será executado")
+            })
+
+        console.log("fim codigo")
+
+    </script>
+</body>
+</html>
