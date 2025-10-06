@@ -1,0 +1,34 @@
+n1 = 1545.5
+n1.toFixed(2)  -> 1545.50
+n1.toFixed(3).replace('.', ',') -> 1545,50
+n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'} -> R$ 1545,50
+
+=    ->   atribuição
+==   ->   grandeza  (mesmo valor)
+===  ->   identico  (typeof)
+
+Precedencia
+
+ - Aritméticos 
+    - () -> Parenteses
+    - ** -> exponenciação
+    - % , /, * 
+    - +, -
+ - Relacionais
+ - Lógicos 
+    - ! -> Negação
+    - && -> E
+    - || -> Ou 
+
+Selecionando elementos do DOM
+getElement      (de acordo com a tag)
+    - ByTagName   -> Pela Marca
+    - ById        -> pelo Id do elemento
+    - ByName      -> pelo nome do elemento
+    - ByClassName -> pela classe 
+
+querySelector     -> utilizado pelo seletor (CSS)  
+             (id) ->   #
+         (classe) ->   .
+
+function()   //  executa uma ação 

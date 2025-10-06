@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            background-color: green;
+            color: white;
+            width: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        div#area2 {
+            font: normal 20pt Arial;
+            background-color: blue;
+            color: white;
+            width: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        <p>Interaja ...</p>
+    </div> <br>
+    <div id="area2">
+        <p>Interaja ...</p>
+    </div>
+
+    <script>
+
+        let area = document.getElementById('area')
+        let area2 = document.getElementById('area2')
+
+        area2.addEventListener('click', clicarEvent)
+        area2.addEventListener('mouseenter', entrarEvent)
+        area2.addEventListener('mouseout', sairEvent)
+
+        function clicar(){
+            area.style.backgroundColor = 'red'
+            area.innerHTML = "Clicou!!"
+        }
+        function clicarEvent(){
+            area2.style.backgroundColor = 'purple'
+            area2.innerHTML = "Clicou!!"
+        }
+
+        function entrar(){
+            area.style.backgroundColor = 'black'
+            area.innerHTML = "Entrou!!"
+        }
+        function entrarEvent(){
+            area2.style.backgroundColor = 'brown'
+            area2.innerHTML = "Entrou!!"
+        }
+
+        function sair(){
+            area.style.backgroundColor = 'green'
+            area.innerHTML = "Saiu!! Interaja ..."
+        }
+        function sairEvent(){
+            area2.style.backgroundColor = 'blue'
+            area2.innerHTML = "Saiu!! Interaja ..."
+        }
+    </script>
+    
+</body>
+</html>

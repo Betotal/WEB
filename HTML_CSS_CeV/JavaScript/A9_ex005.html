@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+    <style>
+        body{
+            background: rgb(148, 148, 255);
+            color: white;
+            font: normal 18px Arial
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos - DOM</h1>  
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div class="teste">Clique em mim</div>      
+
+    <script>
+        let p1 = document.getElementsByTagName('p')[0]
+        document.write(`No paragrafo está escrito: ${p1.innerText}`)
+
+        let teste = document.querySelector('div.teste')
+        teste.innerHTML = '<strong>Alterando o texto</strong> ' + teste.innerHTML
+        teste.style.backgroundColor = 'black'
+    </script>
+</body>
+</html>

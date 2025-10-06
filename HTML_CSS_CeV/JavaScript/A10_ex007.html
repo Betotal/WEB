@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> + 
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res">Resultado</div>
+    
+    <script>
+        res.innerHTML = ""
+        function somar(){
+            let tn1 = document.getElementById('txtn1')
+            let tn2 = document.querySelector('input#txtn2')
+            let res = document.getElementById('res')
+
+            let n1 = parseInt(tn1.value)
+            let n2 = parseInt(tn2.value)
+
+            let result = n1 + n2
+            if (result > 0){
+                res.innerHTML = `A Soma dos números ${n1} e ${n2} é: ${result}.`
+            }
+        }
+    </script>
+</body>
+</html>
