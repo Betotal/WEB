@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+
+    <link rel="stylesheet" href="Mod_estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <main>
+        <section>
+            <div id="gerador">
+                <label for="">Número:</label>
+                <input type="text" name="txtnumero" id="txtnumero">
+                <input type="button" value="Gerar Tabuada" onclick="gerarTabuada()">
+            </div>
+
+            <div id="tabulada">
+                <select name="tabuada" id="seltab" size="10">
+                    <option value="op">Digite um Número</option>
+                </select>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Curso em video</p>
+    </footer>
+
+    <script src="Mod_script.js"></script>
+</body>
+</html>

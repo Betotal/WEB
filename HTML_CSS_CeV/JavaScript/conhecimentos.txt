@@ -27,8 +27,40 @@ getElement      (de acordo com a tag)
     - ByName      -> pelo nome do elemento
     - ByClassName -> pela classe 
 
+criando elementos no DOM
+let element = document.createElement('<tipo>')  
+    // tipo = tipo do elemento (p, h1, select, option, div ...
+element.setAtribute ('id', 'idElement')
+element.setAttribute ('class', 'classElement')
+   // setAttribute insere um atributo ao element    
+element.innerHTML / element.textContent = texto
+
+paiDoElmento.appendChild(element)
+
 querySelector     -> utilizado pelo seletor (CSS)  
              (id) ->   #
          (classe) ->   .
 
 function()   //  executa uma ação 
+
+site emoji: https://unicode.org/emoji/charts/full-emoji-list.html
+
+
+Na função
+   function soma(n1 = 0, n2 = 0){
+      return n1 + n2
+   }
+   
+   Se não passar valou nas variáveis n1 e/ou n2 , assumirá o valor padrão, no exemplo, 0 (zero)
+
+Próximos passos:
+    - Funções
+    - Objetos
+      - Modularização
+    - RegEx (Expressões regulares)
+    - JSON
+    - AJAX
+    - NodeJS
+    - Biblioteca
+    
+   

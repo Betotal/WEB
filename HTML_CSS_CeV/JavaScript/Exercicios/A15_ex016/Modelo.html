@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+
+    <link rel="stylesheet" href="Mod_estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <main>
+        <section>
+            <div id="campos">
+                <label for="">Início:</label>
+                <input type="text" name="txtinicio" id="txtinicio"><br>
+                <label for="">Fim:</label>
+                <input type="text" name="txtfim" id="txtfim"><br>
+                <label for="">Passo:</label>
+                <input type="text" name="txtpasso" id="txtpasso"><br>
+                <input type="button" value="Contar" onclick="contar()">
+            </div>
+
+            <div id="contador">
+                <p id="txtcontagem">Preparando contagem ... </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Curso em video</p>
+    </footer>
+
+    <script src="Mod_script.js"></script>
+</body>
+</html>
